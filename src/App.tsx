@@ -11,6 +11,11 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Testimonials from "./pages/Testimonials";
+import AttorneyProfiles from "./pages/AttorneyProfiles";
+import ConsultationScheduler from "./pages/ConsultationScheduler";
 import TemporaryResidency from "./pages/services/TemporaryResidency";
 import PermanentResidency from "./pages/services/PermanentResidency";
 import MexicanCitizenship from "./pages/services/MexicanCitizenship";
@@ -37,6 +42,11 @@ const App = () => (
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faqs" element={<FAQs />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/attorneys" element={<AttorneyProfiles />} />
+                <Route path="/schedule-consultation" element={<ConsultationScheduler />} />
                 <Route path="/services/temporary-residency" element={<TemporaryResidency />} />
                 <Route path="/services/permanent-residency" element={<PermanentResidency />} />
                 <Route path="/services/mexican-citizenship" element={<MexicanCitizenship />} />

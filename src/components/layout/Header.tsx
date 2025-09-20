@@ -74,6 +74,33 @@ const Header = () => {
             </DropdownMenu>
 
             <Link
+              to="/blog"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActivePath("/blog") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Blog
+            </Link>
+
+            <Link
+              to="/testimonials"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActivePath("/testimonials") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Testimonials
+            </Link>
+
+            <Link
+              to="/attorneys"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActivePath("/attorneys") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Attorneys
+            </Link>
+
+            <Link
               to="/about"
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 isActivePath("/about") ? "text-primary" : "text-muted-foreground"
@@ -104,7 +131,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <Button asChild className="btn-professional">
-              <Link to="/contact">Get Started — Schedule a Consultation</Link>
+              <Link to="/schedule-consultation">Schedule Consultation</Link>
             </Button>
           </div>
 
@@ -154,6 +181,36 @@ const Header = () => {
               </div>
 
               <Link
+                to="/blog"
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                  isActivePath("/blog") ? "text-primary bg-accent-muted" : "text-muted-foreground hover:text-primary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+
+              <Link
+                to="/testimonials"
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                  isActivePath("/testimonials") ? "text-primary bg-accent-muted" : "text-muted-foreground hover:text-primary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Testimonials
+              </Link>
+
+              <Link
+                to="/attorneys"
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                  isActivePath("/attorneys") ? "text-primary bg-accent-muted" : "text-muted-foreground hover:text-primary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Attorneys
+              </Link>
+
+              <Link
                 to="/about"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   isActivePath("/about") ? "text-primary bg-accent-muted" : "text-muted-foreground hover:text-primary"
@@ -185,7 +242,7 @@ const Header = () => {
 
               <div className="px-3 py-2">
                 <Button asChild className="btn-professional w-full" onClick={() => setIsMenuOpen(false)}>
-                  <Link to="/contact">Get Started — Schedule a Consultation</Link>
+                  <Link to="/schedule-consultation">Schedule Consultation</Link>
                 </Button>
               </div>
             </div>

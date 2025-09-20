@@ -87,10 +87,30 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Resources & Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Quick Links</h3>
+            <h3 className="font-semibold text-lg">Resources</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/blog" className="hover:text-accent transition-colors">
+                  Blog & Guides
+                </Link>
+              </li>
+              <li>
+                <Link to="/testimonials" className="hover:text-accent transition-colors">
+                  Client Stories
+                </Link>
+              </li>
+              <li>
+                <Link to="/attorneys" className="hover:text-accent transition-colors">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/schedule-consultation" className="hover:text-accent transition-colors">
+                  Schedule Consultation
+                </Link>
+              </li>
               <li>
                 <Link to="/about" className="hover:text-accent transition-colors">
                   About Us
@@ -104,16 +124,6 @@ const Footer = () => {
               <li>
                 <Link to="/contact" className="hover:text-accent transition-colors">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="hover:text-accent transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/disclaimer" className="hover:text-accent transition-colors">
-                  Disclaimer
                 </Link>
               </li>
             </ul>
