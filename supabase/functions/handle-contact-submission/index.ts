@@ -1,129 +1,187 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.57.4'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
+}
 
 // Initialize Supabase client
-const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const supabase = createClient(
+  Deno.env.get('SUPABASE_URL') ?? '',
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+)
 
-// Get environment variables
-const twilioSid = Deno.env.get('twilio_sid');
-const twilioAuth = Deno.env.get('twilio_auth');
-const airtableToken = Deno.env.get('airtable_personal_access_token');
-const airtableBase = Deno.env.get('airtable_base');
-const airtableTable = Deno.env.get('airtable_table');
+interface ContactSubmission {
+  submission_id: string
+  name: string
+  email: string
+  phone?: string
+  message: string
+  service_type?: string
+  preferred_contact?: string
+}
 
-serve(async (req) => {
-  console.log('Handle contact submission function called');
+async function syncToAirtable(submission: ContactSubmission) {
+  const airtableToken = Deno.env.get('airtable_personal_access_token')
+  const airtableBase = Deno.env.get('airtable_base')
+  const airtableTable = Deno.env.get('airtable_table')
 
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
+  if (!airtableToken || !airtableBase || !airtableTable) {
+    console.error('Missing Airtable configuration')
+    return false
   }
 
   try {
-    const { submission_id, name, email, phone, message, service_type, preferred_contact } = await req.json();
+    const airtableUrl = `https://api.airtable.com/v0/${airtableBase}/${airtableTable}`
     
-    console.log('Processing submission:', { submission_id, name, email });
+    const response = await fetch(airtableUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${airtableToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        records: [{
+          fields: {
+            'Name': submission.name,
+            'Email': submission.email,
+            'Phone': submission.phone || '',
+            'Message': submission.message,
+            'Service Type': submission.service_type || '',
+            'Preferred Contact': submission.preferred_contact || 'email',
+            'Submission Date': new Date().toISOString()
+          }
+        }]
+      })
+    })
 
-    // 1. Sync to Airtable
-    if (airtableToken && airtableBase && airtableTable) {
-      try {
-        const airtableResponse = await fetch(`https://api.airtable.com/v0/${airtableBase}/${airtableTable}`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${airtableToken}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            fields: {
-              'Name': name,
-              'Email': email,
-              'Phone': phone || '',
-              'Message': message,
-              'Service Type': service_type || '',
-              'Preferred Contact': preferred_contact || 'email',
-              'Submission Date': new Date().toISOString(),
-            }
-          }),
-        });
-
-        if (airtableResponse.ok) {
-          console.log('Successfully synced to Airtable');
-          
-          // Update Supabase record
-          await supabase
-            .from('contact_submissions')
-            .update({ synced_to_airtable: true })
-            .eq('id', submission_id);
-        } else {
-          console.error('Failed to sync to Airtable:', await airtableResponse.text());
-        }
-      } catch (error) {
-        console.error('Error syncing to Airtable:', error);
-      }
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('Airtable sync failed:', errorText)
+      return false
     }
 
-    // 2. Send WhatsApp notification via Twilio
-    if (twilioSid && twilioAuth) {
-      try {
-        const whatsappMessage = `🚨 New Contact Form Submission
-
-👤 Name: ${name}
-📧 Email: ${email}
-📱 Phone: ${phone || 'Not provided'}
-🏢 Service: ${service_type || 'Not specified'}
-💬 Preferred Contact: ${preferred_contact}
-
-Message:
-${message}
-
-Submitted: ${new Date().toLocaleString()}`;
-
-        const twilioResponse = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${twilioSid}/Messages.json`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Basic ${btoa(`${twilioSid}:${twilioAuth}`)}`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams({
-            'From': 'whatsapp:+14155238886', // Twilio Sandbox number
-            'To': 'whatsapp:+1YOUR_PHONE_NUMBER', // Replace with your WhatsApp number
-            'Body': whatsappMessage,
-          }),
-        });
-
-        if (twilioResponse.ok) {
-          console.log('Successfully sent WhatsApp notification');
-          
-          // Update Supabase record
-          await supabase
-            .from('contact_submissions')
-            .update({ notification_sent: true })
-            .eq('id', submission_id);
-        } else {
-          console.error('Failed to send WhatsApp notification:', await twilioResponse.text());
-        }
-      } catch (error) {
-        console.error('Error sending WhatsApp notification:', error);
-      }
-    }
-
-    return new Response(JSON.stringify({ success: true }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-
+    console.log('Successfully synced to Airtable')
+    return true
   } catch (error) {
-    console.error('Error in handle-contact-submission function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    console.error('Error syncing to Airtable:', error)
+    return false
   }
-});
+}
+
+async function sendWhatsAppNotification(submission: ContactSubmission) {
+  const twilioSid = Deno.env.get('twilio_sid')
+  const twilioAuth = Deno.env.get('twilio_auth')
+
+  if (!twilioSid || !twilioAuth) {
+    console.error('Missing Twilio configuration')
+    return false
+  }
+
+  try {
+    const message = `🚨 New Contact Form Submission:
+    
+👤 Name: ${submission.name}
+📧 Email: ${submission.email}
+📱 Phone: ${submission.phone || 'Not provided'}
+🏢 Service: ${submission.service_type || 'Not specified'}
+💬 Preferred Contact: ${submission.preferred_contact || 'email'}
+
+📝 Message:
+${submission.message}
+
+Submission ID: ${submission.submission_id}`
+
+    const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${twilioSid}/Messages.json`
+    
+    const formData = new URLSearchParams()
+    formData.append('From', 'whatsapp:+14155238886') // Twilio sandbox number
+    formData.append('To', 'whatsapp:+YOUR_WHATSAPP_NUMBER') // Replace with your WhatsApp number
+    formData.append('Body', message)
+
+    const response = await fetch(twilioUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${btoa(`${twilioSid}:${twilioAuth}`)}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData
+    })
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('Twilio notification failed:', errorText)
+      return false
+    }
+
+    console.log('Successfully sent WhatsApp notification')
+    return true
+  } catch (error) {
+    console.error('Error sending WhatsApp notification:', error)
+    return false
+  }
+}
+
+async function updateSubmissionStatus(submissionId: string, airtableSynced: boolean, notificationSent: boolean) {
+  try {
+    const { error } = await supabase
+      .from('contact_submissions')
+      .update({
+        synced_to_airtable: airtableSynced,
+        notification_sent: notificationSent
+      })
+      .eq('id', submissionId)
+
+    if (error) {
+      console.error('Error updating submission status:', error)
+    }
+  } catch (error) {
+    console.error('Error updating submission status:', error)
+  }
+}
+
+Deno.serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+  try {
+    const submission: ContactSubmission = await req.json()
+    
+    console.log('Processing contact submission:', submission.submission_id)
+
+    // Sync to Airtable
+    const airtableSynced = await syncToAirtable(submission)
+    
+    // Send WhatsApp notification
+    const notificationSent = await sendWhatsAppNotification(submission)
+    
+    // Update submission status in Supabase
+    await updateSubmissionStatus(submission.submission_id, airtableSynced, notificationSent)
+
+    return new Response(
+      JSON.stringify({ 
+        success: true,
+        airtable_synced: airtableSynced,
+        notification_sent: notificationSent
+      }),
+      { 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 200
+      }
+    )
+  } catch (error) {
+    console.error('Error processing contact submission:', error)
+    return new Response(
+      JSON.stringify({ 
+        error: 'Failed to process submission',
+        details: error.message
+      }),
+      { 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 500
+      }
+    )
+  }
+})
