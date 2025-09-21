@@ -140,10 +140,10 @@ const Header = () => {
 
           {/* WhatsApp Button */}
           <div className="hidden md:flex">
-            <Button asChild className="btn-professional">
+            <Button asChild variant="whatsapp">
               <a 
                 href="whatsapp://send?phone=523222787690"
-                className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium flex items-center gap-2"
+                className="text-white hover:text-white/80 transition-colors font-medium flex items-center gap-2"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -266,10 +266,10 @@ const Header = () => {
               </Link>
 
               <div className="px-3 py-2">
-                <Button asChild className="btn-professional w-full" onClick={() => setIsMenuOpen(false)}>
+                <Button asChild variant="whatsapp" className="w-full" onClick={() => setIsMenuOpen(false)}>
                   <a 
                     href="whatsapp://send?phone=523222787690"
-                    className="text-foreground hover:text-primary transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md hover:bg-muted w-full"
+                    className="text-white hover:text-white/80 transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md w-full"
                   >
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp
