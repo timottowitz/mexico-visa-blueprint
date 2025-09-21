@@ -1,69 +1,82 @@
-# Complete Guide to Mexican Citizenship Requirements in 2024
+# Mexican Citizenship Requirements 2024-2025: Complete Naturalization Guide
 
-Obtaining Mexican citizenship is a significant step that grants you full rights and privileges as a Mexican citizen. This comprehensive guide outlines the requirements, process, and benefits of acquiring Mexican citizenship.
+The acquisition of Mexican citizenship through naturalization is a formal process governed by the Secretaría de Relaciones Exteriores (SRE), representing the final step of integration for a foreign national. This comprehensive guide covers all pathways, requirements, and procedures for obtaining Mexican citizenship in 2024-2025.
 
 ## Who Can Apply for Mexican Citizenship?
 
-Mexican citizenship can be obtained through several pathways:
-
 ### 1. By Birth (Jus Soli)
 - Anyone born on Mexican territory
-- Children of Mexican parents born abroad (with registration)
+- Children of Mexican parents born abroad (with registration at Mexican consulate)
 
-### 2. By Naturalization
-The most common path for foreign residents involves meeting specific residency requirements:
+### 2. Naturalization by Residency: The Standard Path
 
-**For General Applicants:**
-- 5 years of continuous legal residence in Mexico
-- Demonstrate integration into Mexican society
-- Basic Spanish proficiency
-- Knowledge of Mexican history and culture
+**Core Residency Requirement:** Minimum of **five consecutive years** of legal residency, holding either temporary resident or permanent resident card, immediately preceding the application date.
+
+**Physical Presence Test:** You must prove physical presence in Mexico for at least **18 of the 24 months** (18 months within two years) immediately prior to submitting your application. Temporary absences exceeding six months cumulative during this two-year period will result in application denial.
 
 **For Priority Cases (2 years residence):**
-- Spouses of Mexican citizens
-- Children of Mexican citizens
-- Individuals who have rendered outstanding services to Mexico
-- Citizens of Latin American or Iberian Peninsula countries
+- Spouses of Mexican citizens (legally married)
+- Children of Mexican citizens  
+- Citizens of Latin American or Iberian Peninsula countries (Spain and Portugal)
+- Individuals with children born in Mexico
 
-## Required Documents
+### 3. Citizenship by Descent (Nationality)
+Individuals born to at least one Mexican parent are considered Mexican nationals by birthright. This is a registration process at Mexican consulates abroad, not naturalization, and involves no residency requirements or examinations.
 
-### Primary Documents
-1. **Birth Certificate** - Apostilled and translated
-2. **Passport** - Valid with entry stamps
-3. **FM2/FM3 or Residente Temporal/Permanente** - Proof of legal status
-4. **CURP** - Mexican population registry number
-5. **Proof of Income** - Tax returns or employment verification
+## Required Documents for Naturalization
 
-### Supporting Documents
-- Marriage certificate (if applicable)
-- Children's birth certificates (if applicable)
-- Criminal background check from country of origin
-- Medical certificate
-- Photographs (passport-style)
+### Primary Application Documents
+1. **DNN-3 Form** - Official naturalization application
+2. **Current Resident Card** - Temporary or permanent with 6+ months validity
+3. **Foreign Birth Certificate** - Apostilled and officially translated by certified Mexican translator
+4. **Valid Foreign Passport** - With copies of all pages
+5. **Criminal Record Certificates** - Federal and local from place of residence
+6. **Recent Photos** - Two identical passport-sized (color, white background, no glasses)
+7. **Payment Receipt** - Government fee payment proof
+8. **Signed Letter** - Under penalty of perjury detailing all Mexico entries/exits in past 2 years
 
-## The Application Process
+## The Citizenship Examinations: Integration Assessment
 
-### Step 1: Gather Documentation
+All applicants must pass two distinct examinations unless exempted:
+
+### Exam Components
+1. **Spanish Language Proficiency** - Including reading comprehension
+2. **Mexican History and Culture** - Comprehensive knowledge assessment
+
+### 2024-2025 Exam Changes
+The examination format was significantly revised in 2018, moving from memorization-based multiple choice to comprehensive assessment testing genuine understanding of Mexico's culture and society.
+
+### Exemptions
+- Individuals **60 years or older** at application time
+- Officially recognized **refugees**
+- Exempted individuals may still need interviews demonstrating basic Spanish conversation
+
+## The Naturalization Process
+
+### Step 1: Gather Documentation (2-4 months)
 Ensure all foreign documents are:
-- Apostilled in the country of origin
-- Officially translated to Spanish
-- No older than 90 days (for some documents)
+- Apostilled in country of origin (or legalized if not Hague Convention signatory)
+- Translated by government-certified Mexican translator ("perito traductor")
+- Current and properly authenticated
 
-### Step 2: Submit Application
-- Complete Form DNN-1 (Naturalization Application)  
-- Pay application fees (approximately $4,500 MXN)
-- Submit at your local SRE (Secretaría de Relaciones Exteriores) office
+### Step 2: Submit Application at SRE
+- Complete DNN-3 form with supporting documents
+- Pay application fees
+- Submit at local SRE office
+- Receive case number for tracking
 
-### Step 3: Interview and Examination
-- Spanish language assessment
-- Mexican history and culture test
-- Personal interview with immigration officials
+### Step 3: Examinations and Interview
+- Spanish proficiency test with reading comprehension
+- Mexican history and culture examination
+- Personal interview with SRE official
+- Document verification process
 
-### Step 4: Oath Ceremony
-Upon approval, attend the citizenship ceremony where you'll:
-- Take the oath of allegiance to Mexico
-- Receive your naturalization certificate
-- Become eligible for a Mexican passport
+### Step 4: Approval and Oath Ceremony
+Upon approval:
+- Attend citizenship ceremony
+- Take oath of allegiance to Mexico
+- Receive naturalization certificate
+- Become eligible for Mexican passport
 
 ## Benefits of Mexican Citizenship
 
@@ -97,27 +110,29 @@ Upon approval, attend the citizenship ceremony where you'll:
 - Employment records
 - Tax filings
 
-## Financial Investment
+## 2025 Fees and Costs
 
-### Government Fees
-- Application fee: ~$4,500 MXN
-- Additional processing fees: ~$1,500 MXN
-- Oath ceremony: ~$1,000 MXN
+### Government Fees (Updated for 2025)
+- **Naturalization fee:** $9,155 MXN (may vary - verify on official SRE portal)
+- **Document processing:** Additional fees may apply
+- **Oath ceremony:** Included in main fee
 
-### Legal Assistance
-While not required, professional legal assistance typically costs:
+### Professional Assistance
 - Document preparation: $15,000 - $25,000 MXN
-- Full representation: $30,000 - $50,000 MXN
+- Full legal representation: $30,000 - $50,000 MXN
+- Translation services: $5,000 - $10,000 MXN
 
-## Timeline Expectations
+## Timeline Expectations for 2024-2025
 
-The citizenship process typically takes:
-- **Document preparation:** 2-3 months
-- **Application review:** 6-12 months
-- **Interview scheduling:** 1-3 months
-- **Final approval:** 2-4 months
+### Official Processing Timeline
+- **SRE processing:** Approximately 3 months from INM opinion receipt
+- **Document preparation:** 2-4 months
+- **Total timeline:** Often extends beyond official estimates due to administrative delays
 
-**Total timeline:** 12-24 months from application to citizenship ceremony
+### Real-World Timeline
+- **Complete process:** 12-24 months from initial document gathering
+- **Bureaucratic delays:** Can significantly extend official timelines
+- **Planning recommendation:** Allow extra time for unexpected delays
 
 ## Tips for Success
 
