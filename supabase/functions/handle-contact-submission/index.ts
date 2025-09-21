@@ -96,7 +96,7 @@ Submission ID: ${submission.submission_id}`
     
     const formData = new URLSearchParams()
     formData.append('From', 'whatsapp:+14155238886') // Twilio sandbox number
-    formData.append('To', 'whatsapp:+YOUR_WHATSAPP_NUMBER') // Replace with your WhatsApp number
+    formData.append('To', 'whatsapp:+523222787690') // Your WhatsApp number
     formData.append('Body', message)
 
     const response = await fetch(twilioUrl, {
