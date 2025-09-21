@@ -12,6 +12,16 @@ interface BlogPostMeta {
 // Static blog metadata - no need to load full files for listing
 const BLOG_POSTS_METADATA: BlogPostMeta[] = [
   {
+    slug: 'residency-mexico-economic-solvency-requirements-2025',
+    title: 'Residency in Mexico: 2025 Economic Solvency Requirements & Fees',
+    excerpt: 'Complete guide to Mexico residency economic solvency calculations, minimum wage requirements, consulate variations, and 2025 immigration fees.',
+    date: '2025-01-20',
+    readTime: '10 min read',
+    category: 'Residency Requirements',
+    author: 'Mexico Immigration Lawyer',
+    featured: true
+  },
+  {
     slug: 'hire-mexico-immigration-lawyer-guide',
     title: 'Should You Hire a Mexico Immigration Lawyer? Complete Guide 2025',
     excerpt: 'Expert guide on when to hire a Mexico immigration attorney, costs, benefits, and how to choose the right lawyer for your residency, work visa, or citizenship case.',
