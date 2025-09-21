@@ -46,7 +46,7 @@ const Contact = () => {
                   <img 
                     src={consultationMeetingImage} 
                     alt="Immigration attorney consulting with clients about Mexico residency and visa services"
-                    className="w-20 h-16 object-cover rounded-lg shadow-sm hidden sm:block"
+                    className="w-28 h-20 object-cover rounded-lg shadow-sm hidden sm:block"
                   />
                 </div>
               </CardHeader>
