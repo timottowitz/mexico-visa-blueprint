@@ -216,7 +216,7 @@ const AttorneyProfiles = () => {
         </div>
 
         {/* Team Overview Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">15+</div>
             <div className="text-foreground font-medium">Years Combined Experience</div>
@@ -224,14 +224,6 @@ const AttorneyProfiles = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">650+</div>
             <div className="text-foreground font-medium">Cases Handled</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">3</div>
-            <div className="text-foreground font-medium">Languages Spoken</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">98%</div>
-            <div className="text-foreground font-medium">Success Rate</div>
           </div>
         </div>
 
