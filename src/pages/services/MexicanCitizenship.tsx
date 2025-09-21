@@ -51,7 +51,7 @@ const MexicanCitizenship = () => {
     <>
       <Helmet>
         <title>Mexican Citizenship — Naturalization Requirements 2025</title>
-        <meta name="description" content="Mexican citizenship naturalization: 2-5 year residency requirements, dual citizenship benefits, Spanish & civics exams. Expert legal help obtaining Mexican citizenship through naturalization." />
+        <meta name="description" content="Get Mexican citizenship after 2-5 years residency. Expert help with naturalization process, Spanish exam prep & dual citizenship benefits. Schedule consultation now!" />
       </Helmet>
 
       <Hero

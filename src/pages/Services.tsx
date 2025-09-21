@@ -73,7 +73,7 @@ const Services = () => {
     <>
       <Helmet>
         <title>Mexico Immigration Services — Complete Visa & Residency Solutions</title>
-        <meta name="description" content="Comprehensive Mexico immigration services: temporary residency, permanent residency, work visas, family immigration, Mexican citizenship, and corporate solutions. Expert immigration attorneys." />
+        <meta name="description" content="Complete Mexico immigration services: residency, work visas, citizenship & family immigration. Licensed attorneys with 15+ years experience. Free consultation available!" />
         <meta name="keywords" content="Mexico immigration services, Mexico residency visa, immigration attorney Mexico, temporary residency Mexico, permanent residency Mexico, Mexico work visa, Mexican citizenship, family immigration Mexico" />
         <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/services" />
       </Helmet>

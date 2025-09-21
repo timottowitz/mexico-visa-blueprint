@@ -43,7 +43,7 @@ const PermanentResidency = () => {
     <>
       <Helmet>
         <title>Permanent Residency Mexico — Residente Permanente Guide</title>
-        <meta name="description" content="Permanent residency Mexico: Requirements for indefinite residency, financial thresholds, family options. Expert legal help obtaining Residente Permanente with Mexico immigration lawyer." />
+        <meta name="description" content="Get permanent residency in Mexico with no renewals needed. Expert legal help with financial requirements, family cases & work authorization. Start your application today!" />
       </Helmet>
 
       <Hero

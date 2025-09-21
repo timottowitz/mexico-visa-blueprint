@@ -48,7 +48,7 @@ const CorporateImmigration = () => {
     <>
       <Helmet>
         <title>Corporate Immigration Services Mexico — Business Visas</title>
-        <meta name="description" content="Corporate immigration services for companies relocating employees to Mexico. Employer registration, business owner visas, executive transfers, and compliance support." />
+        <meta name="description" content="Corporate immigration solutions for Mexico: executive transfers, investor visas, employer registration & work permits. Expert business immigration services. Get quote today!" />
       </Helmet>
 
       <Hero

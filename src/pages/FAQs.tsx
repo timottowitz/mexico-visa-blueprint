@@ -109,7 +109,7 @@ const FAQs = () => {
     <>
         <Helmet>
         <title>Mexico Immigration FAQs — Expert Answers & Guide</title>
-        <meta name="description" content="Mexico immigration FAQ: Expert answers on temporary residency, permanent residency, work permits, Mexican citizenship, and legal services. Comprehensive immigration guide." />
+        <meta name="description" content="Get answers to Mexico immigration questions: residency requirements, work permits, citizenship process & legal costs. Expert FAQ from experienced immigration lawyers." />
           <meta name="keywords" content="Mexico immigration FAQ, temporary residency Mexico, permanent residency Mexico, work permit Mexico, Mexican citizenship, immigration lawyer Mexico" />
         </Helmet>
 

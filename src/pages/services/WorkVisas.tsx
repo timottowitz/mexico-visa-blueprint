@@ -33,7 +33,7 @@ const WorkVisas = () => {
     <>
       <Helmet>
         <title>Mexico Work Visa — Work Permits & Employment Authorization</title>
-        <meta name="description" content="Mexico work visa & work permits: Employer-sponsored visas, INM authorization, temporary resident with work permission. Expert legal help for foreign employees working in Mexico." />
+        <meta name="description" content="Need Mexico work visa or work permit? Expert legal help with employer sponsorship, INM authorization & temporary residency with work rights. Call for consultation!" />
       </Helmet>
 
       <Hero

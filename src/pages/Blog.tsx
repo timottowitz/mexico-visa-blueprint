@@ -118,7 +118,7 @@ const Blog = () => {
         <title>Mexico Immigration Blog — Expert Guides & Updates</title>
         <meta 
           name="description" 
-          content="Stay updated with the latest Mexico immigration news, visa guides, and expert insights. Comprehensive resources for temporary residency, permanent residency, and citizenship." 
+          content="Expert Mexico immigration guides & news: residency requirements, visa processes, citizenship tips & law updates. Written by experienced immigration attorneys." 
         />
         <meta property="og:title" content="Mexico Immigration Blog — Expert Guides & Updates" />
         <meta property="og:description" content="Stay updated with the latest Mexico immigration news, visa guides, and expert insights." />

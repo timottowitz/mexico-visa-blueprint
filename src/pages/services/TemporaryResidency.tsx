@@ -51,7 +51,7 @@ const TemporaryResidency = () => {
     <>
       <Helmet>
         <title>Temporary Residency Mexico — Requirements & Process</title>
-        <meta name="description" content="Temporary residency Mexico guide: financial requirements, application process, and legal help. Get 1-4 year Mexico temporary resident visa with expert immigration lawyer assistance." />
+        <meta name="description" content="Get Mexico temporary residency (1-4 years) with expert legal help. Financial requirements, application process & INM support. Perfect for retirees & remote workers!" />
       </Helmet>
 
       <Hero

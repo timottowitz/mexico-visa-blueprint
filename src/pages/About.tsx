@@ -56,7 +56,7 @@ const About = () => {
     <>
       <Helmet>
         <title>About Mexico Immigration Lawyer — 15+ Years Experience</title>
-        <meta name="description" content="Mexico Immigration Lawyer: Boutique law firm in Mexico City with 15+ years experience. Licensed attorneys, 1,000+ successful cases, bilingual service. Expert in residency, citizenship & work permits." />
+        <meta name="description" content="Licensed Mexico immigration attorneys in Mexico City with 15+ years experience. 1,000+ successful cases for US & Canadian clients. Bilingual legal services you can trust." />
         <meta name="keywords" content="Mexico immigration lawyer, immigration attorney Mexico City, Mexican immigration law firm, residency lawyer Mexico, work permit attorney Mexico, bilingual immigration lawyer" />
         <link rel="canonical" href="https://mexicoimmigrationlawyer.com/about" />
       </Helmet>

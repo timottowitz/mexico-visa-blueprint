@@ -46,7 +46,7 @@ const FamilyBasedImmigration = () => {
     <>
       <Helmet>
         <title>Family Based Immigration Mexico — Marriage & Family Visas</title>
-        <meta name="description" content="Family-based immigration Mexico: residency through Mexican spouses, children, or relatives. Marriage visas, family reunification, no financial requirements for qualified family cases." />
+        <meta name="description" content="Reunite with family in Mexico! Marriage visas, family reunification, no financial requirements for qualified cases. Expert legal help with spouse & family visas." />
       </Helmet>
 
       <Hero

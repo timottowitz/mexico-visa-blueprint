@@ -96,7 +96,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>Mexico Immigration Lawyer — Visa & Residency Experts in Mexico</title>
-        <meta name="description" content="Bilingual Mexican immigration law firm helping U.S. & Canadian clients obtain residency, citizenship, work visas, and more. Expert guidance for Mexico immigration." />
+        <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. Bilingual attorneys with 15+ years experience. Free consultation!" />
       </Helmet>
 
       {/* Hero Section */}

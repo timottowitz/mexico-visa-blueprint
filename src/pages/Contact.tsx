@@ -10,7 +10,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Mexico Immigration Lawyer — Free Consultation</title>
-        <meta name="description" content="Contact Mexico immigration lawyer for free consultation. Mexico City office, US/Canada toll-free phone, WhatsApp, email. Expert legal help for Mexico residency and visas." />
+        <meta name="description" content="Contact our Mexico immigration attorneys for free consultation. Mexico City office, US toll-free phone, WhatsApp support. Get expert help with your residency case today!" />
       </Helmet>
 
       <Hero
