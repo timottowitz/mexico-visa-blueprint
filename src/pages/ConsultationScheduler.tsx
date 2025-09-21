@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Calendar, CheckCircle, Users, Phone, Video, ArrowRight, ExternalLink } from "lucide-react";
+import { Clock, Calendar, CheckCircle, Users, Phone, Video, ArrowRight } from "lucide-react";
 
 interface ConsultationType {
   id: string;
@@ -165,18 +165,13 @@ const ConsultationScheduler = () => {
 
                 {/* Schedule Button */}
                 <div className="pt-4">
-                  <a 
-                    href={consultation.calendlyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
+                  <Button 
+                    className="w-full group-hover:shadow-lg transition-shadow"
+                    onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
                   >
-                    <Button className="w-full group-hover:shadow-lg transition-shadow">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      Schedule Now
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </a>
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Schedule Now
+                  </Button>
                 </div>
               </CardContent>
             </Card>
