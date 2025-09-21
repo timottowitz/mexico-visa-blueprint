@@ -6,8 +6,9 @@ interface GoogleMapProps {
 }
 
 const GoogleMap = ({ address, title = "Our Location" }: GoogleMapProps) => {
+  // Simple Google Maps embed (no API key needed)
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
   const encodedAddress = encodeURIComponent(address);
-  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDummyKeyForDemo&q=${encodedAddress}&zoom=15&maptype=roadmap`;
 
   return (
     <Card className="card-professional">
