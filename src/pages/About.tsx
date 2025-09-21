@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Award, Users, Shield, Zap } from "lucide-react";
+import lawyerProfileImage from "@/assets/lawyer-profile.png";
 
 const About = () => {
   const values = [
@@ -114,6 +115,17 @@ const About = () => {
                 </Card>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Attorney Profile */}
+        <section className="mb-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <img 
+              src={lawyerProfileImage} 
+              alt="Mexico immigration attorney consulting with client in professional setting"
+              className="w-48 h-32 object-cover rounded-lg mx-auto shadow-md"
+            />
           </div>
         </section>
 
