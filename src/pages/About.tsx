@@ -133,9 +133,9 @@ const About = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
                         <p className="text-muted-foreground">
-                          Av. Paseo de la Reforma 123, Piso 4<br />
-                          Col. Polanco, Miguel Hidalgo<br />
-                          CDMX 11560, Mexico
+                          Calle Pestalozzi 635<br />
+                          Col. Narvarte Poniente, Benito Juárez<br />
+                          CDMX 03020, México
                         </p>
                       </div>
                     </div>
@@ -153,13 +153,10 @@ const About = () => {
                     <div className="flex items-start space-x-3">
                       <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                        <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
                         <p className="text-muted-foreground">
-                          <a href="tel:+525555551234" className="hover:text-primary transition-colors">
-                            +52 (55) 5555-1234
-                          </a><br />
-                          <a href="tel:18001234567" className="hover:text-primary transition-colors">
-                            1-800-123-4567 (US/Canada)
+                          <a href="https://wa.me/52322278690" className="hover:text-primary transition-colors">
+                            +52-322-278690
                           </a>
                         </p>
                       </div>

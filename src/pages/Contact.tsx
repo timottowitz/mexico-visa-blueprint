@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import ContactForm from "@/components/ui/contact-form";
+import GoogleMap from "@/components/ui/google-map";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -16,12 +17,12 @@ const Contact = () => {
         title="Contact Us"
         subtitle="We're ready to assist with all your Mexico immigration needs. Reach out with questions, to book a consultation, or to begin your application."
         primaryCta={{
-          text: "Call Now: +52 (55) 5555-1234",
-          href: "tel:+525555551234"
+          text: "WhatsApp: +52-322-278690",
+          href: "https://wa.me/52322278690"
         }}
         secondaryCta={{
-          text: "US/Canada: 1-800-123-4567",
-          href: "tel:18001234567"
+          text: "Schedule a Consultation",
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -43,13 +44,10 @@ const Contact = () => {
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone Numbers</h3>
+                    <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+525555551234" className="hover:text-primary transition-colors block">
-                        +52 (55) 5555-1234 (Mexico City Office)
-                      </a>
-                      <a href="tel:18001234567" className="hover:text-primary transition-colors block">
-                        1-800-123-4567 (U.S. & Canada Toll-Free)
+                      <a href="https://wa.me/52322278690" className="hover:text-primary transition-colors block">
+                        +52-322-278690
                       </a>
                     </p>
                   </div>
@@ -88,9 +86,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Mexico Immigration Lawyer</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Av. Paseo de la Reforma #123, Piso 4<br />
-                      Colonia Polanco, Alcaldía Miguel Hidalgo<br />
-                      Mexico City, CDMX 11560, Mexico
+                      Calle Pestalozzi 635<br />
+                      Colonia Narvarte Poniente<br />
+                      Alcaldía Benito Juárez<br />
+                      Ciudad de México, C.P. 03020, México
                     </p>
                   </div>
                 </div>
@@ -110,21 +109,11 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
-            <Card className="card-professional">
-              <CardHeader>
-                <CardTitle className="text-xl">Location</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-muted rounded-lg h-48 flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="w-8 h-8 mx-auto mb-2" />
-                    <p>Interactive map coming soon</p>
-                    <p className="text-sm">Polanco, Mexico City</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Google Map */}
+            <GoogleMap 
+              address="Calle Pestalozzi 635, Colonia Narvarte Poniente, Alcaldía Benito Juárez, Ciudad de México, C.P. 03020, México"
+              title="Office Location"
+            />
           </div>
         </div>
 

@@ -36,24 +36,16 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p>Av. Paseo de la Reforma 123, Piso 4</p>
-                  <p>Col. Polanco, Miguel Hidalgo</p>
-                  <p>CDMX 11560, Mexico</p>
+                  <p>Calle Pestalozzi 635</p>
+                  <p>Col. Narvarte Poniente, Benito Juárez</p>
+                  <p>CDMX 03020, México</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <div>
-                  <a href="tel:+525555551234" className="hover:text-accent transition-colors">
-                    +52 (55) 5555-1234
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
-                <div>
-                  <a href="tel:18001234567" className="hover:text-accent transition-colors">
-                    1-800-123-4567 (US/Canada)
+                  <a href="https://wa.me/52322278690" className="hover:text-accent transition-colors">
+                    WhatsApp: +52-322-278690
                   </a>
                 </div>
               </div>

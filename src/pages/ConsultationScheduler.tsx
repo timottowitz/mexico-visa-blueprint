@@ -311,10 +311,10 @@ const ConsultationScheduler = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <a href="tel:+525555551234">
+            <a href="https://wa.me/52322278690">
               <Button variant="outline" size="lg">
                 <Phone className="mr-2 h-4 w-4" />
-                Call Now: +52 (55) 5555-1234
+                WhatsApp: +52-322-278690
               </Button>
             </a>
           </div>
