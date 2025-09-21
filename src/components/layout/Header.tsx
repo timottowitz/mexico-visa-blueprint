@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -145,7 +145,7 @@ const Header = () => {
                 href="whatsapp://send?phone=523222787690"
                 className="text-white hover:text-white/80 transition-colors font-medium flex items-center gap-2"
               >
-                <Phone className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </a>
             </Button>
@@ -271,7 +271,7 @@ const Header = () => {
                     href="whatsapp://send?phone=523222787690"
                     className="text-white hover:text-white/80 transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md w-full"
                   >
-                    <Phone className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4" />
                     WhatsApp
                   </a>
                 </Button>
