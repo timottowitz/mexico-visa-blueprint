@@ -116,10 +116,10 @@ const FAQs = () => {
         <Hero
           title="Mexico Immigration: Frequently Asked Questions"
           subtitle="Comprehensive answers to the most common questions about Mexican immigration, visa requirements, residency processes, work permits, and our legal services. Navigate the complex immigration system with expert guidance."
-          primaryCta={{
-            text: "Schedule a Consultation",
-            href: "/contact"
-          }}
+        primaryCta={{
+          text: "Schedule a Consultation",
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
+        }}
         />
 
         <div className="container mx-auto px-4 py-16">
@@ -174,8 +174,12 @@ const FAQs = () => {
                 We're here to help guide you through the Mexico immigration process with expert legal advice.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="btn-professional">
-                  <Link to="/contact">Schedule a Consultation</Link>
+                <Button 
+                  size="lg" 
+                  className="btn-professional"
+                  onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                >
+                  Schedule a Consultation
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/services/temporary-residency">View Our Services</Link>

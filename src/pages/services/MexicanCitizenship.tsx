@@ -59,7 +59,7 @@ const MexicanCitizenship = () => {
         subtitle="Becoming a naturalized Mexican citizen grants full civic rights, a Mexican passport, and the ability to own property nationwide without a trust. Mexico permits dual citizenship, so most U.S. and Canadian citizens can keep their original nationality."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -190,8 +190,12 @@ const MexicanCitizenship = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Interested in becoming a Mexican citizen?</h2>
             <p className="text-lg text-muted-foreground mb-8">Book a citizenship eligibility assessment.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
+              <Button 
+                size="lg" 
+                className="btn-professional"
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+              >
+                Schedule a Consultation
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/faqs">View FAQs</Link>

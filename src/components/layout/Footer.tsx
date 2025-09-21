@@ -107,9 +107,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/schedule-consultation" className="hover:text-accent transition-colors">
+                <button 
+                  onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                  className="hover:text-accent transition-colors text-left"
+                >
                   Schedule Consultation
-                </Link>
+                </button>
               </li>
               <li>
                 <Link to="/about" className="hover:text-accent transition-colors">

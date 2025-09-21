@@ -56,7 +56,7 @@ const CorporateImmigration = () => {
         subtitle="Expanding into Mexico or relocating foreign staff requires precise immigration planning. We act as your strategic partner for transfers, ensuring executives, employees, and their families obtain visas smoothly and remain compliant."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -179,8 +179,12 @@ const CorporateImmigration = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Relocating talent to Mexico?</h2>
             <p className="text-lg text-muted-foreground mb-8">Contact our Corporate Immigration team for a tailored plan.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
+              <Button 
+                size="lg" 
+                className="btn-professional"
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+              >
+                Schedule a Consultation
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/services/work-visas">Learn About Work Visas</Link>

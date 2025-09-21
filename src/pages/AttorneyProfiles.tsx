@@ -402,12 +402,13 @@ const AttorneyProfiles = () => {
             Schedule a consultation to meet with one of our experienced immigration attorneys and discuss your specific case.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/schedule-consultation">
-              <Button size="lg">
-                <Calendar className="mr-2 h-4 w-4" />
-                Schedule Consultation
-              </Button>
-            </Link>
+            <Button 
+              size="lg"
+              onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+            >
+              <Calendar className="mr-2 h-4 w-4" />
+              Schedule Consultation
+            </Button>
             <Link to="/contact">
               <Button variant="outline" size="lg">
                 Contact Our Team

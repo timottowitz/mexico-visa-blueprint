@@ -41,7 +41,7 @@ const WorkVisas = () => {
         subtitle="If you're employed by, or assigned to, a Mexican entity, you need the correct work-authorized residency. We support both individuals and employers end-to-end—from employer registration and INM work authorization to consular issuance and the resident card in Mexico."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -161,8 +161,12 @@ const WorkVisas = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Need a Mexican work visa?</h2>
             <p className="text-lg text-muted-foreground mb-8">Contact us for a streamlined, on-time process for you or your team.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
+              <Button 
+                size="lg" 
+                className="btn-professional"
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+              >
+                Schedule a Consultation
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/services/corporate-immigration">Corporate Immigration Services</Link>

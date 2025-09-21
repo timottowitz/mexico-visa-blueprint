@@ -60,7 +60,7 @@ const About = () => {
         subtitle="Mexico Immigration Lawyer is a boutique law firm dedicated exclusively to immigration and nationality law. Based in Mexico City, we bridge the gap between North America and Mexico with bilingual, bicultural service."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -189,9 +189,13 @@ const About = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Have questions or ready to begin?</h2>
             <p className="text-lg text-muted-foreground mb-8">Contact us to schedule a consultation.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="btn-professional"
+                  onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                >
+                  Schedule a Consultation
+                </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/faqs">View FAQs</Link>
               </Button>

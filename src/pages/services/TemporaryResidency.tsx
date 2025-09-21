@@ -59,7 +59,7 @@ const TemporaryResidency = () => {
         subtitle="A Temporary Resident Visa (Residente Temporal) allows you to live in Mexico for longer than 180 days and up to four years (typically issued for 1 year initially, renewable to a total of 4 years). It's ideal for retirees, remote workers with foreign income, investors, students, and those with family ties in Mexico."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -181,8 +181,12 @@ const TemporaryResidency = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Interested in Temporary Residency?</h2>
             <p className="text-lg text-muted-foreground mb-8">Contact us for an honest eligibility assessment and next steps.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
+              <Button 
+                size="lg" 
+                className="btn-professional"
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+              >
+                Schedule a Consultation
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/services/permanent-residency">Learn About Permanent Residency</Link>

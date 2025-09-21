@@ -105,7 +105,7 @@ const Index = () => {
         subtitle="Welcome to Mexico Immigration Lawyer, a bilingual law firm serving clients from the United States and Canada. We provide end-to-end legal guidance to make your move to Mexico smooth and stress-free. Whether you're seeking temporary residency, permanent residency, or Mexican citizenship, our experienced attorneys help you every step of the way."
         primaryCta={{
           text: "Get Started — Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -224,8 +224,12 @@ const Index = () => {
                   Contact us for a free initial consultation. We'll evaluate your case and explain your options clearly.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="btn-accent">
-                    <Link to="/contact">Get Started Today — Schedule a Consultation</Link>
+                  <Button 
+                    size="lg" 
+                    className="btn-accent"
+                    onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                  >
+                    Get Started Today — Schedule a Consultation
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                     <Link to="/about">Learn About Our Firm</Link>

@@ -54,7 +54,7 @@ const FamilyBasedImmigration = () => {
         subtitle="Mexico welcomes close family members of its citizens and residents. If you have a Mexican spouse or child—or certain other qualifying relations—you may obtain residency through family unity, often without financial proofs and frequently through in-country processing."
         primaryCta={{
           text: "Schedule a Consultation",
-          href: "/contact"
+          onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
         }}
       />
 
@@ -173,8 +173,12 @@ const FamilyBasedImmigration = () => {
             <h2 className="text-3xl font-bold text-foreground mb-6">Have a Mexican spouse or family member?</h2>
             <p className="text-lg text-muted-foreground mb-8">Contact us to confirm your eligibility and plan your filing.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-professional">
-                <Link to="/contact">Schedule a Consultation</Link>
+              <Button 
+                size="lg" 
+                className="btn-professional"
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+              >
+                Schedule a Consultation
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/faqs">View FAQs</Link>

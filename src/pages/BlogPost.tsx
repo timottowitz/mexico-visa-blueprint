@@ -323,12 +323,14 @@ In the meantime, feel free to [contact us](/contact) for personalized guidance o
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Our experienced immigration attorneys are ready to help you navigate the Mexico residency process. Schedule a consultation to discuss your specific situation.
             </p>
-            <Link to="/schedule-consultation">
-              <Button size="lg" className="mr-4">
-                Schedule Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="mr-4"
+              onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+            >
+              Schedule Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
             <Link to="/contact">
               <Button variant="outline" size="lg">
                 Contact Us

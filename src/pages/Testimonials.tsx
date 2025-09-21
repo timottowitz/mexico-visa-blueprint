@@ -313,12 +313,13 @@ const Testimonials = () => {
             Join hundreds of satisfied clients who achieved their Mexico immigration goals with our expert guidance. Schedule a consultation to discuss your specific situation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/schedule-consultation">
-              <Button size="lg">
-                Schedule Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <Button 
+              size="lg"
+              onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+            >
+              Schedule Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
             <Link to="/contact">
               <Button variant="outline" size="lg">
                 Contact Us

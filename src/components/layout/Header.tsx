@@ -131,7 +131,12 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <Button asChild className="btn-professional">
-              <Link to="/schedule-consultation">Schedule Consultation</Link>
+              <button 
+                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
+              >
+                Schedule Consultation
+              </button>
             </Button>
           </div>
 
@@ -242,7 +247,12 @@ const Header = () => {
 
               <div className="px-3 py-2">
                 <Button asChild className="btn-professional w-full" onClick={() => setIsMenuOpen(false)}>
-                  <Link to="/schedule-consultation">Schedule Consultation</Link>
+                  <button 
+                    onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                    className="text-foreground hover:text-primary transition-colors block px-4 py-2 text-sm rounded-md hover:bg-muted"
+                  >
+                    Schedule Consultation
+                  </button>
                 </Button>
               </div>
             </div>

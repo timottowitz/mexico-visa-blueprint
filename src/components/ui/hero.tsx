@@ -8,11 +8,13 @@ interface HeroProps {
   subtitle: string;
   primaryCta?: {
     text: string;
-    href: string;
+    href?: string;
+    onClick?: () => void;
   };
   secondaryCta?: {
     text: string;
-    href: string;
+    href?: string;
+    onClick?: () => void;
   };
   backgroundImage?: string;
   className?: string;
@@ -62,19 +64,44 @@ const Hero = ({
           {(primaryCta || secondaryCta) && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               {primaryCta && (
-                <Button asChild size="lg" className="btn-accent text-lg px-8 py-3">
-                  <Link to={primaryCta.href}>
-                    {primaryCta.text}
-                  </Link>
-                </Button>
+                <>
+                  {primaryCta.href ? (
+                    <Button asChild size="lg" className="btn-accent text-lg px-8 py-3">
+                      <Link to={primaryCta.href}>
+                        {primaryCta.text}
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="lg" 
+                      className="btn-accent text-lg px-8 py-3"
+                      onClick={primaryCta.onClick}
+                    >
+                      {primaryCta.text}
+                    </Button>
+                  )}
+                </>
               )}
               
               {secondaryCta && (
-                <Button asChild variant="outline" size="lg" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 text-lg px-8 py-3">
-                  <Link to={secondaryCta.href}>
-                    {secondaryCta.text}
-                  </Link>
-                </Button>
+                <>
+                  {secondaryCta.href ? (
+                    <Button asChild variant="outline" size="lg" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 text-lg px-8 py-3">
+                      <Link to={secondaryCta.href}>
+                        {secondaryCta.text}
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button 
+                      variant="outline" 
+                      size="lg" 
+                      className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 text-lg px-8 py-3"
+                      onClick={secondaryCta.onClick}
+                    >
+                      {secondaryCta.text}
+                    </Button>
+                  )}
+                </>
               )}
             </div>
           )}
