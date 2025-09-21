@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Calendar, Clock, ArrowLeft, ArrowRight, User } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, User, Phone, MessageCircle } from "lucide-react";
 import { loadBlogPost } from "@/utils/blogUtils";
 import lawyerProfile from "@/assets/lawyer-profile.png";
 
@@ -208,27 +208,73 @@ const BlogPost = () => {
             </div>
           </article>
 
-          {/* CTA Section */}
-          <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary-accent/10 rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              Need Help With Your Immigration Case?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Our experienced immigration attorneys are ready to help you navigate the Mexico residency process. Schedule a consultation to discuss your specific situation.
-            </p>
-            <Button 
-              size="lg" 
-              className="mr-4"
-              onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
-            >
-              Schedule Consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Link to="/contact">
-              <Button variant="outline" size="lg">
-                Contact Us
-              </Button>
-            </Link>
+          {/* Enhanced CTA Section */}
+          <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary-accent/10 rounded-lg p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-semibold mb-4 text-foreground">
+                Need Help With Your Immigration Case?
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Our experienced immigration attorneys are ready to help you navigate the Mexico residency process. Get in touch today to discuss your specific situation.
+              </p>
+            </div>
+            
+            {/* Contact Options */}
+            <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {/* Calendly Button */}
+              <div className="text-center">
+                <Button 
+                  size="lg" 
+                  className="w-full mb-2"
+                  onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
+                >
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Schedule Consultation
+                </Button>
+                <p className="text-sm text-muted-foreground">Book a free 30-minute consultation</p>
+              </div>
+
+              {/* WhatsApp Button */}
+              <div className="text-center">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="w-full mb-2 border-green-500 text-green-600 hover:bg-green-50 hover:text-green-700 hover:border-green-600"
+                  asChild
+                >
+                  <a href="https://wa.me/52322278690" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    WhatsApp Chat
+                  </a>
+                </Button>
+                <p className="text-sm text-muted-foreground">Instant messaging support</p>
+              </div>
+
+              {/* Phone Button */}
+              <div className="text-center">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="w-full mb-2"
+                  asChild
+                >
+                  <a href="tel:+12144734507">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call Now
+                  </a>
+                </Button>
+                <p className="text-sm text-muted-foreground">Direct phone consultation</p>
+              </div>
+            </div>
+
+            {/* Additional Contact Info */}
+            <div className="mt-6 pt-6 border-t border-border/50 text-center text-sm text-muted-foreground">
+              <p>
+                <strong>US:</strong> +1 (214) 473-4507 | 
+                <strong className="ml-2">WhatsApp:</strong> +52-322-278690
+              </p>
+              <p className="mt-1">Available Monday-Friday, 9 AM - 6 PM (CST)</p>
+            </div>
           </div>
 
           {/* Related Articles */}
