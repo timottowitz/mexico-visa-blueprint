@@ -138,27 +138,27 @@ const Index = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">Mexico Residency Visa Options</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our immigration attorneys in Mexico specialize in all types of Mexico residency visas. Whether you need temporary residency for retirement, 
-                  permanent residency for long-term living, or work visas for employment, we provide expert legal guidance throughout the entire process.
+                  Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">immigration attorneys in Mexico</Link> specialize in all types of Mexico residency visas. Whether you need <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover font-medium">temporary residency for retirement</Link>, 
+                  <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover font-medium">permanent residency for long-term living</Link>, or <Link to="/services/work-visas" className="text-primary hover:text-primary-hover font-medium">work visas for employment</Link>, we provide expert legal guidance throughout the entire process.
                 </p>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• <strong>Temporary Residency Mexico:</strong> 1-4 year visas for retirees and remote workers</li>
-                  <li>• <strong>Permanent Residency Mexico:</strong> Indefinite residency with work authorization</li>
-                  <li>• <strong>Mexico Work Visas:</strong> Employment-based immigration solutions</li>
-                  <li>• <strong>Family Immigration Mexico:</strong> Spouse and family reunification visas</li>
+                  <li>• <strong><Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover">Temporary Residency Mexico:</Link></strong> 1-4 year visas for retirees and remote workers</li>
+                  <li>• <strong><Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover">Permanent Residency Mexico:</Link></strong> Indefinite residency with work authorization</li>
+                  <li>• <strong><Link to="/services/work-visas" className="text-primary hover:text-primary-hover">Mexico Work Visas:</Link></strong> Employment-based immigration solutions</li>
+                  <li>• <strong><Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover">Family Immigration Mexico:</Link></strong> Spouse and family reunification visas</li>
                 </ul>
               </div>
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">Expert Mexico Immigration Lawyer Services</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  When you hire a Mexico immigration lawyer from our firm, you get bilingual legal representation, comprehensive visa assistance, 
-                  and strategic guidance for Mexican citizenship by naturalization. Our immigration attorneys handle everything from consulate applications to INM processing.
+                  When you hire a <Link to="/about" className="text-primary hover:text-primary-hover font-medium">Mexico immigration lawyer from our firm</Link>, you get bilingual legal representation, comprehensive <Link to="/services" className="text-primary hover:text-primary-hover font-medium">Mexico visa assistance</Link>, 
+                  and strategic guidance for <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover font-medium">Mexican citizenship by naturalization</Link>. Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">immigration attorneys</Link> handle everything from consulate applications to INM processing.
                 </p>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• <strong>Mexico Visa Assistance:</strong> Complete application support and representation</li>
-                  <li>• <strong>Immigration Attorney Mexico:</strong> Licensed legal professionals with 15+ years experience</li>
-                  <li>• <strong>Mexican Citizenship Services:</strong> Naturalization process and exam preparation</li>
-                  <li>• <strong>Corporate Immigration:</strong> Business visa solutions and employee transfers</li>
+                  <li>• <strong>Mexico Visa Assistance:</strong> Complete application support and representation with our <Link to="/contact" className="text-primary hover:text-primary-hover">experienced legal team</Link></li>
+                  <li>• <strong><Link to="/about" className="text-primary hover:text-primary-hover">Immigration Attorney Mexico:</Link></strong> Licensed legal professionals with 15+ years experience</li>
+                  <li>• <strong><Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover">Mexican Citizenship Services:</Link></strong> Naturalization process and exam preparation</li>
+                  <li>• <strong><Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover">Corporate Immigration:</Link></strong> Business visa solutions and employee transfers</li>
                 </ul>
               </div>
             </div>
@@ -217,15 +217,15 @@ const Index = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <h4 className="font-semibold text-foreground mb-2">Mexico Residency Experts</h4>
-                  <p className="text-sm text-muted-foreground">Specialized in temporary and permanent residency applications with high success rates for US and Canadian citizens seeking Mexico residency visas.</p>
+                  <p className="text-sm text-muted-foreground">Specialized in <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover underline">temporary</Link> and <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency applications</Link> with high success rates for US and Canadian citizens seeking <Link to="/services" className="text-primary hover:text-primary-hover underline">Mexico residency visas</Link>.</p>
                 </div>
                 <div className="text-center">
                   <h4 className="font-semibold text-foreground mb-2">Immigration Attorney Services</h4>
-                  <p className="text-sm text-muted-foreground">Licensed Mexico immigration lawyers providing bilingual legal representation for all aspects of Mexican immigration law and visa assistance.</p>
+                  <p className="text-sm text-muted-foreground">Licensed <Link to="/about" className="text-primary hover:text-primary-hover underline">Mexico immigration lawyers</Link> providing bilingual legal representation for all aspects of Mexican immigration law and <Link to="/services" className="text-primary hover:text-primary-hover underline">visa assistance</Link>.</p>
                 </div>
                 <div className="text-center">
                   <h4 className="font-semibold text-foreground mb-2">Mexican Citizenship Assistance</h4>
-                  <p className="text-sm text-muted-foreground">Expert guidance for Mexican citizenship by naturalization, including Spanish language preparation and civics exam support for qualifying residents.</p>
+                  <p className="text-sm text-muted-foreground">Expert guidance for <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican citizenship by naturalization</Link>, including Spanish language preparation and civics exam support for qualifying residents. Learn more about our <Link to="/faqs" className="text-primary hover:text-primary-hover underline">citizenship requirements</Link>.</p>
                 </div>
               </div>
             </div>

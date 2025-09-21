@@ -142,9 +142,9 @@ const Services = () => {
                     <li>• INM resident card processing support</li>
                     <li>• Annual renewal guidance and representation</li>
                   </ul>
-                  <Button asChild className="w-full">
-                    <Link to="/services/temporary-residency">Learn About Temporary Residency</Link>
-                  </Button>
+              <Button asChild size="lg" className="w-full">
+                <Link to="/services/temporary-residency">Learn About Temporary Residency</Link>
+              </Button>
                 </CardContent>
               </Card>
 

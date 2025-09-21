@@ -146,11 +146,11 @@ const PermanentResidency = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">CURP</h3>
-                <p className="text-muted-foreground mb-6">We assist with obtaining your CURP after approval.</p>
+                <p className="text-muted-foreground mb-6">We assist with obtaining your CURP after approval. This document is essential for many aspects of life in Mexico and is required for <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican citizenship applications</Link>.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Best Practices</h3>
-                <p className="text-muted-foreground">We brief you on address notifications, travel patterns relevant to future citizenship eligibility, and options to sponsor relatives once permanent.</p>
+                <p className="text-muted-foreground">We brief you on address notifications, travel patterns relevant to future <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">citizenship eligibility</Link>, and options to <Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover underline">sponsor relatives</Link> once permanent. Our <Link to="/services" className="text-primary hover:text-primary-hover underline">comprehensive immigration services</Link> support your long-term plans in Mexico.</p>
               </div>
             </div>
           </div>

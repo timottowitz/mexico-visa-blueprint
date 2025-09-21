@@ -168,17 +168,17 @@ const MexicanCitizenship = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Document Compliance</h3>
-                <p className="text-muted-foreground mb-6">Ensure legalization/translation standards.</p>
+                <p className="text-muted-foreground mb-6">Ensure legalization/translation standards. Our <Link to="/about" className="text-primary hover:text-primary-hover underline">experienced legal team</Link> has handled over 1,000 successful cases and knows exactly what documentation Mexican authorities require.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Application Crafting</h3>
-                <p className="text-muted-foreground">Accurate Spanish filings and persuasive cover letters where appropriate.</p>
+                <p className="text-muted-foreground">Accurate Spanish filings and persuasive cover letters where appropriate. If you're also interested in other immigration options, explore our <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency services</Link> or <Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover underline">family-based immigration options</Link>.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Exam Preparation</h3>
-                <p className="text-muted-foreground mb-6">Study materials, practice tests, and optional tutoring.</p>
+                <p className="text-muted-foreground mb-6">Study materials, practice tests, and optional tutoring. We provide comprehensive preparation for both Spanish language and Mexican civics requirements. Check our <Link to="/faqs" className="text-primary hover:text-primary-hover underline">FAQ section</Link> for common questions about the naturalization process.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Post-Approval Steps</h3>
-                <p className="text-muted-foreground">Passport/ID setup and updating prior registrations.</p>
+                <p className="text-muted-foreground">Passport/ID setup and updating prior registrations. Our <Link to="/contact" className="text-primary hover:text-primary-hover underline">ongoing support</Link> ensures you complete all necessary steps to fully enjoy your new Mexican citizenship.</p>
               </div>
             </div>
           </div>

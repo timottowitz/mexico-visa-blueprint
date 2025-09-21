@@ -87,10 +87,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources & Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Resources</h3>
+            <h3 className="font-semibold text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/services" className="hover:text-accent transition-colors">
+                  All Immigration Services
+                </Link>
+              </li>
               <li>
                 <Link to="/blog" className="hover:text-accent transition-colors">
                   Blog & Guides

@@ -159,17 +159,17 @@ const TemporaryResidency = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Strategy</h3>
-                <p className="text-muted-foreground mb-6">Identify the strongest qualification route and optimize documentation.</p>
+                <p className="text-muted-foreground mb-6">Identify the strongest qualification route and optimize documentation. Our <Link to="/about" className="text-primary hover:text-primary-hover underline">experienced immigration attorneys</Link> evaluate whether temporary residency is right for you, or if <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency</Link> might be a better option.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Consulate Know-How</h3>
-                <p className="text-muted-foreground">We navigate appointment systems and varying consulate criteria.</p>
+                <p className="text-muted-foreground">We navigate appointment systems and varying consulate criteria. Learn more about the complete process in our <Link to="/faqs" className="text-primary hover:text-primary-hover underline">immigration FAQ section</Link>.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Representation</h3>
-                <p className="text-muted-foreground mb-6">Spanish-language filings and INM communications handled by our attorneys.</p>
+                <p className="text-muted-foreground mb-6">Spanish-language filings and INM communications handled by our attorneys. Our <Link to="/contact" className="text-primary hover:text-primary-hover underline">bilingual legal team</Link> ensures nothing gets lost in translation.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Post-Visa Support</h3>
-                <p className="text-muted-foreground">Guidance on obligations (address changes, adding work permission) and planning your upgrade to permanent residency when eligible.</p>
+                <p className="text-muted-foreground">Guidance on obligations (address changes, adding work permission) and planning your upgrade to <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency when eligible</Link>. We also assist with the path to <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican citizenship</Link> after completing residency requirements.</p>
               </div>
             </div>
           </div>

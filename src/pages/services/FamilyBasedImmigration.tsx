@@ -151,17 +151,17 @@ const FamilyBasedImmigration = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Bilingual Support</h3>
-                <p className="text-muted-foreground mb-6">Bilingual liaison for both the foreign applicant and Mexican family member.</p>
+                <p className="text-muted-foreground mb-6">Bilingual liaison for both the foreign applicant and Mexican family member. Our <Link to="/about" className="text-primary hover:text-primary-hover underline">experienced attorneys</Link> understand the unique challenges of cross-cultural families.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Document Preparation</h3>
-                <p className="text-muted-foreground">Preparation of sponsorship letters, declarations, and precise document formatting.</p>
+                <p className="text-muted-foreground">Preparation of sponsorship letters, declarations, and precise document formatting. We also handle cases transitioning from family-based temporary residency to <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency</Link> after the required waiting period.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Representation</h3>
-                <p className="text-muted-foreground mb-6">Attendance and representation at INM appointments; translation support.</p>
+                <p className="text-muted-foreground mb-6">Attendance and representation at INM appointments; translation support. Our <Link to="/contact" className="text-primary hover:text-primary-hover underline">bilingual legal team</Link> ensures clear communication throughout the process.</p>
                 
                 <h3 className="text-xl font-semibold mb-4">Follow-up</h3>
-                <p className="text-muted-foreground">Active follow-up for swift approvals and clear communication.</p>
+                <p className="text-muted-foreground">Active follow-up for swift approvals and clear communication. We also provide guidance on the eventual path to <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican citizenship</Link> for family members who qualify. For additional questions, visit our <Link to="/faqs" className="text-primary hover:text-primary-hover underline">comprehensive FAQ section</Link>.</p>
               </div>
             </div>
           </div>

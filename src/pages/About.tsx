@@ -79,7 +79,7 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Mexico Immigration Lawyer is a boutique law firm dedicated exclusively to immigration and nationality law. 
                 Based in Mexico City, we bridge the gap between North America and Mexico with bilingual, bicultural service. 
-                Our licensed attorneys and experienced staff deliver clear guidance and reliable representation.
+                Our licensed attorneys and experienced staff deliver clear guidance and reliable representation for all your <Link to="/services" className="text-primary hover:text-primary-hover underline">Mexico immigration needs</Link>.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -89,7 +89,7 @@ const About = () => {
                       <Award className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">15+ Years Experience</h3>
-                    <p className="text-sm text-muted-foreground">Led by a licensed Mexican immigration lawyer with extensive expertise and National Bar Association membership</p>
+                    <p className="text-sm text-muted-foreground">Led by a licensed Mexican immigration lawyer with extensive expertise and National Bar Association membership. We have successfully handled <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover underline">temporary residency</Link>, <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency</Link>, and <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">citizenship cases</Link>.</p>
                   </CardContent>
                 </Card>
                 
@@ -264,7 +264,7 @@ const About = () => {
         <section className="text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-6">Have questions or ready to begin?</h2>
-            <p className="text-lg text-muted-foreground mb-8">Join over 1,000 successful clients who trusted us with their Mexico immigration journey.</p>
+            <p className="text-lg text-muted-foreground mb-8">Join over 1,000 successful clients who trusted us with their Mexico immigration journey. Whether you need help with <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover underline">temporary residency</Link>, <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">permanent residency</Link>, <Link to="/services/work-visas" className="text-primary hover:text-primary-hover underline">work visas</Link>, or <Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover underline">family immigration</Link>, our experienced attorneys are here to help.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 

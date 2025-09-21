@@ -16,11 +16,11 @@ Mexico offers several pathways to legal residency for US and Canadian citizens. 
 - Path to permanent residency after 4 years
 
 **Who Should Apply**
-- Retirees with pension or investment income
+- Retirees with pension or investment income ([learn more about temporary residency](/services/temporary-residency))
 - Remote workers earning foreign salaries
-- Investors in Mexican businesses
+- Investors in Mexican businesses ([explore corporate immigration](/services/corporate-immigration))
 - Students in Mexican institutions
-- Family members of Mexican citizens/residents
+- Family members of Mexican citizens/residents ([family immigration options](/services/family-based-immigration))
 
 ### Permanent Residency (Residente Permanente)
 
@@ -31,10 +31,10 @@ Mexico offers several pathways to legal residency for US and Canadian citizens. 
 - Path to Mexican citizenship after 5 years
 
 **Who Qualifies**
-- Higher financial solvency applicants (direct application)
-- Temporary residents after 4 years
-- Spouses of Mexican citizens (after 2 years temporary)
-- Parents of Mexican-born children
+- Higher financial solvency applicants (direct application) ([learn about permanent residency requirements](/services/permanent-residency))
+- Temporary residents after 4 years ([transition from temporary residency](/services/temporary-residency))
+- Spouses of Mexican citizens (after 2 years temporary) ([family-based immigration](/services/family-based-immigration))
+- Parents of Mexican-born children ([family immigration options](/services/family-based-immigration))
 
 ## 2025 Financial Requirements for Mexico Residency
 
@@ -384,7 +384,7 @@ Remember that immigration regulations change frequently, and each case has uniqu
 
 ---
 
-*Ready to start your Mexico residency application? Our experienced immigration attorneys provide comprehensive legal services for temporary residency, permanent residency, and Mexican citizenship. We specialize in helping US and Canadian citizens navigate Mexico's immigration system successfully.*
+*Ready to start your Mexico residency application? Our experienced immigration attorneys provide comprehensive legal services for [temporary residency](/services/temporary-residency), [permanent residency](/services/permanent-residency), and [Mexican citizenship](/services/mexican-citizenship). We specialize in helping US and Canadian citizens navigate Mexico's immigration system successfully.*
 
 **Schedule Your Consultation Today:**
 - Phone: +1 (214) 473-4507 (US Toll-Free)
@@ -392,4 +392,4 @@ Remember that immigration regulations change frequently, and each case has uniqu
 - Email: info@mexicoimmigrationlawyer.com
 - Office: Mexico City, Mexico
 
-*Licensed Mexico immigration attorneys with 15+ years experience and 1,000+ successful residency applications.*
+*Licensed Mexico immigration attorneys with 15+ years experience and 1,000+ successful residency applications. [Contact us](/contact) to get started.*

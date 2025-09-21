@@ -15,18 +15,21 @@ When navigating Mexico's complex immigration system, many US and Canadian citize
 - Unclear financial documentation
 - Mixed family situations (some members qualifying, others not)
 - Self-employment or irregular income sources
+Learn more about [temporary residency requirements](/services/temporary-residency) and how our attorneys can help with complex cases.
 
 **Permanent Residency Applications**
 - Direct permanent residency applications (bypassing temporary)
 - Family-based applications with complex relationships
 - Business investment-based residency
 - Transition from temporary to permanent with complications
+Explore our comprehensive [permanent residency services](/services/permanent-residency) for detailed guidance.
 
 **Mexican Citizenship by Naturalization**
 - Eligibility questions regarding residency periods
 - Documentation challenges (missing records, name changes)
 - Spanish language or civics exam preparation
 - Dual citizenship considerations
+Visit our [Mexican citizenship page](/services/mexican-citizenship) to understand the naturalization process.
 
 ### High-Stakes Situations
 
@@ -35,12 +38,14 @@ When navigating Mexico's complex immigration system, many US and Canadian citize
 - Employer registration with INM
 - Bulk employee relocations
 - Investment visa structuring
+Our [corporate immigration services](/services/corporate-immigration) provide comprehensive business solutions.
 
 **Family Immigration Complexities**
 - Marriage-based residency with documentation challenges
 - Divorce or separation affecting immigration status
 - Child custody issues involving Mexican and foreign parents
 - Adoption-related immigration cases
+Learn about our specialized [family-based immigration services](/services/family-based-immigration) for marriage and family visas.
 
 ## What Mexico Immigration Lawyers Do
 
@@ -241,7 +246,7 @@ The key is choosing an experienced, qualified attorney who specializes in Mexico
 
 ---
 
-*Need expert guidance for your Mexico immigration case? Our experienced immigration attorneys provide comprehensive legal services for temporary residency, permanent residency, work visas, and Mexican citizenship. Contact us today for a consultation to discuss your specific situation and legal options.*
+*Need expert guidance for your Mexico immigration case? Our experienced immigration attorneys provide comprehensive legal services for [temporary residency](/services/temporary-residency), [permanent residency](/services/permanent-residency), [work visas](/services/work-visas), and [Mexican citizenship](/services/mexican-citizenship). [Contact us today](/contact) for a consultation to discuss your specific situation and legal options.*
 
 **Contact Information:**
 - Phone: +1 (214) 473-4507 (US)
