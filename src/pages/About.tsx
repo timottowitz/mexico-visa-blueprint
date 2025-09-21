@@ -10,49 +10,55 @@ const About = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Client-Centered Service",
-      description: "Personal attention, transparent timelines and pricing, and responsive communication."
+      description: "You're not just a case number. We provide Zoom consultations, interview coaching, and measure success by client satisfaction. Most new clients come from referrals by happy former clients."
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Integrity & Transparency",
-      description: "Clear roadmaps, upfront fees, and practical advice."
+      description: "Complete transparency from day one. Clear fee structures (flat fees for most services), no hidden charges. If you don't need a lawyer for something, we'll tell you honestly."
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Efficiency & Detail",
-      description: "Rigorous checklists and quality control that reduce delays."
+      description: "Streamlined systems, meticulous checklists, and double-checking every form. We use secure client portals and case-tracking software for real-time updates and faster approvals."
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Up-to-Date Expertise",
-      description: "We monitor policy changes and adapt quickly."
+      description: "We regularly attend immigration law seminars and stay current on INM guidelines, consular procedures, and policy changes. When rules change overnight, we adapt quickly and inform clients immediately."
     },
   ];
 
   const reasons = [
     {
       title: "Proven Success",
-      description: "1,000+ matters across residency, citizenship, and corporate transfers."
+      description: "1,000+ successful cases from simple tourist visa extensions to complex corporate relocations. Our success stories include family reunifications, retiree coastal living dreams, and seamless business setups. High success rate through expertise and tenacity.",
+      testimonial: "\"I highly recommend this firm – they made the visa process easy and stress-free.\" - John D., 2025 residency client"
     },
     {
       title: "Bilingual Communication",
-      description: "Fluent English and Spanish; plain-language explanations."
+      description: "Clear English and Spanish communication. We translate official letters from authorities so you understand every step. You effectively get a personal interpreter and advocate, reducing anxiety about legal jargon.",
+      testimonial: "\"The team was with us every step of the way, and we felt confident knowing they had our backs.\" - Thompson family"
     },
     {
       title: "Local Presence, Global Reach",
-      description: "Mexico City HQ with partner support in major cities; toll-free line for U.S./Canada."
+      description: "Mexico City HQ near government offices for quick filings. Partner network in Guadalajara, Monterrey, and Cancún. Toll-free North America number and flexible consultation schedules for all time zones.",
+      testimonial: null
     },
     {
       title: "Comprehensive Support",
-      description: "Beyond paperwork—referrals for housing, banking, and tax guidance."
+      description: "Beyond immigration paperwork: guidance on Mexican driver's licenses, bank accounts, moving companies. We provide resources and referrals, acting as advisors in your entire Mexico transition. Tax specialist referrals available.",
+      testimonial: null
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>About Our Firm — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Mexico Immigration Lawyer is a bilingual law firm based in Mexico City, specializing in immigration law for expats. Learn about our experienced team and our commitment to clients." />
+        <title>About Our Mexico Immigration Law Firm - 15+ Years Experience | Mexico Immigration Lawyer</title>
+        <meta name="description" content="Mexico Immigration Lawyer: Boutique law firm in Mexico City with 15+ years experience. Licensed attorneys, 1,000+ successful cases, bilingual service. Expert in residency, citizenship & work permits." />
+        <meta name="keywords" content="Mexico immigration lawyer, immigration attorney Mexico City, Mexican immigration law firm, residency lawyer Mexico, work permit attorney Mexico, bilingual immigration lawyer" />
+        <link rel="canonical" href="https://mexicoimmigrationlawyer.com/about" />
       </Helmet>
 
       <Hero
@@ -69,11 +75,45 @@ const About = () => {
         <section className="mb-16">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-foreground mb-8">Who We Are</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Mexico Immigration Lawyer is a boutique law firm dedicated exclusively to immigration and nationality law. 
-              Based in Mexico City, we bridge the gap between North America and Mexico with bilingual, bicultural service. 
-              Our licensed attorneys and experienced staff deliver clear guidance and reliable representation.
-            </p>
+            <div className="space-y-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Mexico Immigration Lawyer is a boutique law firm dedicated exclusively to immigration and nationality law. 
+                Based in Mexico City, we bridge the gap between North America and Mexico with bilingual, bicultural service. 
+                Our licensed attorneys and experienced staff deliver clear guidance and reliable representation.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <Card className="card-professional">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Award className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">15+ Years Experience</h3>
+                    <p className="text-sm text-muted-foreground">Led by a licensed Mexican immigration lawyer with extensive expertise and National Bar Association membership</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="card-professional">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Users className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">International Team</h3>
+                    <p className="text-sm text-muted-foreground">Mexican attorneys plus U.S. and Canadian consultants for seamless cross-border coordination</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="card-professional">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">Personal Experience</h3>
+                    <p className="text-sm text-muted-foreground">Many team members have lived abroad or navigated immigration processes, providing unique client insight</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -112,7 +152,12 @@ const About = () => {
                     <CardTitle className="text-xl">{reason.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{reason.description}</p>
+                    <p className="text-muted-foreground mb-4">{reason.description}</p>
+                    {reason.testimonial && (
+                      <div className="bg-primary/5 border-l-4 border-primary pl-4 py-2 rounded-r">
+                        <p className="text-sm italic text-muted-foreground">{reason.testimonial}</p>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -183,11 +228,43 @@ const About = () => {
           </div>
         </section>
 
+        {/* Community & Professional Involvement */}
+        <section className="mb-16 section-gradient py-16 -mx-4 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Community & Professional Involvement</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="card-hover">
+                <CardContent className="p-6 text-center">
+                  <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="font-semibold text-foreground mb-2">Community Education</h3>
+                  <p className="text-sm text-muted-foreground">Free webinars for expat community on "Residency Options 2025" and "New Immigration Rules"</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="card-hover">
+                <CardContent className="p-6 text-center">
+                  <Award className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="font-semibold text-foreground mb-2">Professional Associations</h3>
+                  <p className="text-sm text-muted-foreground">Active in International Bar Association's Immigration Section and National Bar Association of Immigration Lawyers</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="card-hover">
+                <CardContent className="p-6 text-center">
+                  <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="font-semibold text-foreground mb-2">Educational Content</h3>
+                  <p className="text-sm text-muted-foreground">Regular articles in expat magazines and websites, combating myths and providing accurate immigration information</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-6">Have questions or ready to begin?</h2>
-            <p className="text-lg text-muted-foreground mb-8">Contact us to schedule a consultation.</p>
+            <p className="text-lg text-muted-foreground mb-8">Join over 1,000 successful clients who trusted us with their Mexico immigration journey.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
