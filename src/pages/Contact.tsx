@@ -4,6 +4,7 @@ import ContactForm from "@/components/ui/contact-form";
 import GoogleMap from "@/components/ui/google-map";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import consultationMeetingImage from "@/assets/consultation-meeting.png";
 
 const Contact = () => {
   return (
@@ -38,7 +39,16 @@ const Contact = () => {
             {/* Get in Touch */}
             <Card className="card-professional">
               <CardHeader>
-                <CardTitle className="text-2xl">Get in Touch</CardTitle>
+                <div className="flex items-center gap-4">
+                  <div>
+                    <CardTitle className="text-2xl">Get in Touch</CardTitle>
+                  </div>
+                  <img 
+                    src={consultationMeetingImage} 
+                    alt="Immigration attorney consulting with clients about Mexico residency and visa services"
+                    className="w-20 h-16 object-cover rounded-lg shadow-sm hidden sm:block"
+                  />
+                </div>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start space-x-3">
