@@ -25,6 +25,30 @@ const blogPostsData: Record<string, BlogPostMeta> = {
     category: "Residency",
     author: "Mexico Immigration Lawyer"
   },
+  "mexican-citizenship-requirements-2024": {
+    title: "Complete Guide to Mexican Citizenship Requirements in 2024",
+    excerpt: "Everything you need to know about obtaining Mexican citizenship, from eligibility requirements to the application process and benefits.",
+    date: "2024-09-12",
+    readTime: "15 min read",
+    category: "Citizenship",
+    author: "Mexico Immigration Lawyer"
+  },
+  "work-visa-guide-mexico": {
+    title: "Complete Guide to Work Visas in Mexico: Types, Requirements, and Process",
+    excerpt: "Comprehensive guide to obtaining work authorization in Mexico, including visa types, requirements, and step-by-step process.",
+    date: "2024-09-08",
+    readTime: "12 min read",
+    category: "Work Visas",
+    author: "Mexico Immigration Lawyer"
+  },
+  "family-immigration-reunification-mexico": {
+    title: "Family Immigration and Reunification in Mexico: A Complete Guide",
+    excerpt: "Learn about family-based immigration options and how to reunite with family members in Mexico through various visa pathways.",
+    date: "2024-09-05",
+    readTime: "13 min read",
+    category: "Family Immigration",
+    author: "Mexico Immigration Lawyer"
+  },
   "mexico-visa-requirements-2024": {
     title: "Mexico Visa Requirements 2024: Complete Guide for US and Canadian Citizens",
     excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
