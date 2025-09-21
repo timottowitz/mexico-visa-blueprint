@@ -7,7 +7,9 @@ import {
   useTransform, 
   useSpring,
   useMotionValue,
-  AnimatePresence
+  AnimatePresence,
+  useMotionTemplate,
+  LayoutGroup
 } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Hero from "@/components/ui/hero";
@@ -27,28 +29,53 @@ const Index = () => {
   const containerRef = useRef(null);
   const isInView = useInView(ref, { once: true });
   
-  // Scroll-based animations
+  // Enhanced scroll-based animations with multiple targets
+  const { scrollYProgress: globalScrollProgress } = useScroll();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
   
-  // Transform scroll progress into different values
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
-  const servicesY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.8, 1], [1, 1, 0.5, 0]);
+  // Advanced transform values for richer parallax effects
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const heroRotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.05, 0.95]);
+  const servicesY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+  const servicesRotate = useTransform(scrollYProgress, [0, 1], [0, 2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [1, 1, 0.8, 0]);
   
-  // Spring animations for smooth interactions
-  const heroScale = useSpring(1, { stiffness: 300, damping: 20 });
+  // Scroll progress indicator
+  const scrollProgress = useTransform(globalScrollProgress, [0, 1], ["0%", "100%"]);
+  
+  // Enhanced spring animations with different physics profiles
+  const magneticScale = useSpring(1, { stiffness: 400, damping: 25 });
+  const magneticX = useSpring(0, { stiffness: 300, damping: 20 });
+  const magneticY = useSpring(0, { stiffness: 300, damping: 20 });
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  // Mouse tracking for subtle interactions
+  // Dynamic background gradient based on scroll
+  const backgroundGradient = useMotionTemplate`radial-gradient(circle at ${mouseX}px ${mouseY}px, hsl(var(--primary) / 0.1) 0%, transparent 70%)`;
+  
+  // Enhanced mouse tracking with magnetic effects
   const handleMouseMove = (event: React.MouseEvent) => {
     const { clientX, clientY } = event;
     const { innerWidth, innerHeight } = window;
-    mouseX.set((clientX - innerWidth / 2) / 20);
-    mouseY.set((clientY - innerHeight / 2) / 20);
+    
+    // Update mouse position for background gradient
+    mouseX.set(clientX);
+    mouseY.set(clientY);
+    
+    // Subtle parallax based on mouse position
+    const centerX = innerWidth / 2;
+    const centerY = innerHeight / 2;
+    magneticX.set((clientX - centerX) / 50);
+    magneticY.set((clientY - centerY) / 50);
+  };
+  
+  // Magnetic button effect
+  const handleMagneticHover = (isHovering: boolean) => {
+    magneticScale.set(isHovering ? 1.05 : 1);
   };
 
   // Statistics counter animation
@@ -83,48 +110,83 @@ const Index = () => {
     }
   }, [isInView, controls]);
 
-  // Enhanced animation variants with proper types
+  // Enhanced animation variants with layout support
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.15,
+        delayChildren: 0.2,
+        staggerChildren: 0.1,
         type: "spring" as const,
-        stiffness: 100,
+        stiffness: 200,
+        damping: 15
+      }
+    }
+  };
+
+  // Hero section variants
+  const heroVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 80,
+        damping: 15,
+        duration: 1.2
+      }
+    }
+  };
+
+  // Layout-aware service card variants
+  const serviceCardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9,
+      rotateY: -15,
+      filter: "blur(4px)"
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateY: 0,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 20
+      }
+    },
+    hover: {
+      y: -10,
+      scale: 1.02,
+      rotateY: 5,
+      transition: {
+        type: "spring" as const,
+        stiffness: 400,
         damping: 10
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 80, opacity: 0, rotateX: -15 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      rotateX: 0,
-      transition: {
-        type: "spring" as const,
-        stiffness: 100,
-        damping: 10,
-        duration: 0.8
-      }
-    }
-  };
-
-  const cardVariants = {
+  // Feature card variants
+  const featureCardVariants = {
     hidden: { 
-      y: 60, 
       opacity: 0, 
+      y: 60,
       scale: 0.8,
-      rotateY: -15
+      rotateX: -15
     },
     visible: {
-      y: 0,
       opacity: 1,
+      y: 0,
       scale: 1,
-      rotateY: 0,
+      rotateX: 0,
       transition: {
         type: "spring" as const,
         stiffness: 100,
@@ -133,73 +195,10 @@ const Index = () => {
       }
     },
     hover: {
-      scale: 1.05,
-      y: -10,
-      rotateY: 5,
-      boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-      transition: {
-        type: "spring" as const,
-        stiffness: 300,
-        damping: 20
-      }
-    },
-    tap: {
-      scale: 0.98,
-      transition: {
-        type: "spring" as const,
-        stiffness: 400,
-        damping: 10
-      }
-    }
-  };
-
-  const floatingAnimation = {
-    animate: {
-      y: [-15, 15, -15],
-      rotate: [-2, 2, -2],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut" as any
-      }
-    }
-  };
-
-  // Advanced stagger animations for services
-  const servicesContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
-        when: "beforeChildren" as const
-      }
-    }
-  };
-
-  const serviceCardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50, 
-      scale: 0.9,
-      filter: "blur(4px)"
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      filter: "blur(0px)",
-      transition: {
-        type: "spring" as const,
-        stiffness: 100,
-        damping: 10,
-        duration: 0.8
-      }
-    },
-    hover: {
-      scale: 1.03,
       y: -8,
+      scale: 1.03,
+      rotateX: 5,
+      boxShadow: "0 20px 40px hsl(var(--primary) / 0.1)",
       transition: {
         type: "spring" as const,
         stiffness: 400,
@@ -208,6 +207,71 @@ const Index = () => {
     }
   };
 
+  // Magnetic button variants
+  const magneticButtonVariants = {
+    rest: { scale: 1, rotateZ: 0 },
+    hover: { 
+      scale: 1.05,
+      rotateZ: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 400,
+        damping: 15
+      }
+    },
+    tap: { scale: 0.95 }
+  };
+
+  // Text reveal variants
+  const textRevealVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      filter: "blur(4px)"
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 15,
+        duration: 0.8
+      }
+    }
+  };
+
+  // Statistics variants
+  const statVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: (i: number) => ({
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        delay: i * 0.2,
+        duration: 0.8
+      }
+    })
+  };
+
+  // CTA variants
+  const ctaVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 20
+      }
+    }
+  };
+
+  // Data arrays
   const services = [
     {
       title: "Temporary Residency Visas",
@@ -249,27 +313,27 @@ const Index = () => {
 
   const whyChooseUs = [
     {
-      icon: <Award className="w-6 h-6" />,
+      icon: Award,
       title: "Expertise in Mexican Immigration Law",
       description: "Licensed attorneys tracking the latest rules and policy changes. We tailor the best visa strategy for your situation—finances, family, work, or investment."
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: Globe,
       title: "Bilingual & Bicultural Team",
       description: "Fluent in English and Spanish. We understand North American expectations and Mexican procedures."
     },
     {
-      icon: <CheckCircle className="w-6 h-6" />,
+      icon: CheckCircle,
       title: "Proven Track Record",
       description: "Hundreds of approvals across residency types. Clients commend our responsiveness and results."
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: Users,
       title: "Personalized Guidance",
       description: "One-on-one consultations, consulate selection guidance, document checklists, and step-by-step support."
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
+      icon: MessageSquare,
       title: "All-Inclusive Support",
       description: "From consular applications to INM processing, translations, and post-arrival tasks like your resident card and CURP."
     },
@@ -294,454 +358,217 @@ const Index = () => {
   ];
 
   return (
-    <>
+    <LayoutGroup>
+      <Helmet>
+        <title>Expert Mexico Immigration Lawyers | Visa & Residency Services</title>
+        <meta
+          name="description"
+          content="Professional Mexico immigration legal services. Expert lawyers for temporary residency, permanent residency, work visas, and Mexican citizenship. Get your consultation today."
+        />
+        <meta name="keywords" content="Mexico immigration lawyer, Mexico visa lawyer, temporary residency Mexico, permanent residency Mexico, work visa Mexico, Mexican citizenship, immigration attorney Mexico" />
+        <link rel="canonical" href="https://mexico-immigration-lawyers.com/" />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Expert Mexico Immigration Lawyers | Visa & Residency Services" />
+        <meta property="og:description" content="Professional Mexico immigration legal services. Expert lawyers for temporary residency, permanent residency, work visas, and Mexican citizenship." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mexico-immigration-lawyers.com/" />
+        <meta property="og:image" content="https://mexico-immigration-lawyers.com/og-image.jpg" />
+        
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Mexico Immigration Lawyers | Visa & Residency Services" />
+        <meta name="twitter:description" content="Professional Mexico immigration legal services. Get expert help with your Mexico visa and residency needs." />
+        <meta name="twitter:image" content="https://mexico-immigration-lawyers.com/twitter-image.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": "Mexico Immigration Lawyers",
+            "description": "Expert legal services for Mexico immigration, visas, and residency applications",
+            "url": "https://mexico-immigration-lawyers.com",
+            "telephone": "+52-xxx-xxx-xxxx",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Professional Office Address",
+              "addressLocality": "Mexico City",
+              "addressCountry": "Mexico"
+            },
+            "areaServed": "Mexico",
+            "serviceType": ["Immigration Law", "Visa Services", "Residency Applications"],
+            "priceRange": "$$"
+          })}
+        </script>
+      </Helmet>
+
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary z-50 origin-left"
+        style={{ scaleX: scrollProgress }}
+        layoutId="scroll-progress"
+      />
+
       <AnimatedBackground />
+      
       <motion.div 
         ref={containerRef}
-        className="relative z-10"
+        className="min-h-screen relative overflow-hidden"
         onMouseMove={handleMouseMove}
-        style={{ perspective: 1000 }}
+        style={{ 
+          background: backgroundGradient,
+          x: magneticX,
+          y: magneticY
+        }}
       >
-        <Helmet>
-          <title>Mexico Immigration Lawyer — Visa & Residency Experts in Mexico</title>
-          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. Bilingual attorneys with 15+ years experience. Free consultation!" />
-        </Helmet>
-
-        {/* Enhanced Hero Section with Parallax */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ 
-            type: "spring",
-            stiffness: 80,
-            damping: 15,
-            duration: 1.2
+        {/* Hero Section with Enhanced Animations */}
+        <motion.section 
+          className="relative"
+          style={{ 
+            y: heroY, 
+            opacity,
+            rotateX: heroRotate,
+            scale: heroScale
           }}
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+          layoutId="hero-section"
         >
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
-            <Hero 
-              title="Mexico Immigration Lawyer — Visa & Residency Experts"
-              subtitle="Get expert legal assistance for Mexico residency, work visas, and citizenship. Bilingual attorneys with 15+ years experience helping US & Canadian citizens."
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Enhanced Services Section with Advanced Animations */}
-        <motion.section 
-          className="py-20 bg-background"
-          style={{ y: servicesY }}
-        >
-          <div className="container mx-auto px-4">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="text-center mb-16"
-            >
-              <motion.div
-                variants={itemVariants}
-                className="relative inline-block"
-              >
-                <motion.h2 
-                  className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  Our Mexico Immigration Services
-                </motion.h2>
-                <motion.div
-                  className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-primary/80 rounded-full"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "6rem" }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                />
-              </motion.div>
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
-              >
-                From temporary visas to permanent residency and citizenship, we provide comprehensive legal assistance for all Mexico immigration needs.
-              </motion.p>
-            </motion.div>
-
-            <motion.div 
-              variants={servicesContainerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {services.map((service, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={serviceCardVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  className="group"
-                >
-                  <motion.div
-                    style={{
-                      transformStyle: "preserve-3d",
-                    }}
-                  >
-                    <ServiceCard
-                      title={service.title}
-                      description={service.description}
-                      href={service.href}
-                      icon={service.icon}
-                    />
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+          <Hero
+            eyebrow="Trusted Legal Expertise"
+            title="Your Gateway to Mexico Immigration Success"
+            subtitle="Expert legal guidance for temporary residency, permanent residency, work visas, and Mexican citizenship. Navigate Mexico's immigration process with confidence."
+            primaryCta={{
+              text: "Get Free Consultation",
+              href: "/consultation"
+            }}
+            secondaryCta={{
+              text: "View Our Services",
+              href: "/services"
+            }}
+          />
         </motion.section>
 
-        {/* Enhanced Why Choose Us Section */}
-        <motion.section 
-          className="py-20 bg-muted/30 relative overflow-hidden"
-        >
-          {/* Floating background elements */}
-          <motion.div
-            animate={{
-              x: [0, -20, 0],
-              y: [0, -10, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"
-          />
-          <motion.div
-            animate={{
-              x: [0, 20, 0],
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear",
-              delay: 2
-            }}
-            className="absolute bottom-20 right-10 w-24 h-24 bg-secondary/5 rounded-full blur-xl"
-          />
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="text-center mb-16"
-            >
-              <motion.h2 
-                variants={itemVariants}
-                className="text-4xl md:text-5xl font-bold mb-6"
-                whileHover={{ 
-                  scale: 1.02,
-                  textShadow: "0 0 20px rgba(var(--primary), 0.3)"
-                }}
-              >
-                Why Choose Our Legal Team?
-              </motion.h2>
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
-              >
-                Experience, expertise, and dedication to getting you through Mexico's immigration system successfully.
-              </motion.p>
-            </motion.div>
-
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {whyChooseUs.map((feature, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={cardVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  className="group"
-                >
-                  <Card className="h-full transition-all duration-300 border-0 shadow-lg backdrop-blur-sm bg-background/80 hover:bg-background group-hover:shadow-2xl">
-                    <CardHeader>
-                      <div className="flex items-center space-x-4">
-                        <motion.div 
-                          className="text-primary p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors"
-                          whileHover={{ 
-                            rotate: 360,
-                            scale: 1.1
-                          }}
-                          transition={{ 
-                            type: "spring",
-                            stiffness: 300,
-                            damping: 20
-                          }}
-                        >
-                          {feature.icon}
-                        </motion.div>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                          {feature.title}
-                        </CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <motion.p 
-                        className="text-muted-foreground leading-relaxed"
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ delay: index * 0.1 }}
-                      >
-                        {feature.description}
-                      </motion.p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* Enhanced Statistics Section with Advanced Counter Animation */}
-        <motion.section 
-          ref={ref}
-          className="py-20 bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground relative overflow-hidden"
+        {/* Services Section with Layout Animations */}
+        <motion.section
+          className="py-24 relative z-10"
+          style={{ 
+            y: servicesY,
+            rotateX: servicesRotate
+          }}
           variants={containerVariants}
           initial="hidden"
-          animate={controls}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          layoutId="services-section"
         >
-          {/* Animated background patterns */}
-          <motion.div
-            className="absolute inset-0 opacity-10"
-            animate={{
-              backgroundPosition: ["0% 0%", "100% 100%"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "50px 50px",
-            }}
-          />
-          
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <motion.h2 
-              variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold mb-16"
-              whileHover={{ 
-                scale: 1.05,
-                textShadow: "0 0 30px rgba(255,255,255,0.5)"
-              }}
+          <div className="container mx-auto px-4">
+            <ParallaxText className="text-center mb-16" speed={0.3}>
+              <motion.div variants={textRevealVariants} layout>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  Our Immigration Services
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Comprehensive legal solutions for all your Mexico immigration needs
+                </p>
+              </motion.div>
+            </ParallaxText>
+
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              layout
             >
-              Proven Results You Can Trust
-            </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <motion.div 
-                variants={itemVariants} 
-                className="text-center group"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <motion.div 
-                  className="text-5xl md:text-7xl font-bold mb-4 group-hover:text-yellow-300 transition-colors"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 100, 
-                    delay: 0.5,
-                    duration: 1
-                  }}
-                >
-                  {counters.experience}+
-                </motion.div>
-                <motion.div 
-                  className="text-xl opacity-90 group-hover:opacity-100 transition-opacity"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.9 }}
-                  transition={{ delay: 1 }}
-                >
-                  Years Experience
-                </motion.div>
-              </motion.div>
-              
-              <motion.div 
-                variants={itemVariants} 
-                className="text-center group"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <motion.div 
-                  className="text-5xl md:text-7xl font-bold mb-4 group-hover:text-yellow-300 transition-colors"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 100, 
-                    delay: 0.7,
-                    duration: 1
-                  }}
-                >
-                  {counters.clients}+
-                </motion.div>
-                <motion.div 
-                  className="text-xl opacity-90 group-hover:opacity-100 transition-opacity"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.9 }}
-                  transition={{ delay: 1.2 }}
-                >
-                  Successful Clients
-                </motion.div>
-              </motion.div>
-              
-              <motion.div 
-                variants={itemVariants} 
-                className="text-center group"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <motion.div 
-                  className="text-5xl md:text-7xl font-bold mb-4 group-hover:text-yellow-300 transition-colors"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 100, 
-                    delay: 0.9,
-                    duration: 1
-                  }}
-                >
-                  {counters.successRate}%
-                </motion.div>
-                <motion.div 
-                  className="text-xl opacity-90 group-hover:opacity-100 transition-opacity"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.9 }}
-                  transition={{ delay: 1.4 }}
-                >
-                  Success Rate
-                </motion.div>
-              </motion.div>
-            </div>
+              <AnimatePresence mode="popLayout">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service.title}
+                    variants={serviceCardVariants}
+                    whileHover="hover"
+                    whileTap={{ scale: 0.98 }}
+                    onHoverStart={() => handleMagneticHover(true)}
+                    onHoverEnd={() => handleMagneticHover(false)}
+                    style={{
+                      perspective: 1000,
+                      transformStyle: "preserve-3d"
+                    }}
+                    layoutId={`service-${index}`}
+                    custom={index}
+                    exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.3 } }}
+                  >
+                    <ServiceCard {...service} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
           </div>
         </motion.section>
 
-        {/* Enhanced Testimonials Section */}
-        <motion.section className="py-20 bg-gradient-to-b from-background to-muted/20">
+        {/* Why Choose Us Section with Magnetic Effects */}
+        <motion.section
+          className="py-24 bg-secondary/30 relative"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          layoutId="why-choose-section"
+        >
           <div className="container mx-auto px-4">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="text-center mb-16"
-            >
-              <motion.h2 
-                variants={itemVariants}
-                className="text-4xl md:text-5xl font-bold mb-6"
-                whileHover={{ scale: 1.02 }}
-              >
-                What Our Clients Say
-              </motion.h2>
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
-              >
-                Hear from families and individuals who successfully obtained their Mexico residency with our help.
-              </motion.p>
+            <motion.div className="text-center mb-16" variants={textRevealVariants} layout>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Why Choose Our Legal Team?
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Experience, expertise, and dedication to your immigration success
+              </p>
             </motion.div>
 
             <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              layout
             >
-              <AnimatePresence>
-                {testimonials.map((testimonial, index) => (
+              <AnimatePresence mode="popLayout">
+                {whyChooseUs.map((item, index) => (
                   <motion.div 
-                    key={index} 
-                    variants={cardVariants}
+                    key={item.title} 
+                    variants={featureCardVariants} 
                     whileHover="hover"
-                    whileTap="tap"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ 
-                      opacity: 1, 
-                      y: 0,
-                      transition: {
-                        delay: index * 0.2,
-                        type: "spring",
-                        stiffness: 100,
-                        damping: 10
-                      }
-                    }}
-                    className="group"
+                    layoutId={`feature-${index}`}
+                    custom={index}
+                    exit={{ opacity: 0, y: 50, transition: { duration: 0.3 } }}
                   >
-                    <Card className="h-full border-0 shadow-lg bg-background/80 backdrop-blur-sm group-hover:shadow-2xl transition-all duration-300">
-                      <CardContent className="p-8">
+                    <Card className="h-full hover:shadow-xl transition-all duration-300 border-primary/10 bg-background/50 backdrop-blur-sm overflow-hidden">
+                      <CardHeader className="text-center">
                         <motion.div 
-                          className="mb-6"
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
-                          transition={{ delay: index * 0.3 }}
+                          className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit"
+                          variants={magneticButtonVariants}
+                          whileHover="hover"
+                          whileTap="tap"
                         >
-                          <motion.div 
-                            className="flex text-yellow-500 mb-4"
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
+                          <motion.div
+                            animate={{ 
+                              rotate: [0, 10, -10, 0],
+                              scale: [1, 1.1, 1]
+                            }}
                             transition={{ 
-                              delay: index * 0.3 + 0.2,
-                              type: "spring",
-                              stiffness: 300
+                              duration: 2,
+                              repeat: Infinity,
+                              repeatType: "reverse",
+                              ease: "easeInOut"
                             }}
                           >
-                            {[...Array(5)].map((_, i) => (
-                              <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ 
-                                  delay: index * 0.3 + 0.3 + i * 0.1,
-                                  type: "spring",
-                                  stiffness: 400
-                                }}
-                              >
-                                <Star className="w-5 h-5 fill-current" />
-                              </motion.div>
-                            ))}
+                            <item.icon className="h-8 w-8 text-primary" />
                           </motion.div>
-                          <motion.p 
-                            className="text-muted-foreground italic text-lg leading-relaxed"
-                            whileHover={{ color: "var(--foreground)" }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            "{testimonial.quote}"
-                          </motion.p>
                         </motion.div>
-                        <motion.div 
-                          className="border-t pt-6"
-                          whileHover={{ borderColor: "var(--primary)" }}
-                        >
-                          <p className="font-semibold text-lg group-hover:text-primary transition-colors">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-sm text-muted-foreground mt-1">
-                            {testimonial.location}
-                          </p>
-                        </motion.div>
+                        <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground text-center">
+                          {item.description}
+                        </p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -751,23 +578,224 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Enhanced CTA Section */}
+        {/* Statistics Section with Advanced Springs */}
+        <motion.section 
+          ref={ref}
+          className="py-24 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 relative overflow-hidden"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          layoutId="stats-section"
+        >
+          {/* Enhanced floating elements with physics */}
+          <motion.div
+            className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl"
+            animate={{
+              y: [-20, -50, -20],
+              x: [-10, 30, -10],
+              scale: [1, 1.3, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+          />
+          <motion.div
+            className="absolute bottom-10 right-10 w-32 h-32 bg-accent/10 rounded-full blur-xl"
+            animate={{
+              y: [10, 30, 10],
+              x: [-5, -25, -5],
+              scale: [1, 0.7, 1],
+              rotate: [0, -90, 0]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: [0.25, 0.1, 0.25, 1],
+              delay: 2
+            }}
+          />
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div className="text-center mb-16" variants={textRevealVariants} layout>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Proven Track Record
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Our numbers speak for themselves
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="grid md:grid-cols-3 gap-12 text-center"
+              variants={containerVariants}
+              layout
+            >
+              <motion.div 
+                variants={statVariants} 
+                whileHover={{ scale: 1.05 }}
+                layoutId="stat-1"
+                custom={0}
+              >
+                <motion.div 
+                  className="text-6xl md:text-7xl font-bold text-primary mb-4"
+                  animate={{ 
+                    textShadow: [
+                      "0 0 0px hsl(var(--primary) / 0.5)",
+                      "0 0 30px hsl(var(--primary) / 0.8)",
+                      "0 0 0px hsl(var(--primary) / 0.5)"
+                    ],
+                    scale: [1, 1.02, 1]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {counters.experience}+
+                </motion.div>
+                <p className="text-2xl font-semibold text-muted-foreground">Years Experience</p>
+              </motion.div>
+
+              <motion.div 
+                variants={statVariants} 
+                whileHover={{ scale: 1.05 }}
+                layoutId="stat-2"
+                custom={1}
+              >
+                <motion.div 
+                  className="text-6xl md:text-7xl font-bold text-accent mb-4"
+                  animate={{ 
+                    textShadow: [
+                      "0 0 0px hsl(var(--accent) / 0.5)",
+                      "0 0 30px hsl(var(--accent) / 0.8)",
+                      "0 0 0px hsl(var(--accent) / 0.5)"
+                    ],
+                    scale: [1, 1.02, 1]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    delay: 0.7,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {counters.clients}+
+                </motion.div>
+                <p className="text-2xl font-semibold text-muted-foreground">Clients Helped</p>
+              </motion.div>
+
+              <motion.div 
+                variants={statVariants} 
+                whileHover={{ scale: 1.05 }}
+                layoutId="stat-3"
+                custom={2}
+              >
+                <motion.div 
+                  className="text-6xl md:text-7xl font-bold text-primary mb-4"
+                  animate={{ 
+                    textShadow: [
+                      "0 0 0px hsl(var(--primary) / 0.5)",
+                      "0 0 30px hsl(var(--primary) / 0.8)",
+                      "0 0 0px hsl(var(--primary) / 0.5)"
+                    ],
+                    scale: [1, 1.02, 1]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    delay: 1.4,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {counters.successRate}%
+                </motion.div>
+                <p className="text-2xl font-semibold text-muted-foreground">Success Rate</p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Testimonials Section */}
+        <motion.section
+          className="py-24 bg-background relative"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          layoutId="testimonials-section"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div className="text-center mb-16" variants={textRevealVariants} layout>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Client Success Stories
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Real experiences from clients we've helped achieve their Mexico immigration goals
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              layout
+            >
+              <AnimatePresence mode="popLayout">
+                {testimonials.map((testimonial, index) => (
+                  <motion.div
+                    key={testimonial.name}
+                    variants={featureCardVariants}
+                    whileHover="hover"
+                    layoutId={`testimonial-${index}`}
+                    custom={index}
+                    exit={{ opacity: 0, y: 50, transition: { duration: 0.3 } }}
+                  >
+                    <Card className="h-full bg-background/50 backdrop-blur-sm border-primary/10">
+                      <CardContent className="p-6">
+                        <div className="flex mb-4">
+                          {[...Array(5)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: i * 0.1 + 0.5, type: "spring", stiffness: 300 }}
+                            >
+                              <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                            </motion.div>
+                          ))}
+                        </div>
+                        <blockquote className="text-muted-foreground mb-4 italic">
+                          "{testimonial.quote}"
+                        </blockquote>
+                        <div className="border-t border-primary/10 pt-4">
+                          <p className="font-semibold text-primary">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Final CTA with Layout Animation */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ 
-            type: "spring",
-            stiffness: 100,
-            damping: 15,
-            duration: 0.8
-          }}
-          whileHover={{ scale: 1.01 }}
+          variants={ctaVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          layoutId="cta-section"
         >
           <CTASection />
         </motion.div>
       </motion.div>
-    </>
+    </LayoutGroup>
   );
 };
 
