@@ -1,6 +1,8 @@
 # Mexican Citizenship Requirements 2025: Complete Naturalization Guide
 
-The acquisition of Mexican citizenship through naturalization is a formal process governed by the Secretaría de Relaciones Exteriores (SRE), representing the final step of integration for a foreign national. This comprehensive guide covers all pathways, requirements, and procedures for obtaining Mexican citizenship in 2025.
+The acquisition of [Mexican citizenship through naturalization](/services/mexican-citizenship) is a formal process governed by the Secretaría de Relaciones Exteriores (SRE), representing the final step of integration for foreign nationals. This comprehensive guide covers all pathways, requirements, and procedures for obtaining Mexican citizenship in 2025.
+
+Before pursuing citizenship, most applicants first establish legal residency through [temporary residency](/services/temporary-residency) or [permanent residency](/services/permanent-residency) pathways. Understanding the complete immigration journey helps you plan strategically for eventual naturalization.
 
 ## Who Can Apply for Mexican Citizenship?
 
@@ -149,5 +151,17 @@ Mexican citizenship offers tremendous opportunities and benefits, but the proces
 Understanding these requirements is just the first step. Each case is unique, and immigration laws can change. Professional legal advice ensures you meet all requirements and avoid costly delays.
 
 ---
+
+**Ready to pursue Mexican citizenship?** Our experienced [immigration attorneys](/about) provide comprehensive guidance throughout the naturalization process, from initial eligibility assessment to final oath ceremony.
+
+Whether you're currently on [temporary residency](/services/temporary-residency), [permanent residency](/services/permanent-residency), or exploring [family-based paths to citizenship](/services/family-based-immigration), we help you navigate the complex requirements and achieve your goal of becoming a Mexican citizen.
+
+[Contact our citizenship specialists today](/contact) to schedule a consultation and begin your path to naturalization.
+
+**Related Articles:**
+- [Temporary vs Permanent Residency in Mexico](/blog/temporary-vs-permanent-residency-mexico)
+- [Should You Hire a Mexico Immigration Lawyer?](/blog/hire-mexico-immigration-lawyer-guide)
+- [Family Immigration and Reunification in Mexico](/blog/family-immigration-reunification-mexico)
+- [Mexico Residency Visa Requirements 2025](/blog/mexico-residency-visa-requirements-2025)
 
 *This guide provides general information only. Immigration laws are complex and subject to change. Always consult with qualified legal counsel for advice specific to your situation.*

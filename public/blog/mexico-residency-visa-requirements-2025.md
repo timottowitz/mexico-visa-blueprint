@@ -2,9 +2,9 @@
 
 *Published: January 12, 2025 | Reading time: 16 minutes*
 
-## Understanding Mexico Residency Visa Options
+Planning your move to Mexico starts with understanding the residency visa requirements and choosing the right immigration pathway. This comprehensive guide covers all current Mexico residency visa requirements for 2025, including financial thresholds, application processes, and expert legal guidance for successful applications.
 
-Mexico offers several pathways to legal residency for US and Canadian citizens. This comprehensive guide covers all current Mexico residency visa requirements for 2025, including financial thresholds, application processes, and expert legal guidance for successful applications.
+Whether you're exploring [temporary residency options](/services/temporary-residency), planning for [permanent residency](/services/permanent-residency), or considering [family-based immigration](/services/family-based-immigration), this guide provides the essential information you need to make informed decisions about your Mexico immigration journey.
 
 ## Types of Mexico Residency Visas
 

@@ -2,6 +2,8 @@
 
 Working in Mexico as a foreign national requires proper immigration status with work authorization. This comprehensive guide covers the employer-sponsored process, self-sponsored economic solvency pathway, updated requirements, and critical procedural nuances for 2025.
 
+Whether you're seeking [employment-based residency](/services/work-visas) or exploring [corporate immigration solutions](/services/corporate-immigration), understanding your work authorization options helps you choose the optimal pathway for your career goals in Mexico.
+
 ## Types of Work Authorization in Mexico
 
 ### 1. Temporary Resident Visa with Work Permission (Employer-Sponsored)
