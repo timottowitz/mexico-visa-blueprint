@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Award, Users, Shield, Zap } from "lucide-react";
 import lawyerProfileImage from "@/assets/lawyer-profile.png";
+import CTASection from "@/components/ui/cta-section";
 
 const About = () => {
   const values = [
@@ -271,6 +272,13 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA after Professional Involvement */}
+        <CTASection 
+          variant="compact"
+          title="Experience the Difference Professional Representation Makes"
+          description="Join our community of successful clients who trusted our expertise for their Mexico immigration journey. Get started with a free consultation today."
+        />
 
         {/* CTA Section */}
         <section className="text-center">

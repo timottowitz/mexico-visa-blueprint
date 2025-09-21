@@ -3,6 +3,7 @@ import Hero from "@/components/ui/hero";
 import FAQAccordion from "@/components/ui/faq-accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import CTASection from "@/components/ui/cta-section";
 
 const FAQs = () => {
   // Organize FAQs by category for better navigation
@@ -186,8 +187,14 @@ const FAQs = () => {
                 </Button>
               </div>
             </div>
-          </section>
-        </div>
+        </section>
+
+        {/* Strategic CTA after FAQs */}
+        <CTASection 
+          title="Still Have Questions About Your Mexico Immigration Case?"
+          description="Get personalized answers from our experienced attorneys. Every immigration situation is unique, and we're here to provide the specific guidance you need."
+        />
+      </div>
     </>
   );
 };

@@ -3,6 +3,7 @@ import Hero from "@/components/ui/hero";
 import ServiceCard from "@/components/ui/service-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Globe, Award, MessageSquare, Star } from "lucide-react";
 import lawyerProfileImage from "@/assets/lawyer-profile.png";
@@ -175,6 +176,13 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Strategic CTA after Services */}
+        <CTASection 
+          variant="compact"
+          title="Ready to Start Your Mexico Immigration Process?"
+          description="Schedule a free consultation to discuss your residency goals and get expert guidance from our experienced immigration attorneys."
+        />
+
         {/* Why Choose Us */}
         <section className="mb-20 section-gradient py-16 -mx-4 px-4">
           <div className="max-w-6xl mx-auto">
@@ -274,6 +282,12 @@ const Index = () => {
             ))}
           </div>
         </section>
+
+        {/* Strategic CTA after Social Proof */}
+        <CTASection 
+          title="Join Hundreds of Successful Mexico Immigrants"
+          description="Our track record speaks for itself. Let our experienced attorneys guide you through your Mexico immigration journey with confidence and expertise."
+        />
 
         {/* CTA Banner */}
         <section className="text-center">

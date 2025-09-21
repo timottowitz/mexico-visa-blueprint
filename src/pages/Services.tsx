@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Globe, Award, MessageSquare, Star, FileText, Clock, Shield } from "lucide-react";
+import CTASection from "@/components/ui/cta-section";
 
 const Services = () => {
   const services = [
@@ -114,6 +115,13 @@ const Services = () => {
             ))}
           </div>
         </section>
+
+        {/* Strategic CTA after Services Overview */}
+        <CTASection 
+          variant="compact"
+          title="Which Mexico Visa is Right for You?"
+          description="Not sure which immigration option fits your situation? Our attorneys provide personalized consultations to help you choose the best path forward."
+        />
 
         {/* Mexico Residency Options */}
         <section className="mb-20 section-gradient py-16 -mx-4 px-4">
