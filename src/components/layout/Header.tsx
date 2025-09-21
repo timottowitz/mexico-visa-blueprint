@@ -58,6 +58,16 @@ const Header = () => {
                 <ChevronDown className="ml-1 h-3 w-3" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-64">
+                <DropdownMenuItem asChild>
+                  <Link
+                    to="/services"
+                    className={`block px-4 py-2 text-sm font-semibold border-b ${
+                      isActivePath("/services") ? "text-primary" : "text-foreground"
+                    }`}
+                  >
+                    All Services Overview
+                  </Link>
+                </DropdownMenuItem>
                 {servicePages.map((service) => (
                   <DropdownMenuItem key={service.href} asChild>
                     <Link
@@ -170,6 +180,15 @@ const Header = () => {
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-muted-foreground mb-2">Services</div>
                 <div className="ml-4 space-y-1">
+                  <Link
+                    to="/services"
+                    className={`block px-3 py-2 text-sm font-semibold rounded-md transition-colors border-b ${
+                      isActivePath("/services") ? "text-primary bg-accent-muted" : "text-muted-foreground hover:text-primary"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Services Overview
+                  </Link>
                   {servicePages.map((service) => (
                     <Link
                       key={service.href}

@@ -113,10 +113,10 @@ const Index = () => {
         {/* Our Immigration Services */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Immigration Services</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Mexico Immigration Services — Complete Legal Solutions</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive legal services to help you achieve your Mexico immigration goals, 
-              from temporary residency to full citizenship.
+              As your trusted Mexico immigration attorney, we provide comprehensive legal services to help you achieve your Mexico immigration goals, 
+              from temporary residency to full Mexican citizenship.
             </p>
           </div>
           
@@ -131,15 +131,47 @@ const Index = () => {
               />
             ))}
           </div>
+
+          {/* Additional keyword-rich content */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-foreground">Mexico Residency Visa Options</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our immigration attorneys in Mexico specialize in all types of Mexico residency visas. Whether you need temporary residency for retirement, 
+                  permanent residency for long-term living, or work visas for employment, we provide expert legal guidance throughout the entire process.
+                </p>
+                <ul className="text-muted-foreground space-y-2">
+                  <li>• <strong>Temporary Residency Mexico:</strong> 1-4 year visas for retirees and remote workers</li>
+                  <li>• <strong>Permanent Residency Mexico:</strong> Indefinite residency with work authorization</li>
+                  <li>• <strong>Mexico Work Visas:</strong> Employment-based immigration solutions</li>
+                  <li>• <strong>Family Immigration Mexico:</strong> Spouse and family reunification visas</li>
+                </ul>
+              </div>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-foreground">Expert Mexico Immigration Lawyer Services</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  When you hire a Mexico immigration lawyer from our firm, you get bilingual legal representation, comprehensive visa assistance, 
+                  and strategic guidance for Mexican citizenship by naturalization. Our immigration attorneys handle everything from consulate applications to INM processing.
+                </p>
+                <ul className="text-muted-foreground space-y-2">
+                  <li>• <strong>Mexico Visa Assistance:</strong> Complete application support and representation</li>
+                  <li>• <strong>Immigration Attorney Mexico:</strong> Licensed legal professionals with 15+ years experience</li>
+                  <li>• <strong>Mexican Citizenship Services:</strong> Naturalization process and exam preparation</li>
+                  <li>• <strong>Corporate Immigration:</strong> Business visa solutions and employee transfers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Why Choose Us */}
         <section className="mb-20 section-gradient py-16 -mx-4 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose Us</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose Our Mexico Immigration Law Firm</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Experience the difference of working with Mexico's trusted immigration law experts.
+                Experience the difference of working with Mexico's most trusted immigration attorneys specializing in US and Canadian client services.
               </p>
             </div>
             
@@ -177,6 +209,25 @@ const Index = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Additional expertise section */}
+            <div className="mt-12 text-center">
+              <h3 className="text-2xl font-semibold text-foreground mb-6">Comprehensive Mexico Immigration Solutions</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <h4 className="font-semibold text-foreground mb-2">Mexico Residency Experts</h4>
+                  <p className="text-sm text-muted-foreground">Specialized in temporary and permanent residency applications with high success rates for US and Canadian citizens seeking Mexico residency visas.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold text-foreground mb-2">Immigration Attorney Services</h4>
+                  <p className="text-sm text-muted-foreground">Licensed Mexico immigration lawyers providing bilingual legal representation for all aspects of Mexican immigration law and visa assistance.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-semibold text-foreground mb-2">Mexican Citizenship Assistance</h4>
+                  <p className="text-sm text-muted-foreground">Expert guidance for Mexican citizenship by naturalization, including Spanish language preparation and civics exam support for qualifying residents.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

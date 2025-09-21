@@ -16,13 +16,29 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "hire-mexico-immigration-lawyer-guide",
+    title: "Should You Hire a Mexico Immigration Lawyer? Complete Guide 2025",
+    excerpt: "Expert guide on when to hire a Mexico immigration attorney, costs, benefits, and how to choose the right lawyer for your residency, work visa, or citizenship case.",
+    date: "2025-01-15",
+    readTime: "12 min read",
+    category: "Legal Services",
+    featured: true
+  },
+  {
+    slug: "mexico-residency-visa-requirements-2025",
+    title: "Mexico Residency Visa Requirements 2025: Complete Guide for US & Canadian Citizens",
+    excerpt: "Comprehensive guide to Mexico residency visa requirements including financial thresholds, application process, and documentation for temporary and permanent residency.",
+    date: "2025-01-12",
+    readTime: "16 min read",
+    category: "Residency Requirements"
+  },
+  {
     slug: "retiring-in-mexico-visa-guide",
     title: "Retiring in Mexico Visa Guide: Complete 2025 Retirement Immigration Process",
     excerpt: "Everything retirees need to know about moving to Mexico, including visa requirements, costs, healthcare, and best retirement destinations.",
     date: "2025-09-22",
     readTime: "18 min read",
-    category: "Retirement",
-    featured: true
+    category: "Retirement"
   },
   {
     slug: "work-permit-mexico-americans-canadians",

@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 import BreadcrumbNav from "@/components/ui/breadcrumb-nav";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
 import Blog from "./pages/Blog";
@@ -40,6 +41,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faqs" element={<FAQs />} />
                 <Route path="/blog" element={<Blog />} />
