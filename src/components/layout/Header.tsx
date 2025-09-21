@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -138,15 +138,18 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
+          {/* WhatsApp Button */}
           <div className="hidden md:flex">
             <Button asChild className="btn-professional">
-              <button 
-                onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
-                className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium"
+              <a 
+                href="https://wa.me/523222786900"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium flex items-center gap-2"
               >
-                Schedule Consultation
-              </button>
+                <MessageCircle className="h-4 w-4" />
+                +52-322-278690
+              </a>
             </Button>
           </div>
 
@@ -266,12 +269,15 @@ const Header = () => {
 
               <div className="px-3 py-2">
                 <Button asChild className="btn-professional w-full" onClick={() => setIsMenuOpen(false)}>
-                  <button 
-                    onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
-                    className="text-foreground hover:text-primary transition-colors block px-4 py-2 text-sm rounded-md hover:bg-muted"
+                  <a 
+                    href="https://wa.me/523222786900"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md hover:bg-muted w-full"
                   >
-                    Schedule Consultation
-                  </button>
+                    <MessageCircle className="h-4 w-4" />
+                    +52-322-278690
+                  </a>
                 </Button>
               </div>
             </div>
