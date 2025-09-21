@@ -64,7 +64,8 @@ const BLOG_POSTS_METADATA: BlogPostMeta[] = [
     date: '2025-09-15',
     readTime: '8 min read',
     category: 'Residency',
-    author: 'Mexico Immigration Lawyer'
+    author: 'Mexico Immigration Lawyer',
+    featured: true
   },
   {
     slug: 'mexican-citizenship-requirements-2025',

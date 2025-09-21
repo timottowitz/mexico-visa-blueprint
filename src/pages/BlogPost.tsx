@@ -5,8 +5,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Calendar, Clock, ArrowLeft, ArrowRight, User } from "lucide-react";
 import { loadBlogPost } from "@/utils/blogUtils";
+import lawyerProfile from "@/assets/lawyer-profile.png";
 
 interface BlogPostMeta {
   title: string;
@@ -15,7 +17,16 @@ interface BlogPostMeta {
   readTime: string;
   category: string;
   author: string;
+  featured?: boolean;
 }
+
+// Author information for schema and display
+const AUTHOR_INFO = {
+  name: "Mexico Immigration Lawyer",
+  bio: "Experienced immigration attorney specializing in Mexico residency, work visas, and citizenship applications. Over 15 years helping US and Canadian citizens navigate Mexican immigration law.",
+  image: lawyerProfile,
+  url: "https://mexicoimmigrationlawyer.com/about"
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -81,6 +92,37 @@ const BlogPost = () => {
     );
   }
 
+  const articleUrl = `https://mexicoimmigrationlawyer.com/blog/${slug}`;
+
+  // Structured data for article
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": postMeta.title,
+    "description": postMeta.excerpt,
+    "image": `${lawyerProfile}`,
+    "datePublished": postMeta.date,
+    "dateModified": postMeta.date,
+    "author": {
+      "@type": "Person",
+      "name": AUTHOR_INFO.name,
+      "description": AUTHOR_INFO.bio,
+      "image": AUTHOR_INFO.image,
+      "url": AUTHOR_INFO.url
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mexico Immigration Lawyer",
+      "url": "https://mexicoimmigrationlawyer.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": articleUrl
+    },
+    "articleSection": postMeta.category,
+    "wordCount": content.split(' ').length
+  };
+
   return (
     <>
       <Helmet>
@@ -89,9 +131,15 @@ const BlogPost = () => {
         <meta property="og:title" content={postMeta.title} />
         <meta property="og:description" content={postMeta.excerpt} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content={lawyerProfile} />
         <meta property="article:published_time" content={postMeta.date} />
         <meta property="article:author" content={postMeta.author} />
-        <link rel="canonical" href={`https://mexicoimmigrationlawyer.com/blog/${slug}`} />
+        <meta property="article:section" content={postMeta.category} />
+        <meta name="author" content={AUTHOR_INFO.name} />
+        <link rel="canonical" href={articleUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">
@@ -105,7 +153,7 @@ const BlogPost = () => {
           {/* Article Header */}
           <article>
             <header className="mb-8">
-              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
                 <Badge variant="secondary">{postMeta.category}</Badge>
                 <div className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -120,12 +168,36 @@ const BlogPost = () => {
                   <span>{postMeta.readTime}</span>
                 </div>
               </div>
-              <h1 className="text-4xl font-bold text-foreground mb-4">
+              
+              <h1 className="text-4xl font-bold text-foreground mb-6">
                 {postMeta.title}
               </h1>
-              <p className="text-xl text-muted-foreground">
+              
+              <p className="text-xl text-muted-foreground mb-8">
                 {postMeta.excerpt}
               </p>
+
+              {/* Author Byline - Forbes Style */}
+              <div className="flex items-center gap-4 py-6 border-y border-border">
+                <Avatar className="h-16 w-16">
+                  <AvatarImage src={AUTHOR_INFO.image} alt={AUTHOR_INFO.name} />
+                  <AvatarFallback>
+                    <User className="h-8 w-8" />
+                  </AvatarFallback>
+                </Avatar>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="font-semibold text-foreground">{AUTHOR_INFO.name}</p>
+                    <span className="text-sm text-muted-foreground">•</span>
+                    <Link to="/about" className="text-sm text-primary hover:text-primary-hover">
+                      View Profile
+                    </Link>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {AUTHOR_INFO.bio}
+                  </p>
+                </div>
+              </div>
             </header>
 
             {/* Article Content */}
