@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { Building, Users, FileCheck, Briefcase } from "lucide-react";
 
@@ -123,6 +124,13 @@ const WorkVisas = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          variant="compact"
+          title="Need Expert Help with Mexico Work Authorization?"
+          description="We handle everything from employer registration to resident card issuance. Get professional guidance for employees and employers."
+        />
 
         {/* Special Cases */}
         <section className="mb-16">

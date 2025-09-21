@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { Heart, Users, Baby, Clock } from "lucide-react";
 
@@ -143,6 +144,12 @@ const FamilyBasedImmigration = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          title="Reunite Your Family in Mexico Faster"
+          description="Family-based cases often have faster processing and no financial requirements. Let our bilingual attorneys help you navigate the process successfully."
+        />
 
         {/* How We Help Your Family */}
         <section className="mb-16">

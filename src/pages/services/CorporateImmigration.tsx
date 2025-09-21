@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { Building2, TrendingUp, Shield, Users } from "lucide-react";
 
@@ -137,6 +138,13 @@ const CorporateImmigration = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          variant="compact"
+          title="Expanding Your Business to Mexico?"
+          description="Get expert corporate immigration support for seamless employee transfers, investor visas, and ongoing compliance. Schedule your business consultation today."
+        />
 
         {/* Why Choose Our Corporate Services */}
         <section className="mb-16">

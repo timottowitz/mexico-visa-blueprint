@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { Globe, BookOpen, Home } from "lucide-react";
 
@@ -160,6 +161,12 @@ const MexicanCitizenship = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          title="Ready to Become a Mexican Citizen?"
+          description="Take the final step in your Mexico journey. Our attorneys provide complete naturalization support, from eligibility assessment to oath ceremony."
+        />
 
         {/* How We Help */}
         <section className="mb-16">

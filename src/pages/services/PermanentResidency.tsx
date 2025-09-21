@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { Clock, Briefcase, Shield, Users } from "lucide-react";
 
@@ -138,6 +139,12 @@ const PermanentResidency = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          title="Secure Your Future in Mexico with Permanent Residency"
+          description="Our attorneys will evaluate your qualification path and guide you through the entire process, whether transitioning from temporary residency or applying directly."
+        />
 
         {/* Ongoing Guidance */}
         <section className="mb-16">

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/ui/cta-section";
 import { Link } from "react-router-dom";
 import { FileText, Calendar, MapPin, Users } from "lucide-react";
 
@@ -151,6 +152,13 @@ const TemporaryResidency = () => {
             </div>
           </div>
         </section>
+
+        {/* Strategic CTA */}
+        <CTASection 
+          variant="compact"
+          title="Ready to Start Your Temporary Residency Application?"
+          description="Get expert guidance on financial requirements, document preparation, and consulate selection from our experienced immigration attorneys."
+        />
 
         {/* How We Help */}
         <section className="mb-16">
