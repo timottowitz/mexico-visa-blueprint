@@ -12,12 +12,12 @@ Before pursuing citizenship, most applicants first establish legal residency thr
 
 ### 2. Naturalization by Residency: The Standard Path
 
-**Core Residency Requirement:** Minimum of **five consecutive years** of legal residency, holding either temporary resident or permanent resident card, immediately preceding the application date.
+**Core Residency Requirement:** Minimum of **five consecutive years** of legal residency, holding either [temporary resident](/services/temporary-residency) or [permanent resident](/services/permanent-residency) card, immediately preceding the application date.
 
 **Physical Presence Test:** You must prove physical presence in Mexico for at least **18 of the 24 months** (18 months within two years) immediately prior to submitting your application. Temporary absences exceeding six months cumulative during this two-year period will result in application denial.
 
 **For Priority Cases (2 years residence):**
-- Spouses of Mexican citizens (legally married)
+- Spouses of Mexican citizens (legally married) - see [family-based immigration options](/services/family-based-immigration)
 - Children of Mexican citizens  
 - Citizens of Latin American or Iberian Peninsula countries (Spain and Portugal)
 - Individuals with children born in Mexico

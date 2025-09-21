@@ -2,6 +2,8 @@
 
 Family reunification remains a cornerstone of Mexico's immigration policy, providing clear pathways for foreign nationals to gain legal residency through established family ties. However, significant procedural changes implemented in March 2025 have dramatically increased administrative complexity. This guide covers the complete process, requirements, and critical updates for family-based immigration.
 
+Whether you're seeking [family-based residency](/services/family-based-immigration) or exploring pathways to [permanent residency through marriage](/services/permanent-residency), understanding your [Mexico immigration options through family ties](/services) helps you navigate this complex but rewarding process.
+
 ## Types of Family Immigration (Unidad Familiar)
 
 ### Eligible Family Relationships
@@ -18,10 +20,12 @@ Family reunification remains a cornerstone of Mexico's immigration policy, provi
 **Eligibility:** Legally married to Mexican citizen
 
 **Benefits:**
-- Accelerated path to permanent residency (2 years instead of 5)
+- Accelerated path to [permanent residency](/services/permanent-residency) (2 years instead of 5)
 - Work authorization included automatically
 - Access to Mexican healthcare and social services
 - No financial solvency requirement from sponsor
+
+Learn more about [family-based immigration options](/services/family-based-immigration) for spouses of Mexican citizens.
 
 ### 2. Child of Mexican Citizen  
 **For Minor Children:**
