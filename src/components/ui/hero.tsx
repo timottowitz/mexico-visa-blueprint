@@ -43,7 +43,7 @@ const Hero = ({
       />
       
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/30" />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 hero-gradient opacity-80" />
