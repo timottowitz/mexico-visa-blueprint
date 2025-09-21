@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          notification_sent: boolean | null
+          phone: string | null
+          preferred_contact: string | null
+          service_type: string | null
+          synced_to_airtable: boolean | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          notification_sent?: boolean | null
+          phone?: string | null
+          preferred_contact?: string | null
+          service_type?: string | null
+          synced_to_airtable?: boolean | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          notification_sent?: boolean | null
+          phone?: string | null
+          preferred_contact?: string | null
+          service_type?: string | null
+          synced_to_airtable?: boolean | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
