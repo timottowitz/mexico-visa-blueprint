@@ -146,7 +146,7 @@ const Header = () => {
                 className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium flex items-center gap-2"
               >
                 <MessageCircle className="h-4 w-4" />
-                +52-322-278-7690
+                WhatsApp
               </a>
             </Button>
           </div>
@@ -272,7 +272,7 @@ const Header = () => {
                     className="text-foreground hover:text-primary transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md hover:bg-muted w-full"
                   >
                     <MessageCircle className="h-4 w-4" />
-                    +52-322-278-7690
+                    WhatsApp
                   </a>
                 </Button>
               </div>
