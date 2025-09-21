@@ -1,6 +1,6 @@
-# Mexican Citizenship Requirements 2024-2025: Complete Naturalization Guide
+# Mexican Citizenship Requirements 2025: Complete Naturalization Guide
 
-The acquisition of Mexican citizenship through naturalization is a formal process governed by the Secretaría de Relaciones Exteriores (SRE), representing the final step of integration for a foreign national. This comprehensive guide covers all pathways, requirements, and procedures for obtaining Mexican citizenship in 2024-2025.
+The acquisition of Mexican citizenship through naturalization is a formal process governed by the Secretaría de Relaciones Exteriores (SRE), representing the final step of integration for a foreign national. This comprehensive guide covers all pathways, requirements, and procedures for obtaining Mexican citizenship in 2025.
 
 ## Who Can Apply for Mexican Citizenship?
 
@@ -43,7 +43,7 @@ All applicants must pass two distinct examinations unless exempted:
 1. **Spanish Language Proficiency** - Including reading comprehension
 2. **Mexican History and Culture** - Comprehensive knowledge assessment
 
-### 2024-2025 Exam Changes
+### 2025 Exam Changes
 The examination format was significantly revised in 2018, moving from memorization-based multiple choice to comprehensive assessment testing genuine understanding of Mexico's culture and society.
 
 ### Exemptions
@@ -122,7 +122,7 @@ Upon approval:
 - Full legal representation: $30,000 - $50,000 MXN
 - Translation services: $5,000 - $10,000 MXN
 
-## Timeline Expectations for 2024-2025
+## Timeline Expectations for 2025
 
 ### Official Processing Timeline
 - **SRE processing:** Approximately 3 months from INM opinion receipt

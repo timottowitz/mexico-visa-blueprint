@@ -1,6 +1,6 @@
-# Temporary vs Permanent Residency in Mexico 2024-2025: Complete Comparison Guide
+# Temporary vs Permanent Residency in Mexico 2025: Complete Comparison Guide
 
-Choosing between temporary and permanent residency in Mexico is one of the most critical decisions in your immigration journey. Each option offers distinct advantages, requirements, and pathways, with significant financial and procedural differences. This comprehensive guide covers updated requirements, the infamous "consulate lottery," and strategic considerations for 2024-2025.
+Choosing between temporary and permanent residency in Mexico is one of the most critical decisions in your immigration journey. Each option offers distinct advantages, requirements, and pathways, with significant financial and procedural differences. This comprehensive guide covers updated requirements, the infamous "consulate lottery," and strategic considerations for 2025.
 
 ## Understanding Mexican Residency Types
 
@@ -14,7 +14,7 @@ Choosing between temporary and permanent residency in Mexico is one of the most 
 
 ## 2025 Financial Requirements: Updated Thresholds
 
-The economic requirements are calculated based on Mexico's daily minimum wage (MDW), with amounts in USD lower than 2024 due to exchange rate shifts.
+The economic requirements are calculated based on Mexico's daily minimum wage (MDW), with current amounts reflecting 2025 exchange rates.
 
 ### Temporary Residency Financial Thresholds (2025)
 
@@ -206,7 +206,7 @@ Mexican consulates worldwide operate with significant autonomy, creating vastly 
 
 ## Conclusion
 
-The choice between temporary and permanent residency in Mexico has become more complex in 2024-2025, with increased consular discretion, higher scrutiny, and significant procedural variations. Success requires understanding not just the official requirements, but the unwritten rules and consular preferences that can determine outcomes.
+The choice between temporary and permanent residency in Mexico has become more complex in 2025, with increased consular discretion, higher scrutiny, and significant procedural variations. Success requires understanding not just the official requirements, but the unwritten rules and consular preferences that can determine outcomes.
 
 **Key Strategic Recommendations:**
 
@@ -220,4 +220,4 @@ The Mexican residency system offers excellent opportunities for qualifying appli
 
 ---
 
-*This guide reflects 2024-2025 conditions and requirements. Immigration procedures continue evolving, and consular practices vary significantly. Always verify current requirements with your chosen consulate and consider professional legal consultation for complex situations.*
+*This guide reflects 2025 conditions and requirements. Immigration procedures continue evolving, and consular practices vary significantly. Always verify current requirements with your chosen consulate and consider professional legal consultation for complex situations.*

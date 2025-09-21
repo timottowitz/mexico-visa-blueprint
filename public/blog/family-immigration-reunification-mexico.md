@@ -1,4 +1,4 @@
-# Family Immigration and Reunification in Mexico: 2024-2025 Complete Guide
+# Family Immigration and Reunification in Mexico: 2025 Complete Guide
 
 Family reunification remains a cornerstone of Mexico's immigration policy, providing clear pathways for foreign nationals to gain legal residency through established family ties. However, significant procedural changes implemented in March 2025 have dramatically increased administrative complexity. This guide covers the complete process, requirements, and critical updates for family-based immigration.
 

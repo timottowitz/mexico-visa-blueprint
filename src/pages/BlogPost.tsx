@@ -20,15 +20,15 @@ const blogPostsData: Record<string, BlogPostMeta> = {
   "temporary-vs-permanent-residency-mexico": {
     title: "Temporary vs Permanent Residency in Mexico: Which Path is Right for You?",
     excerpt: "Understanding the key differences between temporary and permanent residency options in Mexico, including financial requirements, benefits, and application processes.",
-    date: "2024-09-15",
+    date: "2025-09-15",
     readTime: "8 min read",
     category: "Residency",
     author: "Mexico Immigration Lawyer"
   },
-  "mexican-citizenship-requirements-2024": {
-    title: "Complete Guide to Mexican Citizenship Requirements in 2024",
+  "mexican-citizenship-requirements-2025": {
+    title: "Complete Guide to Mexican Citizenship Requirements in 2025",
     excerpt: "Everything you need to know about obtaining Mexican citizenship, from eligibility requirements to the application process and benefits.",
-    date: "2024-09-12",
+    date: "2025-09-12",
     readTime: "15 min read",
     category: "Citizenship",
     author: "Mexico Immigration Lawyer"
@@ -36,7 +36,7 @@ const blogPostsData: Record<string, BlogPostMeta> = {
   "work-visa-guide-mexico": {
     title: "Complete Guide to Work Visas in Mexico: Types, Requirements, and Process",
     excerpt: "Comprehensive guide to obtaining work authorization in Mexico, including visa types, requirements, and step-by-step process.",
-    date: "2024-09-08",
+    date: "2025-09-08",
     readTime: "12 min read",
     category: "Work Visas",
     author: "Mexico Immigration Lawyer"
@@ -44,15 +44,15 @@ const blogPostsData: Record<string, BlogPostMeta> = {
   "family-immigration-reunification-mexico": {
     title: "Family Immigration and Reunification in Mexico: A Complete Guide",
     excerpt: "Learn about family-based immigration options and how to reunite with family members in Mexico through various visa pathways.",
-    date: "2024-09-05",
+    date: "2025-09-05",
     readTime: "13 min read",
     category: "Family Immigration",
     author: "Mexico Immigration Lawyer"
   },
-  "mexico-visa-requirements-2024": {
-    title: "Mexico Visa Requirements 2024: Complete Guide for US and Canadian Citizens",
+  "mexico-visa-requirements-2025": {
+    title: "Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens",
     excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
-    date: "2024-09-10",
+    date: "2025-09-10",
     readTime: "12 min read",
     category: "Visas",
     author: "Mexico Immigration Lawyer"
@@ -60,7 +60,7 @@ const blogPostsData: Record<string, BlogPostMeta> = {
   "mexican-citizenship-naturalization-process": {
     title: "Mexican Citizenship Through Naturalization: Step-by-Step Process",
     excerpt: "Everything you need to know about becoming a Mexican citizen, from residency requirements to the citizenship exam and oath ceremony.",
-    date: "2024-09-05",
+    date: "2025-09-05",
     readTime: "10 min read",
     category: "Citizenship",
     author: "Mexico Immigration Lawyer"
@@ -85,7 +85,7 @@ Temporary residency allows you to live in Mexico for **up to four years total**,
 - Path to permanent residency after completion
 
 ### Financial Requirements:
-The financial requirements for temporary residency are measured in **UMAs (Unidades de Medida y Actualización)** and vary by consulate. As of 2024, most consulates require:
+The financial requirements for temporary residency are measured in **UMAs (Unidades de Medida y Actualización)** and vary by consulate. As of 2025, most consulates require:
 
 - **Monthly income**: Equivalent to 300-400 UMAs per month
 - **Bank balance**: Equivalent to 5,000-6,000 UMAs
@@ -342,11 +342,11 @@ In the meantime, feel free to [contact us](/contact) for personalized guidance o
           <div className="mt-12">
             <h3 className="text-2xl font-semibold mb-6 text-foreground">Related Articles</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/mexico-visa-requirements-2024" className="block group">
+              <Link to="/blog/mexico-visa-requirements-2025" className="block group">
                 <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
                   <Badge variant="outline" className="mb-3">Visas</Badge>
                   <h4 className="font-semibold group-hover:text-primary transition-colors mb-2">
-                    Mexico Visa Requirements 2024: Complete Guide for US and Canadian Citizens
+                    Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens
                   </h4>
                   <p className="text-sm text-muted-foreground">
                     Updated requirements and processes for obtaining various types of Mexican visas...

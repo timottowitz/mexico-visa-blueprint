@@ -19,16 +19,16 @@ const blogPosts: BlogPost[] = [
     slug: "temporary-vs-permanent-residency-mexico",
     title: "Temporary vs Permanent Residency in Mexico: Which Path is Right for You?",
     excerpt: "Understanding the key differences between temporary and permanent residency options in Mexico, including financial requirements, benefits, and application processes.",
-    date: "2024-09-15",
+    date: "2025-09-15",
     readTime: "8 min read",
     category: "Residency",
     featured: true
   },
   {
-    slug: "mexican-citizenship-requirements-2024",
-    title: "Complete Guide to Mexican Citizenship Requirements in 2024",
+    slug: "mexican-citizenship-requirements-2025",
+    title: "Complete Guide to Mexican Citizenship Requirements in 2025",
     excerpt: "Everything you need to know about obtaining Mexican citizenship, from eligibility requirements to the application process and benefits.",
-    date: "2024-09-12",
+    date: "2025-09-12",
     readTime: "15 min read",
     category: "Citizenship"
   },
@@ -36,7 +36,7 @@ const blogPosts: BlogPost[] = [
     slug: "work-visa-guide-mexico",
     title: "Complete Guide to Work Visas in Mexico: Types, Requirements, and Process",
     excerpt: "Comprehensive guide to obtaining work authorization in Mexico, including visa types, requirements, and step-by-step process.",
-    date: "2024-09-08",
+    date: "2025-09-08",
     readTime: "12 min read",
     category: "Work Visas"
   },
@@ -44,15 +44,15 @@ const blogPosts: BlogPost[] = [
     slug: "family-immigration-reunification-mexico",
     title: "Family Immigration and Reunification in Mexico: A Complete Guide",
     excerpt: "Learn about family-based immigration options and how to reunite with family members in Mexico through various visa pathways.",
-    date: "2024-09-05",
+    date: "2025-09-05",
     readTime: "13 min read",
     category: "Family Immigration"
   },
   {
-    slug: "mexico-visa-requirements-2024",
-    title: "Mexico Visa Requirements 2024: Complete Guide for US and Canadian Citizens",
+    slug: "mexico-visa-requirements-2025",
+    title: "Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens",
     excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
-    date: "2024-09-10",
+    date: "2025-09-10",
     readTime: "12 min read",
     category: "Visas"
   },
@@ -60,7 +60,7 @@ const blogPosts: BlogPost[] = [
     slug: "mexican-citizenship-naturalization-process",
     title: "Mexican Citizenship Through Naturalization: Step-by-Step Process",
     excerpt: "Everything you need to know about becoming a Mexican citizen, from residency requirements to the citizenship exam and oath ceremony.",
-    date: "2024-09-05",
+    date: "2025-09-05",
     readTime: "10 min read",
     category: "Citizenship"
   },
@@ -68,7 +68,7 @@ const blogPosts: BlogPost[] = [
     slug: "family-based-immigration-mexico",
     title: "Family-Based Immigration to Mexico: Spouse and Family Visas Explained",
     excerpt: "How to obtain Mexican residency through family connections, including marriage-based visas and requirements for family members.",
-    date: "2024-08-28",
+    date: "2025-08-28",
     readTime: "7 min read",
     category: "Family Immigration"
   },
@@ -76,7 +76,7 @@ const blogPosts: BlogPost[] = [
     slug: "working-mexico-visa-requirements",
     title: "Working in Mexico: Visa Requirements and Work Permits for Foreign Employees",
     excerpt: "Comprehensive guide to Mexican work visas, employer sponsorship requirements, and the process for obtaining work authorization.",
-    date: "2024-08-20",
+    date: "2025-08-20",
     readTime: "9 min read",
     category: "Work Visas"
   },
@@ -84,7 +84,7 @@ const blogPosts: BlogPost[] = [
     slug: "mexico-immigration-common-mistakes",
     title: "5 Common Mistakes to Avoid in Your Mexico Immigration Application",
     excerpt: "Learn from the most frequent errors we see in immigration applications and how to avoid costly delays or rejections.",
-    date: "2024-08-15",
+    date: "2025-08-15",
     readTime: "6 min read",
     category: "Tips & Advice"
   }
