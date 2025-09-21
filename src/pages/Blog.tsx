@@ -16,13 +16,37 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "retiring-in-mexico-visa-guide",
+    title: "Retiring in Mexico Visa Guide: Complete 2025 Retirement Immigration Process",
+    excerpt: "Everything retirees need to know about moving to Mexico, including visa requirements, costs, healthcare, and best retirement destinations.",
+    date: "2025-09-22",
+    readTime: "18 min read",
+    category: "Retirement",
+    featured: true
+  },
+  {
+    slug: "work-permit-mexico-americans-canadians",
+    title: "Work Permit Mexico for Americans and Canadians: Complete 2025 Guide",
+    excerpt: "Comprehensive guide for US and Canadian citizens seeking work authorization in Mexico, including visa types, requirements, and application processes.",
+    date: "2025-09-20",
+    readTime: "16 min read",
+    category: "Work Visas"
+  },
+  {
+    slug: "inm-appointment-mexico-guide",
+    title: "INM Appointment Mexico: Complete Guide to Immigration Appointments",
+    excerpt: "Master the INM appointment system in Mexico with our comprehensive guide covering booking, preparation, and what to expect during your immigration appointment.",
+    date: "2025-09-18",
+    readTime: "14 min read",
+    category: "Immigration Process"
+  },
+  {
     slug: "temporary-vs-permanent-residency-mexico",
     title: "Temporary vs Permanent Residency in Mexico: Which Path is Right for You?",
     excerpt: "Understanding the key differences between temporary and permanent residency options in Mexico, including financial requirements, benefits, and application processes.",
     date: "2025-09-15",
     readTime: "8 min read",
-    category: "Residency",
-    featured: true
+    category: "Residency"
   },
   {
     slug: "mexican-citizenship-requirements-2025",
@@ -31,6 +55,14 @@ const blogPosts: BlogPost[] = [
     date: "2025-09-12",
     readTime: "15 min read",
     category: "Citizenship"
+  },
+  {
+    slug: "mexico-visa-requirements-2025",
+    title: "Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens",
+    excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
+    date: "2025-09-10",
+    readTime: "12 min read",
+    category: "Visas"
   },
   {
     slug: "work-visa-guide-mexico",
@@ -49,44 +81,12 @@ const blogPosts: BlogPost[] = [
     category: "Family Immigration"
   },
   {
-    slug: "mexico-visa-requirements-2025",
-    title: "Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens",
-    excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
-    date: "2025-09-10",
-    readTime: "12 min read",
-    category: "Visas"
-  },
-  {
     slug: "mexican-citizenship-naturalization-process",
     title: "Mexican Citizenship Through Naturalization: Step-by-Step Process",
     excerpt: "Everything you need to know about becoming a Mexican citizen, from residency requirements to the citizenship exam and oath ceremony.",
     date: "2025-09-05",
     readTime: "10 min read",
     category: "Citizenship"
-  },
-  {
-    slug: "family-based-immigration-mexico",
-    title: "Family-Based Immigration to Mexico: Spouse and Family Visas Explained",
-    excerpt: "How to obtain Mexican residency through family connections, including marriage-based visas and requirements for family members.",
-    date: "2025-08-28",
-    readTime: "7 min read",
-    category: "Family Immigration"
-  },
-  {
-    slug: "working-mexico-visa-requirements",
-    title: "Working in Mexico: Visa Requirements and Work Permits for Foreign Employees",
-    excerpt: "Comprehensive guide to Mexican work visas, employer sponsorship requirements, and the process for obtaining work authorization.",
-    date: "2025-08-20",
-    readTime: "9 min read",
-    category: "Work Visas"
-  },
-  {
-    slug: "mexico-immigration-common-mistakes",
-    title: "5 Common Mistakes to Avoid in Your Mexico Immigration Application",
-    excerpt: "Learn from the most frequent errors we see in immigration applications and how to avoid costly delays or rejections.",
-    date: "2025-08-15",
-    readTime: "6 min read",
-    category: "Tips & Advice"
   }
 ];
 
