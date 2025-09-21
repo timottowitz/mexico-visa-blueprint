@@ -84,4 +84,47 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/family-immigration-reunification-mexico</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/inm-appointment-mexico-guide</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/mexican-citizenship-requirements-2025</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/retiring-in-mexico-visa-guide</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/temporary-vs-permanent-residency-mexico</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/work-permit-mexico-americans-canadians</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/work-visa-guide-mexico</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
