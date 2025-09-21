@@ -124,7 +124,7 @@ const About = () => {
             <img 
               src={lawyerProfileImage} 
               alt="Mexico immigration attorney consulting with client in professional setting"
-              className="w-48 h-32 object-cover rounded-lg mx-auto shadow-md"
+              className="w-72 h-48 object-cover rounded-lg mx-auto shadow-md"
             />
           </div>
         </section>
