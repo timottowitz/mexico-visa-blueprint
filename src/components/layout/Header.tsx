@@ -142,7 +142,7 @@ const Header = () => {
           <div className="hidden md:flex">
             <Button asChild className="btn-professional">
               <a 
-                href="whatsapp://send?phone=523222786900"
+                href="whatsapp://send?phone=52322278690"
                 className="text-primary-foreground hover:text-primary-foreground/80 transition-colors font-medium flex items-center gap-2"
               >
                 <MessageCircle className="h-4 w-4" />
@@ -268,7 +268,7 @@ const Header = () => {
               <div className="px-3 py-2">
                 <Button asChild className="btn-professional w-full" onClick={() => setIsMenuOpen(false)}>
                   <a 
-                    href="whatsapp://send?phone=523222786900"
+                    href="whatsapp://send?phone=52322278690"
                     className="text-foreground hover:text-primary transition-colors flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-md hover:bg-muted w-full"
                   >
                     <MessageCircle className="h-4 w-4" />
