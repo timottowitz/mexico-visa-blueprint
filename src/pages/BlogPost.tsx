@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import { loadBlogPost } from "@/utils/blogUtils";
 
 interface BlogPostMeta {
   title: string;
@@ -16,195 +17,6 @@ interface BlogPostMeta {
   author: string;
 }
 
-const blogPostsData: Record<string, BlogPostMeta> = {
-  "temporary-vs-permanent-residency-mexico": {
-    title: "Temporary vs Permanent Residency in Mexico: Which Path is Right for You?",
-    excerpt: "Understanding the key differences between temporary and permanent residency options in Mexico, including financial requirements, benefits, and application processes.",
-    date: "2025-09-15",
-    readTime: "8 min read",
-    category: "Residency",
-    author: "Mexico Immigration Lawyer"
-  },
-  "mexican-citizenship-requirements-2025": {
-    title: "Complete Guide to Mexican Citizenship Requirements in 2025",
-    excerpt: "Everything you need to know about obtaining Mexican citizenship, from eligibility requirements to the application process and benefits.",
-    date: "2025-09-12",
-    readTime: "15 min read",
-    category: "Citizenship",
-    author: "Mexico Immigration Lawyer"
-  },
-  "work-visa-guide-mexico": {
-    title: "Complete Guide to Work Visas in Mexico: Types, Requirements, and Process",
-    excerpt: "Comprehensive guide to obtaining work authorization in Mexico, including visa types, requirements, and step-by-step process.",
-    date: "2025-09-08",
-    readTime: "12 min read",
-    category: "Work Visas",
-    author: "Mexico Immigration Lawyer"
-  },
-  "family-immigration-reunification-mexico": {
-    title: "Family Immigration and Reunification in Mexico: A Complete Guide",
-    excerpt: "Learn about family-based immigration options and how to reunite with family members in Mexico through various visa pathways.",
-    date: "2025-09-05",
-    readTime: "13 min read",
-    category: "Family Immigration",
-    author: "Mexico Immigration Lawyer"
-  },
-  "mexico-visa-requirements-2025": {
-    title: "Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens",
-    excerpt: "Updated requirements and processes for obtaining various types of Mexican visas, including recent policy changes and financial thresholds.",
-    date: "2025-09-10",
-    readTime: "12 min read",
-    category: "Visas",
-    author: "Mexico Immigration Lawyer"
-  },
-  "inm-appointment-mexico-guide": {
-    title: "INM Appointment Mexico: Complete Guide to Immigration Appointments",
-    excerpt: "Master the INM appointment system in Mexico with our comprehensive guide covering booking, preparation, and what to expect during your immigration appointment.",
-    date: "2025-09-18",
-    readTime: "14 min read",
-    category: "Immigration Process",
-    author: "Mexico Immigration Lawyer"
-  },
-  "work-permit-mexico-americans-canadians": {
-    title: "Work Permit Mexico for Americans and Canadians: Complete 2025 Guide",
-    excerpt: "Comprehensive guide for US and Canadian citizens seeking work authorization in Mexico, including visa types, requirements, and application processes.",
-    date: "2025-09-20",
-    readTime: "16 min read",
-    category: "Work Visas",
-    author: "Mexico Immigration Lawyer"
-  },
-  "retiring-in-mexico-visa-guide": {
-    title: "Retiring in Mexico Visa Guide: Complete 2025 Retirement Immigration Process",
-    excerpt: "Everything retirees need to know about moving to Mexico, including visa requirements, costs, healthcare, and best retirement destinations.",
-    date: "2025-09-22",
-    readTime: "18 min read",
-    category: "Retirement",
-    author: "Mexico Immigration Lawyer"
-  },
-};
-
-// Sample markdown content for the first blog post
-const sampleMarkdownContent = `
-# Temporary vs Permanent Residency in Mexico: Which Path is Right for You?
-
-When planning your move to Mexico, one of the most important decisions you'll make is choosing between **temporary residency** and **permanent residency**. Each option offers distinct advantages and requirements, and the right choice depends on your individual circumstances, financial situation, and long-term goals.
-
-## Understanding Temporary Residency (Residente Temporal)
-
-Temporary residency allows you to live in Mexico for **up to four years total**, typically issued initially for one year and renewable annually. This status is ideal for those who want to establish roots in Mexico while maintaining flexibility.
-
-### Key Benefits of Temporary Residency:
-- Legal residence for 1-4 years
-- Ability to open Mexican bank accounts
-- Access to healthcare services
-- Option to add work permission
-- Path to permanent residency after completion
-
-### Financial Requirements:
-The financial requirements for temporary residency are measured in **UMAs (Unidades de Medida y Actualización)** and vary by consulate. As of 2025, most consulates require:
-
-- **Monthly income**: Equivalent to 300-400 UMAs per month
-- **Bank balance**: Equivalent to 5,000-6,000 UMAs
-- **Investment accounts**: Securities and investments may count toward financial solvency
-
-> **Important Note**: UMA values are updated annually, and each Mexican consulate may have slightly different requirements. Always verify current thresholds with your chosen consulate.
-
-## Understanding Permanent Residency (Residente Permanente)
-
-Permanent residency grants **indefinite stay in Mexico** with no renewal requirements. This status provides maximum stability and freedom for long-term residents.
-
-### Key Benefits of Permanent Residency:
-- No expiration date or renewals required
-- Automatic work authorization for any employer
-- Greater property ownership options
-- Simplified travel in and out of Mexico
-- Pathway to Mexican citizenship after residency requirements
-
-### How to Qualify:
-1. **Direct application**: Higher financial thresholds (typically 500+ UMAs monthly income or 20,000+ UMAs in savings)
-2. **Transition from temporary**: After 4 years as a temporary resident
-3. **Family relationships**: Spouse of Mexican citizen (after 2 years temporary residency) or parent of Mexican child
-
-## Comparing the Two Options
-
-| Aspect | Temporary Residency | Permanent Residency |
-|--------|-------------------|-------------------|
-| **Duration** | 1-4 years total | Indefinite |
-| **Renewals** | Required annually | None |
-| **Work Authorization** | Must be added separately | Automatic |
-| **Financial Requirements** | Lower thresholds | Higher thresholds |
-| **Flexibility** | Good for testing Mexico life | Best for committed residents |
-
-## Which Option Should You Choose?
-
-### Choose Temporary Residency If:
-- You're unsure about long-term commitment to Mexico
-- You meet the lower financial requirements but not the higher permanent residency thresholds
-- You want to "test the waters" before making a permanent commitment
-- You're planning to work in Mexico and need time to establish income
-
-### Choose Permanent Residency If:
-- You're certain about making Mexico your long-term home
-- You meet the higher financial requirements
-- You want maximum stability and don't want to deal with renewals
-- You plan to travel frequently between Mexico and other countries
-
-## The Application Process
-
-Both types of residency follow a similar process:
-
-1. **Consular Stage**: Apply at a Mexican consulate in your home country
-2. **Documentation**: Gather required financial proofs, background checks, and photos
-3. **Interview**: Attend your consular appointment
-4. **Entry to Mexico**: Enter Mexico with your visa within 180 days
-5. **INM Processing**: Exchange your visa for a resident card within 30 days
-
-### Timeline Expectations:
-- **Consular processing**: 1-4 weeks depending on the consulate
-- **INM card processing**: 2-4 weeks after your Mexico appointment
-- **Total timeline**: 1-2 months from application to resident card
-
-## Common Mistakes to Avoid
-
-1. **Insufficient financial documentation**: Ensure your bank statements clearly show the required amounts for the specified period
-2. **Wrong consulate choice**: Some consulates have different requirements or processing times
-3. **Incomplete translations**: All foreign documents must be properly translated and, in some cases, apostilled
-4. **Missing the INM deadline**: You must complete your INM processing within 30 days of entering Mexico
-
-## Planning Your Immigration Strategy
-
-### For First-Time Applicants:
-Most people start with temporary residency because:
-- Lower financial barriers to entry
-- Opportunity to establish Mexican financial history
-- Time to understand the system before committing permanently
-
-### For Families:
-Consider your entire family's situation:
-- Spouses and minor children can be included as dependents
-- Family-based applications may have different requirements
-- Plan for everyone's timelines and renewals
-
-## Getting Professional Help
-
-While it's possible to navigate the residency process independently, working with an experienced immigration attorney can:
-- Ensure you choose the right residency type for your situation
-- Help optimize your financial documentation
-- Navigate consulate-specific requirements
-- Provide representation during the INM process
-- Plan for future upgrades or changes
-
-## Conclusion
-
-The choice between temporary and permanent residency depends on your personal circumstances, financial situation, and long-term plans. Temporary residency offers a lower-commitment entry point with the flexibility to upgrade later, while permanent residency provides maximum stability for those ready to make Mexico their long-term home.
-
-Remember that immigration laws and requirements can change, and each case is unique. Consider consulting with a qualified immigration attorney to evaluate your specific situation and ensure you choose the path that best serves your goals.
-
----
-
-*Ready to start your Mexico residency journey? [Contact our experienced immigration team](/contact) for a personalized consultation and guidance tailored to your specific situation.*
-`;
-
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const [content, setContent] = useState<string>("");
@@ -212,33 +24,26 @@ const BlogPost = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadBlogPost = async () => {
-      if (!slug || !blogPostsData[slug]) {
+    const loadPost = async () => {
+      if (!slug) {
         setLoading(false);
         return;
       }
 
-      setPostMeta(blogPostsData[slug]);
-      
-      // In a real implementation, you would fetch the markdown file from your server
-      // For now, we'll use sample content for the first post
-      if (slug === "temporary-vs-permanent-residency-mexico") {
-        setContent(sampleMarkdownContent);
-      } else {
-        // Placeholder content for other posts
-        setContent(`
-# ${blogPostsData[slug].title}
-
-This article is coming soon. Please check back later for the complete guide.
-
-In the meantime, feel free to [contact us](/contact) for personalized guidance on this topic.
-        `);
+      try {
+        const result = await loadBlogPost(slug);
+        if (result) {
+          setContent(result.content);
+          setPostMeta(result.metadata);
+        }
+      } catch (error) {
+        console.error('Failed to load blog post:', error);
+      } finally {
+        setLoading(false);
       }
-      
-      setLoading(false);
     };
 
-    loadBlogPost();
+    loadPost();
   }, [slug]);
 
   if (loading) {
