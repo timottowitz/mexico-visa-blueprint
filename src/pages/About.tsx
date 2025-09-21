@@ -153,10 +153,13 @@ const About = () => {
                     <div className="flex items-start space-x-3">
                       <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
+                        <h3 className="font-semibold text-foreground mb-1">Contact Numbers</h3>
                         <p className="text-muted-foreground">
                           <a href="https://wa.me/52322278690" className="hover:text-primary transition-colors">
-                            +52-322-278690
+                            WhatsApp: +52-322-278690
+                          </a><br />
+                          <a href="tel:+12144734507" className="hover:text-primary transition-colors">
+                            US Landline: +1 (214) 473-4507
                           </a>
                         </p>
                       </div>

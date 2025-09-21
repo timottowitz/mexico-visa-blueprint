@@ -50,6 +50,14 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <div>
+                  <a href="tel:+12144734507" className="hover:text-accent transition-colors">
+                    US Landline: +1 (214) 473-4507
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 <a href="mailto:info@mexicoimmigrationlawyer.com" className="hover:text-accent transition-colors">
                   info@mexicoimmigrationlawyer.com

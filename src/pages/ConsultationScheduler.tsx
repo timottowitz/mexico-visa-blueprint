@@ -317,6 +317,12 @@ const ConsultationScheduler = () => {
                 WhatsApp: +52-322-278690
               </Button>
             </a>
+            <a href="tel:+12144734507">
+              <Button variant="outline" size="lg">
+                <Phone className="mr-2 h-4 w-4" />
+                US: +1 (214) 473-4507
+              </Button>
+            </a>
           </div>
         </div>
       </div>
