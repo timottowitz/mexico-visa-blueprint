@@ -204,8 +204,12 @@ const Index = () => {
           title="Mexico Immigration Lawyer — Visa & Residency Experts"
           subtitle="Bilingual immigration law firm helping US & Canadian citizens obtain Mexican residency, citizenship, and work visas. Expert legal guidance for temporary residency, permanent residency, and all Mexico immigration needs."
           primaryCta={{
-            text: "Get Started — Schedule a Consultation",
+            text: "Schedule a Consultation",
             onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
+          }}
+          secondaryCta={{
+            text: "Call US: +1 (555) 123-4567",
+            href: "tel:+15551234567"
           }}
         />
       </motion.div>
@@ -522,7 +526,7 @@ const Index = () => {
                     className="btn-accent"
                     onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
                   >
-                    Get Started Today — Schedule a Consultation
+                    Schedule a Consultation
                   </Button>
                   <Button asChild variant="outline-light" size="lg">
                     <Link to="/about">Learn About Our Firm</Link>
