@@ -28,7 +28,7 @@ const ServiceCard = ({ icon, image, title, description, href, className }: Servi
           <div className="w-full h-48 rounded-lg overflow-hidden mb-4">
             <img 
               src={image} 
-              alt={title}
+              alt={`${title} - Mexico immigration legal service illustration showing professional consultation and document assistance`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>

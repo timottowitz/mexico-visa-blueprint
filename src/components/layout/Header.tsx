@@ -30,9 +30,9 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">ML</span>
+            <Link to="/" className="flex items-center space-x-2" aria-label="Mexico Immigration Lawyer - Return to homepage">
+              <div className="h-8 w-8 rounded bg-primary flex items-center justify-center" role="img" aria-label="ML logo - Mexico Immigration Lawyer brand mark">
+                <span className="text-primary-foreground font-bold text-sm" aria-hidden="true">ML</span>
               </div>
               <span className="font-bold text-lg text-foreground hidden sm:block">
                 Mexico Immigration Lawyer

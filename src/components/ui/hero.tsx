@@ -35,18 +35,23 @@ const Hero = ({
   const heroBackground = backgroundImage || heroImage;
   
   return (
-    <section className={`relative overflow-hidden ${className || ""}`}>
+    <section 
+      className={`relative overflow-hidden ${className || ""}`}
+      aria-label="Mexico immigration lawyer consultation - Professional bilingual attorney meeting with clients about residency and visa services"
+    >
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+          role="img" 
+          aria-label="Professional Mexico immigration consultation - Experienced bilingual attorney meeting with US and Canadian clients about Mexico residency visas, work permits, and citizenship services in modern Mexico City office"
+        />
       
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 hero-gradient opacity-80" />
+      <div className="absolute inset-0 hero-gradient opacity-80" aria-hidden="true" />
       
       {/* Content */}
       <div className="relative container mx-auto px-4 py-16 lg:py-24">

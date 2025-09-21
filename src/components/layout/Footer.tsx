@@ -18,8 +18,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded bg-primary-foreground flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">ML</span>
+              <div className="h-8 w-8 rounded bg-primary-foreground flex items-center justify-center" role="img" aria-label="ML logo - Mexico Immigration Lawyer brand mark">
+                <span className="text-primary font-bold text-sm" aria-hidden="true">ML</span>
               </div>
               <span className="font-bold text-lg">Mexico Immigration Lawyer</span>
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg">Contact Information</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" aria-label="Office location" />
                 <div>
                   <p>Calle Pestalozzi 635</p>
                   <p>Col. Narvarte Poniente, Benito Juárez</p>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                <Phone className="h-4 w-4 flex-shrink-0" aria-label="WhatsApp contact" />
                 <div>
                   <a href="https://wa.me/52322278690" className="hover:text-accent transition-colors">
                     WhatsApp: +52-322-278690
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                <Phone className="h-4 w-4 flex-shrink-0" aria-label="US phone number" />
                 <div>
                   <a href="tel:+12144734507" className="hover:text-accent transition-colors">
                     US Landline: +1 (214) 473-4507
@@ -58,13 +58,13 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 flex-shrink-0" />
+                <Mail className="h-4 w-4 flex-shrink-0" aria-label="Email contact" />
                 <a href="mailto:info@mexicoimmigrationlawyer.com" className="hover:text-accent transition-colors">
                   info@mexicoimmigrationlawyer.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 flex-shrink-0" />
+                <Clock className="h-4 w-4 flex-shrink-0" aria-label="Office hours" />
                 <p>Mon–Fri, 9:00–18:00 (CT)</p>
               </div>
             </div>
