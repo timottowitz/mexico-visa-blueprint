@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Globe, Award, MessageSquare, Star } from "lucide-react";
+import lawyerProfileImage from "@/assets/lawyer-profile.png";
 
 const Index = () => {
   const services = [
@@ -112,12 +113,21 @@ const Index = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Our Immigration Services */}
         <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Mexico Immigration Services — Complete Legal Solutions</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              As your trusted Mexico immigration attorney, we provide comprehensive legal services to help you achieve your Mexico immigration goals, 
-              from temporary residency to full Mexican citizenship.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Mexico Immigration Services — Complete Legal Solutions</h2>
+              <p className="text-lg text-muted-foreground">
+                As your trusted Mexico immigration attorney, we provide comprehensive legal services to help you achieve your Mexico immigration goals, 
+                from temporary residency to full Mexican citizenship.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src={lawyerProfileImage} 
+                alt="Professional Mexico immigration attorney consulting with client in modern office setting"
+                className="w-80 h-60 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
