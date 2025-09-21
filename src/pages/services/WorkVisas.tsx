@@ -32,13 +32,13 @@ const WorkVisas = () => {
   return (
     <>
       <Helmet>
-        <title>Work Visas for Mexico — Immigration Lawyer Services</title>
-        <meta name="description" content="Professional assistance with Mexican work visas and permits. Guidance for employer‑sponsored visas, INM work authorization, and permits for foreign employees in Mexico." />
+        <title>Mexico Work Visa — Work Permits & Employment Authorization</title>
+        <meta name="description" content="Mexico work visa & work permits: Employer-sponsored visas, INM authorization, temporary resident with work permission. Expert legal help for foreign employees working in Mexico." />
       </Helmet>
 
       <Hero
-        title="Work Visas & Permits in Mexico"
-        subtitle="If you're employed by, or assigned to, a Mexican entity, you need the correct work-authorized residency. We support both individuals and employers end-to-end—from employer registration and INM work authorization to consular issuance and the resident card in Mexico."
+        title="Mexico Work Visa — Work Permits & Employment Authorization"
+        subtitle="Need work authorization in Mexico? We help employees and employers with work visas, INM permits, and temporary residency with work permission. Complete legal support from employer registration to resident card."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

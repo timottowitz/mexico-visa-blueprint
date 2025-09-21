@@ -101,8 +101,8 @@ const Index = () => {
 
       {/* Hero Section */}
       <Hero
-        title="Your Trusted Mexico Immigration Lawyer — Helping You Call Mexico Home"
-        subtitle="Welcome to Mexico Immigration Lawyer, a bilingual law firm serving clients from the United States and Canada. We provide end-to-end legal guidance to make your move to Mexico smooth and stress-free. Whether you're seeking temporary residency, permanent residency, or Mexican citizenship, our experienced attorneys help you every step of the way."
+        title="Mexico Immigration Lawyer — Visa & Residency Experts"
+        subtitle="Bilingual immigration law firm helping US & Canadian citizens obtain Mexican residency, citizenship, and work visas. Expert legal guidance for temporary residency, permanent residency, and all Mexico immigration needs."
         primaryCta={{
           text: "Get Started — Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

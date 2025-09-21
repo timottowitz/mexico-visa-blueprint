@@ -55,15 +55,15 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Our Mexico Immigration Law Firm - 15+ Years Experience | Mexico Immigration Lawyer</title>
+        <title>About Mexico Immigration Lawyer — 15+ Years Experience</title>
         <meta name="description" content="Mexico Immigration Lawyer: Boutique law firm in Mexico City with 15+ years experience. Licensed attorneys, 1,000+ successful cases, bilingual service. Expert in residency, citizenship & work permits." />
         <meta name="keywords" content="Mexico immigration lawyer, immigration attorney Mexico City, Mexican immigration law firm, residency lawyer Mexico, work permit attorney Mexico, bilingual immigration lawyer" />
         <link rel="canonical" href="https://mexicoimmigrationlawyer.com/about" />
       </Helmet>
 
       <Hero
-        title="About Our Law Firm"
-        subtitle="Mexico Immigration Lawyer is a boutique law firm dedicated exclusively to immigration and nationality law. Based in Mexico City, we bridge the gap between North America and Mexico with bilingual, bicultural service."
+        title="About Mexico Immigration Lawyer — Leading Immigration Firm"
+        subtitle="Boutique Mexico immigration law firm with 15+ years experience serving US & Canadian clients. Licensed attorneys in Mexico City providing bilingual legal services for residency, citizenship, and work visas."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

@@ -45,13 +45,13 @@ const FamilyBasedImmigration = () => {
   return (
     <>
       <Helmet>
-        <title>Family‑Based Immigration (Marriage & Family Visas) — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Immigration services for family unity in Mexico. Residency through Mexican spouses, children, or relatives. No financial criteria needed for qualified family visas." />
+        <title>Family Based Immigration Mexico — Marriage & Family Visas</title>
+        <meta name="description" content="Family-based immigration Mexico: residency through Mexican spouses, children, or relatives. Marriage visas, family reunification, no financial requirements for qualified family cases." />
       </Helmet>
 
       <Hero
-        title="Family & Marriage Immigration"
-        subtitle="Mexico welcomes close family members of its citizens and residents. If you have a Mexican spouse or child—or certain other qualifying relations—you may obtain residency through family unity, often without financial proofs and frequently through in-country processing."
+        title="Family Based Immigration Mexico — Marriage & Family Visas"
+        subtitle="Reunite with family in Mexico! Residency for spouses of Mexican citizens, parents of Mexican children, and other qualifying family relationships. Often no financial requirements and processed in Mexico."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

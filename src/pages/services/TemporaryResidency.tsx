@@ -50,13 +50,13 @@ const TemporaryResidency = () => {
   return (
     <>
       <Helmet>
-        <title>Temporary Residency in Mexico — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Learn how to obtain a Temporary Resident Visa in Mexico. Financial requirements, application process, and expert legal help for temporary residency (1–4 year stays)." />
+        <title>Temporary Residency Mexico — Requirements & Process</title>
+        <meta name="description" content="Temporary residency Mexico guide: financial requirements, application process, and legal help. Get 1-4 year Mexico temporary resident visa with expert immigration lawyer assistance." />
       </Helmet>
 
       <Hero
-        title="Temporary Residency in Mexico"
-        subtitle="A Temporary Resident Visa (Residente Temporal) allows you to live in Mexico for longer than 180 days and up to four years (typically issued for 1 year initially, renewable to a total of 4 years). It's ideal for retirees, remote workers with foreign income, investors, students, and those with family ties in Mexico."
+        title="Temporary Residency Mexico — Requirements & Process"
+        subtitle="Temporary Resident Visa (Residente Temporal) allows 1-4 year stays in Mexico. Perfect for retirees, remote workers, investors, and families. Expert legal help with financial requirements, consulate applications, and INM processing."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

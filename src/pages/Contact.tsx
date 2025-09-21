@@ -9,13 +9,13 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Contact our Mexico immigration law firm for a consultation. Offices in Mexico City, toll‑free phone for USA/Canada, email, and contact form to assist with your immigration needs." />
+        <title>Contact Mexico Immigration Lawyer — Free Consultation</title>
+        <meta name="description" content="Contact Mexico immigration lawyer for free consultation. Mexico City office, US/Canada toll-free phone, WhatsApp, email. Expert legal help for Mexico residency and visas." />
       </Helmet>
 
       <Hero
-        title="Contact Us"
-        subtitle="We're ready to assist with all your Mexico immigration needs. Reach out with questions, to book a consultation, or to begin your application."
+        title="Contact Mexico Immigration Lawyer — Free Consultation"
+        subtitle="Ready to help with your Mexico immigration needs. Contact our bilingual attorneys for a free consultation about temporary residency, permanent residency, citizenship, and work visas."
         primaryCta={{
           text: "Call Now: +1 (214) 473-4507",
           href: "tel:+12144734507"

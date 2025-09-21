@@ -113,7 +113,7 @@ const Blog = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">
-            Immigration Blog & Resources
+            Mexico Immigration Blog — Expert Guides & News
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Stay informed with the latest Mexico immigration updates, expert guides, and practical advice from our experienced legal team.

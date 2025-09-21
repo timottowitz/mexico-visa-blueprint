@@ -108,13 +108,13 @@ const FAQs = () => {
   return (
     <>
         <Helmet>
-          <title>Mexico Immigration FAQs — Comprehensive Answers to Your Questions</title>
-          <meta name="description" content="Comprehensive FAQ about Mexican immigration, visas, residency requirements, work permits, citizenship, and legal services. Expert answers from experienced immigration lawyers." />
+        <title>Mexico Immigration FAQs — Expert Answers & Guide</title>
+        <meta name="description" content="Mexico immigration FAQ: Expert answers on temporary residency, permanent residency, work permits, Mexican citizenship, and legal services. Comprehensive immigration guide." />
           <meta name="keywords" content="Mexico immigration FAQ, temporary residency Mexico, permanent residency Mexico, work permit Mexico, Mexican citizenship, immigration lawyer Mexico" />
         </Helmet>
 
         <Hero
-          title="Mexico Immigration: Frequently Asked Questions"
+          title="Mexico Immigration FAQs — Expert Answers & Guide"
           subtitle="Comprehensive answers to the most common questions about Mexican immigration, visa requirements, residency processes, work permits, and our legal services. Navigate the complex immigration system with expert guidance."
         primaryCta={{
           text: "Schedule a Consultation",

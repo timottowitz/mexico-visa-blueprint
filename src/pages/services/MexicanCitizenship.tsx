@@ -50,13 +50,13 @@ const MexicanCitizenship = () => {
   return (
     <>
       <Helmet>
-        <title>Mexican Citizenship & Naturalization — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Guide to obtaining Mexican citizenship. Eligibility after 2–5 years residency, dual citizenship benefits, and how our immigration lawyers assist with naturalization." />
+        <title>Mexican Citizenship — Naturalization Requirements 2025</title>
+        <meta name="description" content="Mexican citizenship naturalization: 2-5 year residency requirements, dual citizenship benefits, Spanish & civics exams. Expert legal help obtaining Mexican citizenship through naturalization." />
       </Helmet>
 
       <Hero
-        title="Mexican Citizenship / Naturalization"
-        subtitle="Becoming a naturalized Mexican citizen grants full civic rights, a Mexican passport, and the ability to own property nationwide without a trust. Mexico permits dual citizenship, so most U.S. and Canadian citizens can keep their original nationality."
+        title="Mexican Citizenship — Naturalization Requirements 2025"
+        subtitle="Obtain Mexican citizenship through naturalization after 2-5 years residency. Dual citizenship allowed for US & Canadian citizens. Full civic rights, Mexican passport, property ownership, and expert legal assistance."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

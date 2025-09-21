@@ -42,13 +42,13 @@ const PermanentResidency = () => {
   return (
     <>
       <Helmet>
-        <title>Permanent Residency in Mexico — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Information on becoming a Permanent Resident in Mexico. Requirements for indefinite residency, retiree and family options, and legal assistance to obtain your Residente Permanente." />
+        <title>Permanent Residency Mexico — Residente Permanente Guide</title>
+        <meta name="description" content="Permanent residency Mexico: Requirements for indefinite residency, financial thresholds, family options. Expert legal help obtaining Residente Permanente with Mexico immigration lawyer." />
       </Helmet>
 
       <Hero
-        title="Permanent Residency in Mexico"
-        subtitle="Permanent Resident status (Residente Permanente) grants the right to live in Mexico indefinitely without renewals. It confers broad benefits, including open permission to work and freedom to enter and leave Mexico without residency restrictions."
+        title="Permanent Residency Mexico — Residente Permanente"
+        subtitle="Permanent Resident status (Residente Permanente) grants indefinite residency in Mexico with no renewals needed. Includes work authorization, travel freedom, and path to Mexican citizenship with expert legal assistance."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())

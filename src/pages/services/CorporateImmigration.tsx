@@ -47,13 +47,13 @@ const CorporateImmigration = () => {
   return (
     <>
       <Helmet>
-        <title>Corporate Immigration Services — Mexico Immigration Lawyer</title>
-        <meta name="description" content="Legal services for companies and investors moving personnel to Mexico. Employer registration, business owner visas, and corporate immigration solutions." />
+        <title>Corporate Immigration Services Mexico — Business Visas</title>
+        <meta name="description" content="Corporate immigration services for companies relocating employees to Mexico. Employer registration, business owner visas, executive transfers, and compliance support." />
       </Helmet>
 
       <Hero
-        title="Corporate Immigration Services"
-        subtitle="Expanding into Mexico or relocating foreign staff requires precise immigration planning. We act as your strategic partner for transfers, ensuring executives, employees, and their families obtain visas smoothly and remain compliant."
+        title="Corporate Immigration Services Mexico — Business Visas"
+        subtitle="Expanding to Mexico or relocating foreign staff? We provide strategic corporate immigration solutions: employer registration, work visas, executive transfers, investor visas, and ongoing compliance support."
         primaryCta={{
           text: "Schedule a Consultation",
           onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
