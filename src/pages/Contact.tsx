@@ -17,8 +17,8 @@ const Contact = () => {
         title="Contact Us"
         subtitle="We're ready to assist with all your Mexico immigration needs. Reach out with questions, to book a consultation, or to begin your application."
         primaryCta={{
-          text: "WhatsApp: +52-322-278690",
-          href: "https://wa.me/52322278690"
+          text: "Call Now: +1 (214) 473-4507",
+          href: "tel:+12144734507"
         }}
         secondaryCta={{
           text: "Schedule a Consultation",
