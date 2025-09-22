@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormData {
@@ -31,12 +30,19 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert([data]);
+      const response = await fetch('https://nvcswkvuomgiyokjbvii.supabase.co/functions/v1/airtable-contact-submission', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52Y3N3a3Z1b21naXlva2pidmlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0MzcxOTAsImV4cCI6MjA3NDAxMzE5MH0.AojAwcCayIXzqrcnWe5LHfHS7Jt5tm3z1YxJkJ9c9CM`
+        },
+        body: JSON.stringify(data),
+      });
 
-      if (error) {
-        throw error;
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Failed to submit form');
       }
 
       toast({
