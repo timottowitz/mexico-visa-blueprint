@@ -175,9 +175,9 @@ const Index = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <Hero
-          eyebrow="🔥 LIMITED TIME: Free 30-Min Strategy Session"
-          title="Get Your Mexico Residency Approved Efficiently"
-          subtitle="Stop struggling with confusing paperwork and government bureaucracy. Our proven 3-step system has helped 800+ Americans & Canadians secure Mexico residency with a high success rate. Get expert guidance from licensed bilingual attorneys who know exactly what immigration officials want to see."
+          eyebrow="Professional Legal Guidance - Free 30-Min Strategy Session"
+          title="Navigate Mexico Immigration with Confidence"
+          subtitle="Stop struggling with confusing paperwork and government bureaucracy. Our experienced bilingual attorneys have guided 800+ Americans & Canadians through Mexico's immigration process. Get personalized legal guidance from licensed professionals who understand both systems."
           primaryCta={{
             text: "🎯 Claim Your FREE Strategy Session",
             onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
@@ -300,35 +300,30 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Urgent CTA with Social Proof */}
+        {/* Professional CTA Section */}
         <motion.div 
-          className="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200 rounded-xl p-8 text-center my-16"
+          className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center my-16"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
         >
           <div className="max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-red-600 font-bold text-lg mb-4">
-              <span className="animate-pulse">⚠️</span>
-              URGENT: Mexico Immigration Rules Are Changing
-              <span className="animate-pulse">⚠️</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Don't Risk Rejection - Get Expert Help Before It's Too Late
+              Ready to Start Your Mexico Immigration Journey?
             </h3>
             <p className="text-gray-700 mb-6 text-lg">
-              New requirements take effect soon. Our clients who act now avoid delays and save thousands in fees. 
-              Schedule your consultation today to secure your path to Mexico residency.
+              Mexico's immigration requirements can be complex and change frequently. Our experienced attorneys 
+              provide personalized guidance to help you understand your options and navigate the process effectively.
             </p>
             <Button 
               size="lg" 
-              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4 animate-pulse"
+              className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4"
               onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
             >
-              🚨 SECURE YOUR SPOT NOW - 100% FREE
+              Schedule Your Free Consultation
             </Button>
             <p className="text-sm text-gray-600 mt-3">
-              ✅ No obligation • ✅ 30-minute strategy session • ✅ Worth $300, yours free
+              ✅ 30-minute strategy session • ✅ No obligation • ✅ Professional legal guidance
             </p>
           </div>
         </motion.div>
