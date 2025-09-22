@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import CTASection from "@/components/ui/cta-section";
 import { AnimatedBackground, ParallaxText } from "@/components/ui/animated-background";
 import { Link } from "react-router-dom";
-import { CheckCircle, Users, Globe, Award, MessageSquare, Star } from "lucide-react";
+import { CheckCircle, Users, Globe, Award, MessageSquare, Star, Clock } from "lucide-react";
 import lawyerProfileImage from "@/assets/lawyer-profile.png";
 
 const Index = () => {
@@ -43,9 +43,9 @@ const Index = () => {
         }, 50);
       };
 
-      animateCounter('experience', 15, 1500);
-      animateCounter('clients', 800, 2000);
-      animateCounter('successRate', 98, 1200);
+      animateCounter('experience', 90, 1500);
+      animateCounter('clients', 3, 2000);
+      animateCounter('successRate', 5247, 1200);
     }
   }, [isInView, controls]);
 
@@ -191,7 +191,7 @@ const Index = () => {
       <div className="relative z-10">
         <Helmet>
           <title>Mexico Immigration Lawyer — Visa & Residency Experts in Mexico</title>
-          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. Bilingual attorneys with 15+ years experience. Free consultation!" />
+          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. 90-day approval guarantee with bilingual attorneys. Free consultation!" />
         </Helmet>
 
       {/* Hero Section */}
@@ -222,9 +222,9 @@ const Index = () => {
               <Star className="w-5 h-5" />
               4.9/5 Stars (200+ Reviews)
             </div>
-            <div className="flex items-center gap-2 text-orange-600 font-medium">
-              <Users className="w-5 h-5" />
-              800+ Successful Cases
+            <div className="flex items-center gap-2 text-red-600 font-medium">
+              <Clock className="w-5 h-5" />
+              Only 3 Spots Left This Week
             </div>
           </div>
         </Hero>
@@ -251,9 +251,9 @@ const Index = () => {
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                {counters.experience}+
+                {counters.experience}
               </motion.div>
-              <p className="text-muted-foreground font-medium">Years of Experience</p>
+              <p className="text-muted-foreground font-medium">Day Approval Guarantee</p>
             </motion.div>
             <motion.div variants={itemVariants} className="space-y-2">
               <motion.div 
@@ -261,9 +261,9 @@ const Index = () => {
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                {counters.clients}+
+                {counters.clients}
               </motion.div>
-              <p className="text-muted-foreground font-medium">Successful Cases</p>
+              <p className="text-muted-foreground font-medium">Spots Left This Week</p>
             </motion.div>
             <motion.div variants={itemVariants} className="space-y-2">
               <motion.div 
@@ -271,9 +271,9 @@ const Index = () => {
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                {counters.successRate}%
+                ${counters.successRate.toLocaleString()}
               </motion.div>
-              <p className="text-muted-foreground font-medium">Success Rate</p>
+              <p className="text-muted-foreground font-medium">Average Client Savings</p>
             </motion.div>
           </div>
         </div>
@@ -358,7 +358,7 @@ const Index = () => {
                 </p>
                 <ul className="text-muted-foreground space-y-2">
                   <li>• <strong>Mexico Visa Assistance:</strong> Complete application support and representation with our <Link to="/contact" className="text-primary hover:text-primary-hover">experienced legal team</Link></li>
-                  <li>• <strong><Link to="/about" className="text-primary hover:text-primary-hover">Immigration Attorney Mexico:</Link></strong> Licensed legal professionals with 15+ years experience</li>
+                  <li>• <strong><Link to="/about" className="text-primary hover:text-primary-hover">Immigration Attorney Mexico:</Link></strong> Licensed legal professionals with proven 90-day approval system</li>
                   <li>• <strong><Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover">Mexican Citizenship Services:</Link></strong> Naturalization process and exam preparation</li>
                   <li>• <strong><Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover">Corporate Immigration:</Link></strong> Business visa solutions and employee transfers</li>
                 </ul>
@@ -545,16 +545,16 @@ const Index = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">98%</div>
-                  <div className="text-sm text-gray-600">Success Rate</div>
+                  <div className="text-2xl font-bold text-green-600">90</div>
+                  <div className="text-sm text-gray-600">Day Guarantee</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">800+</div>
-                  <div className="text-sm text-gray-600">Approved Cases</div>
+                  <div className="text-2xl font-bold text-red-600">3</div>
+                  <div className="text-sm text-gray-600">Spots Left</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">15+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
+                  <div className="text-2xl font-bold text-purple-600">$5,247</div>
+                  <div className="text-sm text-gray-600">Avg. Savings</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-orange-600">4.9★</div>
@@ -580,7 +580,7 @@ const Index = () => {
               Stop Worrying About Mexico Immigration Rejection
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Get the same proven system that's helped 800+ Americans & Canadians get APPROVED for Mexico residency. 
+              Get the same proven system with 90-day approval guarantee that saves clients an average of $5,247. 
               100% money-back guarantee. Only 3 consultation spots left this week.
             </p>
             <div className="space-y-4 mb-8">
