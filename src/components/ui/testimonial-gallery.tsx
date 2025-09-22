@@ -12,37 +12,43 @@ const testimonials = [
     name: "Maria Rodriguez",
     location: "Austin → Mexico City",
     image: client1,
-    rating: 5
+    rating: 5,
+    approvalDays: 23
   },
   {
     name: "James Chen",
     location: "Vancouver → Playa del Carmen",
     image: client2,
-    rating: 5
+    rating: 5,
+    approvalDays: 17
   },
   {
     name: "Sarah Thompson",
     location: "Chicago → Guadalajara",
     image: client3,
-    rating: 5
+    rating: 5,
+    approvalDays: 41
   },
   {
     name: "Robert Martinez",
     location: "Phoenix → Puerto Vallarta",
     image: client4,
-    rating: 5
+    rating: 5,
+    approvalDays: 28
   },
   {
     name: "Jennifer Kim",
     location: "Seattle → Tulum",
     image: client5,
-    rating: 5
+    rating: 5,
+    approvalDays: 52
   },
   {
     name: "David Wilson",
     location: "Toronto → Merida",
     image: client6,
-    rating: 5
+    rating: 5,
+    approvalDays: 34
   }
 ];
 
@@ -105,7 +111,7 @@ export default function TestimonialGallery() {
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                   <p className="text-green-800 font-medium text-center text-sm">
-                    ✅ APPROVED IN 90 DAYS
+                    ✅ APPROVED IN {testimonial.approvalDays} DAYS
                   </p>
                 </div>
               </motion.div>
@@ -139,7 +145,7 @@ export default function TestimonialGallery() {
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                   <p className="text-green-800 font-medium text-center text-sm">
-                    ✅ APPROVED IN 90 DAYS
+                    ✅ APPROVED IN {testimonial.approvalDays} DAYS
                   </p>
                 </div>
               </motion.div>
