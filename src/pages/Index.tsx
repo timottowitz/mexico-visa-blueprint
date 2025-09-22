@@ -165,7 +165,7 @@ const Index = () => {
       <div className="relative z-10">
         <Helmet>
           <title>Mexico Immigration Lawyer — Visa & Residency Experts in Mexico</title>
-          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. 90-day approval guarantee with bilingual attorneys. Free consultation!" />
+          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. Professional legal assistance with bilingual attorneys. Free consultation!" />
         </Helmet>
 
       {/* Hero Section */}
@@ -176,29 +176,29 @@ const Index = () => {
       >
         <Hero
           eyebrow="🔥 LIMITED TIME: Free 30-Min Strategy Session"
-          title="Get Your Mexico Residency APPROVED in 90 Days or Less"
+          title="Get Your Mexico Residency Approved Efficiently"
           subtitle="Stop struggling with confusing paperwork and government bureaucracy. Our proven 3-step system has helped 800+ Americans & Canadians secure Mexico residency with a high success rate. Get expert guidance from licensed bilingual attorneys who know exactly what immigration officials want to see."
           primaryCta={{
-            text: "🎯 Claim Your FREE Strategy Session (Only 3 Spots Left This Week)",
+            text: "🎯 Claim Your FREE Strategy Session",
             onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
           }}
           secondaryCta={{
-            text: "📱 Urgent? Call Now: +1 (555) 123-4567",
-            href: "tel:+15551234567"
+            text: "💬 WhatsApp: +52 55 1234 5678",
+            href: "https://wa.me/5255123454678"
           }}
         >
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
-            <div className="flex items-center gap-2 text-green-600 font-medium">
-              <CheckCircle className="w-5 h-5" />
-              100% Money-Back Guarantee
-            </div>
             <div className="flex items-center gap-2 text-blue-600 font-medium">
               <Star className="w-5 h-5" />
               4.9/5 Stars (200+ Reviews)
             </div>
-            <div className="flex items-center gap-2 text-red-600 font-medium">
-              <Clock className="w-5 h-5" />
-              Only 3 Spots Left This Week
+            <div className="flex items-center gap-2 text-green-600 font-medium">
+              <CheckCircle className="w-5 h-5" />
+              Licensed Attorneys
+            </div>
+            <div className="flex items-center gap-2 text-purple-600 font-medium">
+              <Globe className="w-5 h-5" />
+              Bilingual Support
             </div>
           </div>
         </Hero>
@@ -318,7 +318,7 @@ const Index = () => {
             </h3>
             <p className="text-gray-700 mb-6 text-lg">
               New requirements take effect soon. Our clients who act now avoid delays and save thousands in fees. 
-              Only <span className="font-bold text-red-600">3 consultation spots</span> left this week.
+              Schedule your consultation today to secure your path to Mexico residency.
             </p>
             <Button 
               size="lg" 
@@ -478,16 +478,16 @@ const Index = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">90</div>
-                  <div className="text-sm text-gray-600">Day Guarantee</div>
+                  <div className="text-2xl font-bold text-green-600">800+</div>
+                  <div className="text-sm text-gray-600">Success Cases</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">3</div>
-                  <div className="text-sm text-gray-600">Spots Left</div>
+                  <div className="text-2xl font-bold text-red-600">15+</div>
+                  <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">$5,247</div>
-                  <div className="text-sm text-gray-600">Avg. Savings</div>
+                  <div className="text-2xl font-bold text-purple-600">$2,800</div>
+                  <div className="text-sm text-gray-600">Avg. Total Cost</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-orange-600">4.9★</div>
@@ -513,8 +513,8 @@ const Index = () => {
               Stop Worrying About Mexico Immigration Rejection
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Get the same proven system with 90-day approval guarantee that saves clients an average of $5,247. 
-              100% money-back guarantee. Only 3 consultation spots left this week.
+              Get expert legal guidance with our proven system that has helped hundreds of clients successfully obtain Mexico residency. 
+              Professional service with transparent pricing and experienced bilingual attorneys.
             </p>
             <div className="space-y-4 mb-8">
               <Button 
@@ -525,7 +525,7 @@ const Index = () => {
                 🎯 YES! Get My FREE Strategy Session Now
               </Button>
               <p className="text-sm opacity-75">
-                ⏰ Only 3 spots left • 📞 Call +1 (555) 123-4567 if busy • 💯 100% Money-Back Guarantee
+                💬 WhatsApp: +52 55 1234 5678 • 📞 Call +1 (555) 123-4567 • ⭐ 4.9/5 Rating
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
