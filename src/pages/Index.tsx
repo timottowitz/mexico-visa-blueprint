@@ -10,42 +10,16 @@ import { AnimatedBackground, ParallaxText } from "@/components/ui/animated-backg
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Globe, Award, MessageSquare, Star, Clock } from "lucide-react";
 import lawyerProfileImage from "@/assets/lawyer-profile.png";
+import TestimonialGallery from "@/components/ui/testimonial-gallery";
 
 const Index = () => {
-  // Animation controls and refs
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Statistics counter animation
-  const [counters, setCounters] = useState({
-    experience: 0,
-    clients: 0,
-    successRate: 0
-  });
-
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
-      
-      // Animate counters
-      const animateCounter = (key: keyof typeof counters, target: number, duration: number) => {
-        let start = 0;
-        const increment = target / (duration / 50);
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= target) {
-            setCounters(prev => ({ ...prev, [key]: target }));
-            clearInterval(timer);
-          } else {
-            setCounters(prev => ({ ...prev, [key]: Math.floor(start) }));
-          }
-        }, 50);
-      };
-
-      animateCounter('experience', 90, 1500);
-      animateCounter('clients', 3, 2000);
-      animateCounter('successRate', 5247, 1200);
     }
   }, [isInView, controls]);
 
@@ -235,49 +209,8 @@ const Index = () => {
         <h1 className="sr-only">Mexico Immigration Lawyer</h1>
       </div>
 
-      {/* Animated Statistics Banner */}
-      <motion.div 
-        ref={ref}
-        className="bg-gradient-to-r from-primary/10 to-accent/10 py-12 -mx-4"
-        initial="hidden"
-        animate={controls}
-        variants={containerVariants}
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <motion.div variants={itemVariants} className="space-y-2">
-              <motion.div 
-                className="text-4xl font-bold text-primary"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              >
-                {counters.experience}
-              </motion.div>
-              <p className="text-muted-foreground font-medium">Day Approval Guarantee</p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="space-y-2">
-              <motion.div 
-                className="text-4xl font-bold text-primary"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              >
-                {counters.clients}
-              </motion.div>
-              <p className="text-muted-foreground font-medium">Spots Left This Week</p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="space-y-2">
-              <motion.div 
-                className="text-4xl font-bold text-primary"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                ${counters.successRate.toLocaleString()}
-              </motion.div>
-              <p className="text-muted-foreground font-medium">Average Client Savings</p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
+      {/* Testimonial Gallery */}
+      <TestimonialGallery />
 
       <div className="container mx-auto px-4 py-16">
         {/* Our Immigration Services */}
