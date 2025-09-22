@@ -230,6 +230,11 @@ const Index = () => {
         </Hero>
       </motion.div>
 
+      {/* SEO H1 */}
+      <div className="container mx-auto px-4 pt-8">
+        <h1 className="sr-only">Mexico Immigration Lawyer</h1>
+      </div>
+
       {/* Animated Statistics Banner */}
       <motion.div 
         ref={ref}
