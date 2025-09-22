@@ -203,7 +203,7 @@ const Index = () => {
         <Hero
           eyebrow="🔥 LIMITED TIME: Free 30-Min Strategy Session"
           title="Get Your Mexico Residency APPROVED in 90 Days or Less"
-          subtitle="Stop struggling with confusing paperwork and government bureaucracy. Our proven 3-step system has helped 800+ Americans & Canadians secure Mexico residency with a 98% success rate. Get expert guidance from licensed bilingual attorneys who know exactly what immigration officials want to see."
+          subtitle="Stop struggling with confusing paperwork and government bureaucracy. Our proven 3-step system has helped 800+ Americans & Canadians secure Mexico residency with a high success rate. Get expert guidance from licensed bilingual attorneys who know exactly what immigration officials want to see."
           primaryCta={{
             text: "🎯 Claim Your FREE Strategy Session (Only 3 Spots Left This Week)",
             onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
@@ -503,7 +503,7 @@ const Index = () => {
             <motion.div className="text-center mb-12" variants={itemVariants}>
               <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold mb-4">
                 <CheckCircle className="w-5 h-5" />
-                PROVEN RESULTS: 98% Success Rate
+                PROVEN RESULTS: High Success Rate
               </div>
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 Join 800+ Americans & Canadians Living Their Dream in Mexico
