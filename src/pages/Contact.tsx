@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/ui/hero";
-import ContactForm from "@/components/ui/contact-form";
 import GoogleMap from "@/components/ui/google-map";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
@@ -31,7 +30,14 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <ContactForm />
+            <iframe 
+              className="airtable-embed" 
+              src="https://airtable.com/embed/appOngYuxgEaPUzAW/pagh1KZUjKLq03hGP/form" 
+              frameBorder="0" 
+              width="100%" 
+              height="533" 
+              style={{background: 'transparent', border: '1px solid #ccc'}}
+            ></iframe>
           </div>
 
           {/* Contact Information */}
