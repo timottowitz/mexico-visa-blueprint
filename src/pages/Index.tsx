@@ -493,31 +493,31 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Final High-Converting CTA */}
+        {/* Professional Trust-Building CTA */}
         <motion.div 
-          className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-2xl p-12 text-center relative overflow-hidden"
+          className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-12 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <div className="relative z-10 max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold mb-6 animate-bounce">
-              🔥 LAST CHANCE: Free Strategy Session Ends Soon!
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold mb-6">
+              ✅ Professional Legal Guidance Available
             </div>
             <h2 className="text-4xl font-bold mb-6">
-              Stop Worrying About Mexico Immigration Rejection
+              Navigate Mexico Immigration with Confidence
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Get expert legal guidance with our proven system that has helped hundreds of clients successfully obtain Mexico residency. 
-              Professional service with transparent pricing and experienced bilingual attorneys.
+              Get personalized legal guidance from experienced bilingual attorneys who understand both Mexican immigration law and North American client needs. 
+              We provide transparent advice and comprehensive support throughout your immigration journey.
             </p>
             <div className="space-y-4 mb-8">
               <Button 
                 size="lg" 
-                className="bg-yellow-400 hover:bg-yellow-300 text-black text-xl px-12 py-6 font-bold shadow-2xl transform hover:scale-105 transition-all"
+                className="bg-white hover:bg-gray-100 text-blue-600 text-xl px-12 py-6 font-semibold shadow-lg"
                 onClick={() => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())}
               >
-                🎯 YES! Get My FREE Strategy Session Now
+                Schedule Your Free Consultation
               </Button>
               <p className="text-sm opacity-75">
                 💬 WhatsApp: +52 55 1234 5678 • 📞 Call +1 (555) 123-4567 • ⭐ 4.9/5 Rating
@@ -536,8 +536,8 @@ const Index = () => {
               </div>
               <div className="bg-white/10 rounded-lg p-4">
                 <Star className="w-8 h-8 mx-auto mb-2" />
-                <div className="font-semibold">Step 3: Get APPROVED</div>
-                <div className="text-sm opacity-75">Celebrate your new residency</div>
+                <div className="font-semibold">Step 3: Application Support</div>
+                <div className="text-sm opacity-75">Professional representation</div>
               </div>
             </div>
           </div>
