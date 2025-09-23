@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /services/
+Allow: /blog/
+Allow: /contact
+Allow: /schedule-consultation
+Allow: /faqs
+Allow: /testimonials
+Allow: /attorneys
+Disallow: /admin/
+Disallow: /private/
 
 # Sitemap location
 Sitemap: https://mexico-visa-blueprint.lovable.app/sitemap.xml
