@@ -12,7 +12,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://mexico-visa-blueprint.lovable.app/sitemap.xml
+Sitemap: https://mexicoimmigrationlawyer.com/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
