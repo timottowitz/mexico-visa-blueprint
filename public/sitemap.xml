@@ -55,7 +55,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mexico-visa-blueprint.lovable.app/consultation</loc>
+    <loc>https://mexico-visa-blueprint.lovable.app/schedule-consultation</loc>
     <lastmod>2025-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -79,12 +79,30 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mexico-visa-blueprint.lovable.app/attorney-profiles</loc>
+    <loc>https://mexico-visa-blueprint.lovable.app/attorneys</loc>
     <lastmod>2025-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Blog Posts -->
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/residency-mexico-economic-solvency-requirements-2025</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/hire-mexico-immigration-lawyer-guide</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mexico-visa-blueprint.lovable.app/blog/mexico-residency-visa-requirements-2025</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://mexico-visa-blueprint.lovable.app/blog/family-immigration-reunification-mexico</loc>
     <lastmod>2025-09-21</lastmod>
