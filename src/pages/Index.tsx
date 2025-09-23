@@ -164,8 +164,17 @@ const Index = () => {
       <AnimatedBackground />
       <div className="relative z-10">
         <Helmet>
-          <title>Mexico Immigration Lawyer — Visa & Residency Experts in Mexico</title>
-          <meta name="description" content="Expert Mexico immigration lawyer helping US & Canadian citizens get residency, work visas & citizenship. Professional legal assistance with bilingual attorneys. Free consultation!" />
+          <title>Mexico Immigration Lawyer — Residency Visa & Citizenship Experts 2025</title>
+          <meta name="description" content="🥇 Top Mexico immigration lawyer helping 800+ US & Canadian clients get residency visas, work permits & citizenship. Licensed attorneys in Mexico City. Free 30-min consultation!" />
+          <meta name="keywords" content="Mexico immigration lawyer, immigration attorney Mexico, Mexico residency visa, permanent residency Mexico, temporary residency Mexico, Mexico work visa, Mexican citizenship, immigration lawyer Mexico City, bilingual immigration attorney" />
+          <meta property="og:title" content="Mexico Immigration Lawyer — Residency & Citizenship Experts" />
+          <meta property="og:description" content="Licensed Mexico immigration attorneys with 15+ years experience helping Americans & Canadians get Mexico residency, work visas & citizenship." />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://mexico-visa-blueprint.lovable.app/assets/lawyer-profile.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Mexico Immigration Lawyer — Visa & Residency Experts" />
+          <meta name="twitter:description" content="Expert Mexico immigration attorneys helping US & Canadian citizens with residency visas, work permits & citizenship applications." />
+          <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/" />
         </Helmet>
 
       {/* Hero Section */}
@@ -267,34 +276,40 @@ const Index = () => {
             ))}
           </motion.div>
 
-          {/* Additional keyword-rich content */}
+          {/* Additional keyword-rich content with enhanced internal linking */}
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-foreground">Mexico Residency Visa Options</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Mexico Residency Visa Options for Americans & Canadians</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">immigration attorneys in Mexico</Link> specialize in all types of Mexico residency visas. Whether you need <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover font-medium">temporary residency for retirement</Link>, 
-                  <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover font-medium">permanent residency for long-term living</Link>, or <Link to="/services/work-visas" className="text-primary hover:text-primary-hover font-medium">work visas for employment</Link>, we provide expert legal guidance throughout the entire process.
+                  Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">licensed Mexico immigration attorneys</Link> specialize in all types of Mexico residency visas for US and Canadian citizens. Whether you need <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover font-medium">Mexico temporary residency for retirement or remote work</Link>, 
+                  <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover font-medium">Mexico permanent residency for long-term living</Link>, or <Link to="/services/work-visas" className="text-primary hover:text-primary-hover font-medium">Mexico work visas for employment authorization</Link>, we provide comprehensive legal guidance throughout the entire immigration process.
                 </p>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• <strong><Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover">Temporary Residency Mexico:</Link></strong> 1-4 year visas for retirees and remote workers</li>
-                  <li>• <strong><Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover">Permanent Residency Mexico:</Link></strong> Indefinite residency with work authorization</li>
-                  <li>• <strong><Link to="/services/work-visas" className="text-primary hover:text-primary-hover">Mexico Work Visas:</Link></strong> Employment-based immigration solutions</li>
-                  <li>• <strong><Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover">Family Immigration Mexico:</Link></strong> Spouse and family reunification visas</li>
+                  <li>• <strong><Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover">Temporary Residency Mexico (Residente Temporal):</Link></strong> 1-4 year Mexico residency visas for retirees, remote workers, and investors</li>
+                  <li>• <strong><Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover">Permanent Residency Mexico (Residente Permanente):</Link></strong> Indefinite Mexico residency with work authorization and no renewal requirements</li>
+                  <li>• <strong><Link to="/services/work-visas" className="text-primary hover:text-primary-hover">Mexico Work Visas & Employment Authorization:</Link></strong> Professional work permits and employer-sponsored immigration solutions</li>
+                  <li>• <strong><Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover">Family Immigration Mexico:</Link></strong> Marriage visas for spouses of Mexican citizens and family reunification services</li>
                 </ul>
+                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="text-sm text-blue-800 font-medium">💡 <strong>Expert Tip:</strong> Read our comprehensive <Link to="/blog/temporary-vs-permanent-residency-mexico" className="text-blue-600 hover:text-blue-700 underline">guide comparing temporary vs permanent residency in Mexico</Link> to determine which option best fits your situation and long-term goals.</p>
+                </div>
               </div>
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-foreground">Expert Mexico Immigration Lawyer Services</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Licensed Mexico Immigration Lawyer Services</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  When you hire a <Link to="/about" className="text-primary hover:text-primary-hover font-medium">Mexico immigration lawyer from our firm</Link>, you get bilingual legal representation, comprehensive <Link to="/services" className="text-primary hover:text-primary-hover font-medium">Mexico visa assistance</Link>, 
-                  and strategic guidance for <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover font-medium">Mexican citizenship by naturalization</Link>. Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">immigration attorneys</Link> handle everything from consulate applications to INM processing.
+                  When you hire a <Link to="/about" className="text-primary hover:text-primary-hover font-medium">Mexico immigration lawyer from our experienced legal team</Link>, you get bilingual legal representation, comprehensive <Link to="/services" className="text-primary hover:text-primary-hover font-medium">Mexico visa assistance</Link>, 
+                  and strategic guidance for <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover font-medium">Mexican citizenship by naturalization</Link>. Our <Link to="/about" className="text-primary hover:text-primary-hover font-medium">licensed immigration attorneys in Mexico City</Link> handle everything from US consulate applications to INM processing and resident card assistance.
                 </p>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• <strong>Mexico Visa Assistance:</strong> Complete application support and representation with our <Link to="/contact" className="text-primary hover:text-primary-hover">experienced legal team</Link></li>
-                  <li>• <strong><Link to="/about" className="text-primary hover:text-primary-hover">Immigration Attorney Mexico:</Link></strong> Licensed legal professionals with proven 90-day approval system</li>
-                  <li>• <strong><Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover">Mexican Citizenship Services:</Link></strong> Naturalization process and exam preparation</li>
-                  <li>• <strong><Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover">Corporate Immigration:</Link></strong> Business visa solutions and employee transfers</li>
+                  <li>• <strong>Complete Mexico Visa Assistance:</strong> Professional application support and legal representation with our <Link to="/contact" className="text-primary hover:text-primary-hover">experienced immigration law firm</Link></li>
+                  <li>• <strong><Link to="/about" className="text-primary hover:text-primary-hover">Immigration Attorney Mexico City:</Link></strong> Licensed legal professionals with 15+ years experience and 1,000+ successful residency cases</li>
+                  <li>• <strong><Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover">Mexican Citizenship Legal Services:</Link></strong> Naturalization process guidance, Spanish exam preparation, and SRE application support</li>
+                  <li>• <strong><Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover">Corporate Immigration Mexico:</Link></strong> Business visa solutions, executive transfers, and employee relocation services</li>
                 </ul>
+                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                  <p className="text-sm text-green-800 font-medium">🎯 <strong>Ready to Start?</strong> Learn more about <Link to="/blog/hire-mexico-immigration-lawyer-guide" className="text-green-600 hover:text-green-700 underline">when to hire a Mexico immigration lawyer</Link> and discover our proven approach to successful Mexico residency applications.</p>
+                </div>
               </div>
             </div>
           </div>

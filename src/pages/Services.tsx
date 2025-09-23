@@ -73,9 +73,15 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Mexico Immigration Services — Complete Visa & Residency Solutions</title>
-        <meta name="description" content="Complete Mexico immigration services: residency, work visas, citizenship & family immigration. Licensed attorneys with 15+ years experience. Free consultation available!" />
-        <meta name="keywords" content="Mexico immigration services, Mexico residency visa, immigration attorney Mexico, temporary residency Mexico, permanent residency Mexico, Mexico work visa, Mexican citizenship, family immigration Mexico" />
+        <title>Mexico Immigration Services 2025 — Residency, Work Visas & Citizenship | Licensed Attorneys</title>
+        <meta name="description" content="🥇 Complete Mexico immigration legal services: temporary/permanent residency, work permits, family visas & citizenship. Licensed attorneys in Mexico City. 15+ years experience. Free consultation!" />
+        <meta name="keywords" content="Mexico immigration services 2025, immigration attorney Mexico City, Mexico residency visa lawyer, temporary residency Mexico attorney, permanent residency Mexico lawyer, Mexico work visa attorney, Mexican citizenship lawyer, family immigration Mexico attorney, bilingual immigration lawyer Mexico" />
+        <meta property="og:title" content="Mexico Immigration Services — Licensed Attorneys in Mexico City" />
+        <meta property="og:description" content="Complete Mexico immigration legal services from licensed attorneys: residency visas, work permits, citizenship & family immigration." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Mexico Immigration Services — Licensed Legal Solutions" />
+        <meta name="twitter:description" content="Professional Mexico immigration services: residency, work visas, citizenship. Licensed attorneys with 15+ years experience." />
         <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/services" />
       </Helmet>
 

@@ -51,8 +51,16 @@ const TemporaryResidency = () => {
   return (
     <>
       <Helmet>
-        <title>Temporary Residency Mexico — Requirements & Process</title>
-        <meta name="description" content="Get Mexico temporary residency (1-4 years) with expert legal help. Financial requirements, application process & INM support. Perfect for retirees & remote workers!" />
+        <title>Temporary Residency Mexico 2025 — Requirements, Process & Financial Thresholds | Expert Legal Help</title>
+        <meta name="description" content="💡 Get Mexico temporary residency visa (Residente Temporal) 1-4 years with expert attorney help. Updated 2025 financial requirements, consulate process & INM support. Perfect for retirees & remote workers!" />
+        <meta name="keywords" content="temporary residency Mexico 2025, Residente Temporal Mexico, Mexico temporary resident visa, temporary residency financial requirements Mexico, Mexico temporary visa attorney, temporary residency process Mexico, Mexico immigration lawyer temporary residency, INM temporary residency Mexico, consulate temporary residency Mexico" />
+        <meta property="og:title" content="Temporary Residency Mexico 2025 — Complete Legal Guide & Requirements" />
+        <meta property="og:description" content="Expert legal assistance for Mexico temporary residency visa with updated 2025 requirements and professional attorney support." />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Mexico Temporary Residency 2025 — Expert Legal Help" />
+        <meta name="twitter:description" content="Get Mexico temporary residency (1-4 years) with professional legal assistance. Updated requirements & process guidance." />
+        <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/services/temporary-residency" />
       </Helmet>
 
       <Hero

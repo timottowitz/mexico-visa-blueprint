@@ -57,10 +57,16 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Mexico Immigration Lawyer — 15+ Years Experience</title>
-        <meta name="description" content="Licensed Mexico immigration attorneys in Mexico City with 15+ years experience. 1,000+ successful cases for US & Canadian clients. Bilingual legal services you can trust." />
-        <meta name="keywords" content="Mexico immigration lawyer, immigration attorney Mexico City, Mexican immigration law firm, residency lawyer Mexico, work permit attorney Mexico, bilingual immigration lawyer" />
-        <link rel="canonical" href="https://mexicoimmigrationlawyer.com/about" />
+        <title>About Mexico Immigration Lawyer — Licensed Attorneys in Mexico City | 1,000+ Success Cases</title>
+        <meta name="description" content="🏆 Meet our licensed Mexico immigration attorneys in Mexico City with 15+ years experience & 1,000+ successful residency cases for US & Canadian clients. Bilingual legal team you can trust!" />
+        <meta name="keywords" content="Mexico immigration lawyer about, immigration attorney Mexico City experience, Mexican immigration law firm team, licensed residency lawyer Mexico, experienced work permit attorney Mexico, bilingual immigration lawyer credentials, Mexico City immigration attorneys, immigration law firm Mexico credentials" />
+        <meta property="og:title" content="About Mexico Immigration Lawyer — Experienced Legal Team" />
+        <meta property="og:description" content="Licensed Mexico immigration attorneys with 15+ years experience and 1,000+ successful cases for US & Canadian clients seeking Mexico residency." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Licensed Mexico Immigration Attorneys — 15+ Years Experience" />
+        <meta name="twitter:description" content="Meet our experienced Mexico immigration legal team with 1,000+ successful residency cases for Americans & Canadians." />
+        <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/about" />
       </Helmet>
 
       <Hero

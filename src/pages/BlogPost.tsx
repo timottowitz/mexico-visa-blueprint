@@ -127,16 +127,23 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{postMeta.title} — Mexico Immigration Lawyer</title>
-        <meta name="description" content={postMeta.excerpt} />
-        <meta property="og:title" content={postMeta.title} />
+        <title>{postMeta.title} | Mexico Immigration Lawyer 2025</title>
+        <meta name="description" content={`${postMeta.excerpt} Expert legal guidance from licensed Mexico immigration attorneys in Mexico City.`} />
+        <meta name="keywords" content={`${postMeta.category.toLowerCase()}, Mexico immigration lawyer, ${postMeta.title.toLowerCase().replace(/[^\w\s]/gi, '')}, immigration attorney Mexico, Mexico visa process, residency Mexico legal help`} />
+        <meta property="og:title" content={`${postMeta.title} | Mexico Immigration Lawyer`} />
         <meta property="og:description" content={postMeta.excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={lawyerProfile} />
         <meta property="article:published_time" content={postMeta.date} />
+        <meta property="article:modified_time" content={postMeta.date} />
         <meta property="article:author" content={postMeta.author} />
         <meta property="article:section" content={postMeta.category} />
+        <meta property="article:tag" content={`Mexico immigration, ${postMeta.category}, visa process, residency Mexico`} />
         <meta name="author" content={AUTHOR_INFO.name} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={postMeta.title} />
+        <meta name="twitter:description" content={postMeta.excerpt} />
+        <meta name="twitter:image" content={lawyerProfile} />
         <link rel="canonical" href={articleUrl} />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
@@ -210,32 +217,84 @@ const BlogPost = () => {
           {/* Enhanced CTA Section */}
           <CTASection />
 
-          {/* Related Articles */}
+          {/* Related Articles with Enhanced SEO Linking */}
           <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-6 text-foreground">Related Articles</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">Related Mexico Immigration Articles</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/mexico-visa-requirements-2025" className="block group">
+              <Link to="/blog/mexico-residency-visa-requirements-2025" className="block group">
                 <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
-                  <Badge variant="outline" className="mb-3">Visas</Badge>
+                  <Badge variant="outline" className="mb-3">Visa Requirements</Badge>
                   <h4 className="font-semibold group-hover:text-primary transition-colors mb-2">
-                    Mexico Visa Requirements 2025: Complete Guide for US and Canadian Citizens
+                    Mexico Residency Visa Requirements 2025: Complete Legal Guide for Americans & Canadians
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Updated requirements and processes for obtaining various types of Mexican visas...
+                    Updated Mexico residency visa requirements for 2025 including temporary and permanent residency financial thresholds, document requirements, and application processes...
                   </p>
                 </div>
               </Link>
-              <Link to="/blog/mexican-citizenship-naturalization-process" className="block group">
+              <Link to="/blog/hire-mexico-immigration-lawyer-guide" className="block group">
+                <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
+                  <Badge variant="outline" className="mb-3">Legal Guidance</Badge>
+                  <h4 className="font-semibold group-hover:text-primary transition-colors mb-2">
+                    Should You Hire a Mexico Immigration Lawyer? Complete Guide to Legal Assistance
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Expert analysis of when you need professional legal help for Mexico immigration, what attorneys provide, and how to choose the right immigration lawyer...
+                  </p>
+                </div>
+              </Link>
+              <Link to="/blog/mexican-citizenship-requirements-2025" className="block group">
                 <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
                   <Badge variant="outline" className="mb-3">Citizenship</Badge>
                   <h4 className="font-semibold group-hover:text-primary transition-colors mb-2">
-                    Mexican Citizenship Through Naturalization: Step-by-Step Process
+                    Mexican Citizenship Requirements 2025: Complete Naturalization Process Guide
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Everything you need to know about becoming a Mexican citizen...
+                    Comprehensive guide to obtaining Mexican citizenship through naturalization including residency requirements, Spanish language tests, and legal procedures...
                   </p>
                 </div>
               </Link>
+              <Link to="/blog/residency-mexico-economic-solvency-requirements-2025" className="block group">
+                <div className="border rounded-lg p-6 hover:border-primary/50 transition-colors">
+                  <Badge variant="outline" className="mb-3">Financial Requirements</Badge>
+                  <h4 className="font-semibold group-hover:text-primary transition-colors mb-2">
+                    Mexico Residency Economic Solvency Requirements 2025: Updated Financial Thresholds
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Current financial requirements for Mexico residency visas including income, savings, and investment thresholds for temporary and permanent residency...
+                  </p>
+                </div>
+              </Link>
+            </div>
+            
+            {/* Additional SEO-focused internal links */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+              <h4 className="font-semibold text-foreground mb-4">Explore Our Mexico Immigration Services:</h4>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <strong>Residency Services:</strong>
+                  <ul className="mt-2 space-y-1 text-muted-foreground">
+                    <li>• <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover underline">Temporary Residency Mexico</Link></li>
+                    <li>• <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">Permanent Residency Mexico</Link></li>
+                    <li>• <Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover underline">Family Immigration Mexico</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Work & Business:</strong>
+                  <ul className="mt-2 space-y-1 text-muted-foreground">
+                    <li>• <Link to="/services/work-visas" className="text-primary hover:text-primary-hover underline">Mexico Work Visas</Link></li>
+                    <li>• <Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover underline">Corporate Immigration Mexico</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Citizenship & Legal Help:</strong>
+                  <ul className="mt-2 space-y-1 text-muted-foreground">
+                    <li>• <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican Citizenship Services</Link></li>
+                    <li>• <Link to="/about" className="text-primary hover:text-primary-hover underline">Meet Our Immigration Attorneys</Link></li>
+                    <li>• <Link to="/contact" className="text-primary hover:text-primary-hover underline">Free Immigration Consultation</Link></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -55,14 +55,19 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Mexico Immigration Blog — Expert Guides & Updates</title>
+        <title>Mexico Immigration Blog 2025 — Visa Requirements, Residency Process & Legal Updates</title>
         <meta 
           name="description" 
-          content="Expert Mexico immigration guides & news: residency requirements, visa processes, citizenship tips & law updates. Written by experienced immigration attorneys." 
+          content="🔥 Latest Mexico immigration guides 2025: temporary/permanent residency requirements, work visa process, citizenship steps & INM updates. Written by licensed attorneys in Mexico City." 
         />
-        <meta property="og:title" content="Mexico Immigration Blog — Expert Guides & Updates" />
-        <meta property="og:description" content="Stay updated with the latest Mexico immigration news, visa guides, and expert insights." />
-        <link rel="canonical" href="https://mexicoimmigrationlawyer.com/blog" />
+        <meta name="keywords" content="Mexico immigration blog, Mexico visa requirements 2025, temporary residency Mexico, permanent residency Mexico, Mexico work visa process, Mexican citizenship requirements, INM Mexico updates, immigration attorney blog Mexico" />
+        <meta property="og:title" content="Mexico Immigration Blog 2025 — Expert Legal Guides & Updates" />
+        <meta property="og:description" content="Comprehensive Mexico immigration guides, visa requirements, and legal updates from experienced attorneys in Mexico City." />
+        <meta property="og:type" content="blog" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Mexico Immigration Blog — Expert Visa & Residency Guides" />
+        <meta name="twitter:description" content="Latest Mexico immigration guides, visa requirements, and legal updates from licensed attorneys." />
+        <link rel="canonical" href="https://mexico-visa-blueprint.lovable.app/blog" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">
@@ -175,21 +180,71 @@ const Blog = () => {
           </div>
         </div>
 
-        {/* Newsletter CTA */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary-accent/10 rounded-lg p-8 text-center">
+        {/* Newsletter CTA with Enhanced SEO Links */}
+        <div className="bg-gradient-to-r from-primary/10 to-primary-accent/10 rounded-lg p-8 text-center mb-8">
           <h3 className="text-2xl font-semibold mb-4 text-foreground">
-            Stay Updated on Mexico Immigration
+            Stay Updated on Mexico Immigration Law & Process Changes
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest immigration updates, policy changes, and expert insights delivered to your inbox.
+            Get the latest Mexico immigration updates, visa requirement changes, and expert legal insights from our experienced immigration attorneys in Mexico City.
           </p>
           <Link 
             to="/contact"
             className="inline-flex items-center bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-semibold transition-colors"
           >
-            Contact Us for Updates
+            Contact Our Immigration Attorneys
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
+        </div>
+
+        {/* Comprehensive Mexico Immigration Resources */}
+        <div className="bg-white rounded-lg p-8 border border-gray-200 mb-8">
+          <h3 className="text-2xl font-semibold mb-6 text-foreground text-center">
+            Complete Mexico Immigration Resources by Our Legal Team
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-foreground">Mexico Residency Services</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• <Link to="/services/temporary-residency" className="text-primary hover:text-primary-hover underline">Temporary Residency Mexico (Residente Temporal)</Link></li>
+                <li>• <Link to="/services/permanent-residency" className="text-primary hover:text-primary-hover underline">Permanent Residency Mexico (Residente Permanente)</Link></li>
+                <li>• <Link to="/services/family-based-immigration" className="text-primary hover:text-primary-hover underline">Family Immigration & Marriage Visas Mexico</Link></li>
+                <li>• <Link to="/blog/temporary-vs-permanent-residency-mexico" className="text-primary hover:text-primary-hover underline">Temporary vs Permanent Residency Comparison</Link></li>
+                <li>• <Link to="/blog/residency-mexico-economic-solvency-requirements-2025" className="text-primary hover:text-primary-hover underline">Mexico Residency Financial Requirements 2025</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-foreground">Work Visas & Business Immigration</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• <Link to="/services/work-visas" className="text-primary hover:text-primary-hover underline">Mexico Work Visas & Employment Authorization</Link></li>
+                <li>• <Link to="/services/corporate-immigration" className="text-primary hover:text-primary-hover underline">Corporate Immigration Mexico</Link></li>
+                <li>• <Link to="/blog/work-visa-guide-mexico" className="text-primary hover:text-primary-hover underline">Complete Mexico Work Visa Guide</Link></li>
+                <li>• <Link to="/blog/work-permit-mexico-americans-canadians" className="text-primary hover:text-primary-hover underline">Work Permits for Americans & Canadians</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lg mb-4 text-foreground">Citizenship & Legal Help</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• <Link to="/services/mexican-citizenship" className="text-primary hover:text-primary-hover underline">Mexican Citizenship by Naturalization</Link></li>
+                <li>• <Link to="/blog/mexican-citizenship-requirements-2025" className="text-primary hover:text-primary-hover underline">Mexican Citizenship Requirements 2025</Link></li>
+                <li>• <Link to="/blog/hire-mexico-immigration-lawyer-guide" className="text-primary hover:text-primary-hover underline">When to Hire a Mexico Immigration Lawyer</Link></li>
+                <li>• <Link to="/about" className="text-primary hover:text-primary-hover underline">About Our Immigration Attorneys</Link></li>
+                <li>• <Link to="/faqs" className="text-primary hover:text-primary-hover underline">Mexico Immigration FAQs</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+            <p className="text-sm text-muted-foreground mb-3">
+              <strong>Free Consultation:</strong> Discuss your Mexico immigration goals with our experienced legal team
+            </p>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center text-primary hover:text-primary-hover font-semibold"
+            >
+              Schedule Your Free Immigration Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </>
