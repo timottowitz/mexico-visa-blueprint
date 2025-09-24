@@ -192,8 +192,8 @@ const Index = () => {
             onClick: () => import('@/utils/calendly').then(({ openCalendlyPopup }) => openCalendlyPopup())
           }}
           secondaryCta={{
-            text: "💬 WhatsApp: +52 55 1234 5678",
-            href: "https://wa.me/5255123454678"
+            text: "💬 WhatsApp: +52 32 2278 7690",
+            href: "https://wa.me/523222787690"
           }}
         >
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
@@ -535,7 +535,7 @@ const Index = () => {
                 Schedule Your Free Consultation
               </Button>
               <p className="text-sm opacity-75">
-                💬 WhatsApp: +52 55 1234 5678 • 📞 Call +1 (555) 123-4567 • ⭐ 4.9/5 Rating
+                💬 WhatsApp: +52 32 2278 7690 • 📞 Call +1 (555) 123-4567 • ⭐ 4.9/5 Rating
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
