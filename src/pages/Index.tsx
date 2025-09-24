@@ -193,7 +193,7 @@ const Index = () => {
           }}
           secondaryCta={{
             text: "💬 WhatsApp: +52 32 2278 7690",
-            href: "https://wa.me/523222787690"
+            href: "whatsapp://send?phone=523222787690"
           }}
         >
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
